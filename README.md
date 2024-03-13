@@ -91,3 +91,9 @@ Running commands with npm `npm run [command]`
 | command         | description                              |
 | :-------------- | :--------------------------------------- |
 | `dev`           | Starts a development instance of the app |
+
+## Open-source evertying
+
+Tdarr: https://docs.tdarr.io/docs/installation/docker/run-compose
+Upload: Mount to local file
+Stream CDN: https://github.com/MohamedBakoush/docker-HLS-streaming-server/blob/main/Dockerfile
