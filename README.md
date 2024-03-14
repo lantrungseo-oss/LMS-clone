@@ -94,6 +94,14 @@ Running commands with npm `npm run [command]`
 
 ## Open-source evertying
 
-Tdarr: https://docs.tdarr.io/docs/installation/docker/run-compose
-Upload: Mount to local file
-Stream CDN: https://github.com/MohamedBakoush/docker-HLS-streaming-server/blob/main/Dockerfile
+- Tdarr: https://docs.tdarr.io/docs/installation/docker/run-compose (Later try)
+
+- Fluent FFMPEG: https://github.com/fluent-ffmpeg/node-fluent-ffmpeg (Quick one -> Create an adapter for build & deploy)
+
+- Implementation reference for VOD: https://github.com/theserverfault/HLS-transcoding-nodejs/blob/master/create-hls-vod.sh
+
+- VOD on AWS: https://github.com/aws-solutions/video-on-demand-on-aws (Adapter for upload & transcode video)
+
+- Upload: Mount to local file (Adapter)
+
+- Stream CDN: https://github.com/MohamedBakoush/docker-HLS-streaming-server/blob/main/Dockerfile
