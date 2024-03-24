@@ -119,3 +119,5 @@ docker-compose up -d kibana
 ```
 
 And then follow the instructions here: https://www.elastic.co/guide/en/elasticsearch/reference/current/run-elasticsearch-locally.html to set it up properly.
+
+For maintaing configuration, we can use https://library.tf/providers/elastic/elasticstack/latest/docs/resources/elasticsearch_script
