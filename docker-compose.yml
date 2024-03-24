@@ -13,6 +13,24 @@ services:
       - mysql_data:/var/lib/mysql
     ports:
       - "3306:3306"
-
+  elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.2
+    container_name: elastic
+    environment:
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - elastic_data:/usr/share/elasticsearch/data
+    mem_limit: 1gb
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.12.2
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elastic
 volumes:
   mysql_data:
+  elastic_data:

@@ -92,7 +92,7 @@ Running commands with npm `npm run [command]`
 | :-------------- | :--------------------------------------- |
 | `dev`           | Starts a development instance of the app |
 
-## Open-source evertying
+## Open-source everthing
 
 - Tdarr: https://docs.tdarr.io/docs/installation/docker/run-compose (Later try)
 
@@ -105,3 +105,17 @@ Running commands with npm `npm run [command]`
 - Upload: Mount to local file (Adapter)
 
 - Stream CDN: https://github.com/MohamedBakoush/docker-HLS-streaming-server/blob/main/Dockerfile
+
+## Elasticsearch & Kibana
+
+### Local setup
+
+
+Run these 2 commands
+
+```bash
+docker-compose up -d elastic
+docker-compose up -d kibana
+```
+
+And then follow the instructions here: https://www.elastic.co/guide/en/elasticsearch/reference/current/run-elasticsearch-locally.html to set it up properly.
