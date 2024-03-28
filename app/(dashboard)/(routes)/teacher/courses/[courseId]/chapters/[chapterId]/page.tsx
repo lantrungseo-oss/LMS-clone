@@ -125,12 +125,13 @@ const ChapterIdPage = async ({
             <div className="flex items-center gap-x-2">
             <IconBadge icon={ListChecks} />
               <h2 className="text-xl">
-                Chapter's activities
+                Chapter&apos; activities
               </h2>
             </div>
             <ChapterActivityForm 
               initialData={{activities: [{ id: '1', title: 'Hello video', type: 'video' }, { id: '2', title: 'Hello text', type: 'text' }]}}
               courseId={params.courseId}
+              chapterId={params.chapterId}
             />
           </div>
         </div>

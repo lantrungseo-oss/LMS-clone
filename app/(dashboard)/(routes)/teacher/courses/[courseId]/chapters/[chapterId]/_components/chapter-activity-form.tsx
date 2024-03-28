@@ -22,10 +22,12 @@ import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { ChapterActivityList } from "./chapter-activity-list";
 import { ChapterActivity } from "@/core/frontend/entity-types";
+import { AddChapterActivityForm } from "./add-activity-form";
 
 interface ChaptersFormProps {
   initialData: { activities: ChapterActivity[] };
   courseId: string;
+  chapterId: string;
 };
 
 const formSchema = z.object({
@@ -34,7 +36,8 @@ const formSchema = z.object({
 
 export const ChapterActivityForm = ({
   initialData,
-  courseId
+  courseId,
+  chapterId
 }: ChaptersFormProps) => {
   const [isCreating, setIsCreating] = useState(false);
   const [isUpdating, setIsUpdating] = useState(false);
@@ -82,13 +85,13 @@ export const ChapterActivityForm = ({
   }
 
   const onEdit = (id: string) => {
-    // router.push(`/teacher/courses/${courseId}/chapters/${id}`);
+    router.push(`/teacher/courses/${courseId}/chapters/${chapterId}/activities/${id}`);
   }
 
   return (
     <div className="relative mt-6 border bg-slate-100 rounded-md p-4">
       <div className="font-medium flex items-center justify-between">
-        Chapter's activities
+        Chapter&apos;activities
         <Button onClick={toggleCreating} variant="ghost">
           {isCreating ? (
             <>Cancel</>
@@ -100,37 +103,12 @@ export const ChapterActivityForm = ({
           )}
         </Button>
       </div>
-      {/* {isCreating && (
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-4 mt-4"
-          >
-            <FormField
-              control={form.control}
-              name="title"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input
-                      disabled={isSubmitting}
-                      placeholder="e.g. 'Introduction to the course'"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button
-              disabled={!isValid || isSubmitting}
-              type="submit"
-            >
-              Create
-            </Button>
-          </form>
-        </Form>
-      )} */}
+      {isCreating && (
+        <AddChapterActivityForm 
+          chapterId="1"
+          courseId="1"
+        />
+      )}
       {!isCreating && (
         <div className={cn(
           "text-sm mt-2",

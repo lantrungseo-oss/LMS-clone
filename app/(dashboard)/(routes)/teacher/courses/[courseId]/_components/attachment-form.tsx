@@ -11,6 +11,7 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { FileUpload } from "@/components/file-upload";
+import { EFileUploadEndpoint } from "@/core/frontend/constants";
 
 interface AttachmentFormProps {
   initialData: Course & { attachments: Attachment[] };
@@ -112,7 +113,7 @@ export const AttachmentForm = ({
       {isEditing && (
         <div>
           <FileUpload
-            endpoint="courseAttachment"
+            endpoint={EFileUploadEndpoint.courseAttachment}
             onChange={(url) => {
               if (url) {
                 onSubmit({ url: url });

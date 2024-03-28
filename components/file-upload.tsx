@@ -4,10 +4,11 @@ import toast from "react-hot-toast";
 
 import { UploadDropzone } from "@/lib/uploadthing";
 import { ourFileRouter } from "@/app/api/uploadthing/core";
+import { EFileUploadEndpoint } from "@/core/frontend/constants";
 
 interface FileUploadProps {
   onChange: (url?: string) => void;
-  endpoint: keyof typeof ourFileRouter;
+  endpoint: EFileUploadEndpoint;
 };
 
 export const FileUpload = ({
@@ -16,7 +17,7 @@ export const FileUpload = ({
 }: FileUploadProps) => {
   return (
     <UploadDropzone
-      endpoint={endpoint}
+      endpoint={endpoint as any}
       onClientUploadComplete={(res) => {
         onChange(res?.[0].url);
       }}

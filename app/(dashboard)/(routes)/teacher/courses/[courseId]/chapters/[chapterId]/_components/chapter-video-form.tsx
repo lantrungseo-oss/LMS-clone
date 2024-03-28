@@ -12,6 +12,7 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { FileUpload } from "@/components/file-upload";
+import { EFileUploadEndpoint } from "@/core/frontend/constants";
 
 interface ChapterVideoFormProps {
   initialData: Chapter & { muxData?: MuxData | null };
@@ -83,7 +84,7 @@ export const ChapterVideoForm = ({
       {isEditing && (
         <div>
           <FileUpload
-            endpoint="chapterVideo"
+            endpoint={EFileUploadEndpoint.chapterVideo}
             onChange={(url) => {
               if (url) {
                 onSubmit({ videoUrl: url });
