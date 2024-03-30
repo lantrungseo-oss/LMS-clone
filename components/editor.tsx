@@ -2,11 +2,11 @@
 
 import { useMemo } from "react";
 import ReactQuill, { Quill } from "react-quill";
+import ImageUploader from "quill-image-uploader";
+
 import "react-quill/dist/quill.snow.css";
 
 // #1 import quill-image-uploader
-import ImageUploader from "quill-image-uploader";
-
 
 // #2 register module
 Quill.register("modules/imageUploader", ImageUploader);

@@ -105,7 +105,7 @@ export const ChapterActivityList = ({
                         className="h-5 w-5"
                       />
                     </div>
-                    <div className="flex">
+                    <div className="flex items-center">
                       <ActivityIcon type={activity.type} />
                       <span className="px-2">{activity.title}</span>
                     </div>
