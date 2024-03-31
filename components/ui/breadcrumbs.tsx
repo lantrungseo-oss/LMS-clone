@@ -21,8 +21,8 @@ const Breadcrumbs = ({ paths }: TBreadcrumbsProps) => {
     <nav aria-label="Breadcrumb">
       <div aria-labelledby="breadcrumb" className='flex flex-row'>
         {paths.map((path, index) => (
-          <>
-            <div key={path.label}>
+          <React.Fragment key={path.label}>
+            <div>
               <BreadcrumbItem
                 href={path.href ? path.href : "#"}
                 {...path.onClick ? {} : { as: "button", onClick: path.onClick }}
@@ -31,7 +31,7 @@ const Breadcrumbs = ({ paths }: TBreadcrumbsProps) => {
               </BreadcrumbItem>
             </div>
             {index < paths.length - 1 && <Separator />}
-          </>
+          </React.Fragment>
         ))}
       </div>
     </nav>

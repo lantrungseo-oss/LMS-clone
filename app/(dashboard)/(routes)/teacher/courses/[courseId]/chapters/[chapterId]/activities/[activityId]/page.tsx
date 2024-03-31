@@ -1,13 +1,14 @@
 import { auth } from "@clerk/nextjs";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Trash } from "lucide-react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { Banner } from "@/components/banner";
+import { Button } from "@/components/ui/button";
 import { db } from "@/lib/db";
+import { ActivityQuizForm } from "./_components/activity-quiz-form";
 import { ActivityTextForm } from "./_components/activity-text-form";
 import { ActivityVideoForm } from "./_components/activity-video-form";
-import { ActivityQuizForm } from "./_components/activity-quiz-form";
 
 const mockActivity = {
   name: 'Hello word',
@@ -66,7 +67,14 @@ const ActivityEditPage = async ({
       </div>
       <div className="w-100 p-6 flex-1">
         <div className="h-full w-100 flex flex-col">
-          <h1 className="text-xl pb-6 flex-none">{activity.type.toUpperCase()}: {activity.name}</h1>
+          <div className='pb-6 flex-none flex justify-between'>
+            <h1 className="text-xl">{activity.type.toUpperCase()}: {activity.name}</h1>
+            <Button variant='destructive'>
+              <Trash className="w-4 h-4 mr-2"/>
+              Delete
+            </Button>
+          </div>
+         
           {activity.type === 'video' && (
             <ActivityVideoForm 
               courseId={params.courseId}

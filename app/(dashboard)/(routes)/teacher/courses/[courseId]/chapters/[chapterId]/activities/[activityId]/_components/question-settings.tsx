@@ -20,7 +20,7 @@ export const QuestionSettings = () => {
       </div>
       <div className="w-100 pt-6">
         <Button className='w-100' variant='destructive'>
-          <Trash className="w-6 h-6 mx-2" />
+          <Trash className="w-6 h-6 mr-2" />
           Delete question
         </Button>
       </div>
