@@ -1,7 +1,7 @@
 datasource db {
   provider     = "mysql"
   url          = env("DATABASE_URL")
-  relationMode = "prisma"
+  relationMode = "foreignKeys"
 }
 
 generator client {
@@ -29,7 +29,7 @@ model Course {
   updatedAt DateTime @updatedAt
 
   @@index([categoryId])
-  @@fulltext([title])
+  @@fulltext([title, description])
 }
 
 model Category {
@@ -66,12 +66,44 @@ model Chapter {
   courseId String
   course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
 
+  activties ChapterActivity[]
+
   userProgress UserProgress[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@index([courseId])
+}
+
+model ChapterActivity {
+  id String @id @default(uuid())
+  name String @db.Text
+  type String @db.Text
+  videoUrl String? @db.Text
+  position Int
+  textContent String? @db.Text
+
+  quizQuestions QuizQuestion[]
+
+  chapterId String
+  chapter Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model QuizQuestion {
+  id String @id @default(uuid())
+  question String @db.Text
+  type String @db.Text
+  data Json @db.Json
+
+  chapterActivityId String
+  chapterActivity ChapterActivity @relation(fields: [chapterActivityId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model MuxData {

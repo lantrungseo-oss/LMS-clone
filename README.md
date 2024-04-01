@@ -68,14 +68,22 @@ STRIPE_WEBHOOK_SECRET=
 NEXT_PUBLIC_TEACHER_ID=
 ```
 
-### Setup Prisma
+### Setup Database and Prisma
 
-Add MySQL Database (I used PlanetScale)
+### For initial setup
 
 ```shell
 npx prisma generate
 npx prisma db push
+```
 
+### For updating schema & custom db migration
+
+```shell
+npx prisma migrate dev --create-only
+# customize the newly generated migration.sql script
+
+npx prisma migrate deploy
 ```
 
 ### Start the app
@@ -121,3 +129,4 @@ docker-compose up -d kibana
 And then follow the instructions here: https://www.elastic.co/guide/en/elasticsearch/reference/current/run-elasticsearch-locally.html to set it up properly.
 
 For maintaing configuration, we can use https://library.tf/providers/elastic/elasticstack/latest/docs/resources/elasticsearch_script
+
