@@ -10,14 +10,15 @@ import {
 import { Input } from "@/components/ui/input";
 import { ACTIVITY_TYPES } from "@/core/frontend/constants";
 import { zodResolver } from "@hookform/resolvers/zod";
-import router from "next/router";
+import axios from "axios";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { isValid, z } from "zod";
+import { z } from "zod";
 
 type TAddChapterActivityFormProps = {
   courseId: string;
   chapterId: string;
+  afterCreated: () => void;
 }
 
 const formSchema = z.object({
@@ -27,7 +28,7 @@ const formSchema = z.object({
 });
 
 export const AddChapterActivityForm = ({
-  courseId, chapterId,
+  courseId, chapterId, afterCreated
 }: TAddChapterActivityFormProps) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -37,12 +38,18 @@ export const AddChapterActivityForm = ({
     },
   });
 
+  const { isValid, isSubmitting } = form.formState
+
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      // await axios.post(`/api/courses/${courseId}/chapters`, values);
+      await axios.post(`/api/courses/${courseId}/chapters/${chapterId}/activities`, {
+        name: values.title,
+        type: values.type,
+      });
       toast.success("Activity created");
+      afterCreated();
       // router.refresh();
-    } catch {
+    } catch (error) {
       toast.error("Something went wrong");
     }
   }
@@ -86,8 +93,8 @@ export const AddChapterActivityForm = ({
             )}
           />
           <Button
-            disabled={true}
             type="submit"
+            disabled={!isValid || isSubmitting}
           >
             Create
           </Button>

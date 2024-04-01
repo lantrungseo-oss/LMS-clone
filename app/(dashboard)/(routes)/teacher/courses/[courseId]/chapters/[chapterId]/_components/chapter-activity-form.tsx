@@ -1,28 +1,17 @@
 "use client";
 
-import * as z from "zod";
-import axios from "axios";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { Loader2, PlusCircle } from "lucide-react";
-import { useState } from "react";
-import toast from "react-hot-toast";
+import { Loader, PlusCircle } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { Chapter, Course } from "@prisma/client";
+import { useCallback, useState } from "react";
+import * as z from "zod";
 
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
-} from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { Input } from "@/components/ui/input";
-import { ChapterActivityList } from "./chapter-activity-list";
 import { ChapterActivity } from "@/core/frontend/entity-types";
+import { cn } from "@/lib/utils";
 import { AddChapterActivityForm } from "./add-activity-form";
+import { ChapterActivityList } from "./chapter-activity-list";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 interface ChaptersFormProps {
   initialData: { activities: ChapterActivity[] };
@@ -40,48 +29,36 @@ export const ChapterActivityForm = ({
   chapterId
 }: ChaptersFormProps) => {
   const [isCreating, setIsCreating] = useState(false);
-  const [isUpdating, setIsUpdating] = useState(false);
+  const [isReorderUpdating, setIsReorderUpdating] = useState(false);
 
   const toggleCreating = () => {
     setIsCreating((current) => !current);
   }
 
+
   const router = useRouter();
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      title: "",
-    },
-  });
-
-  const { isSubmitting, isValid } = form.formState;
-
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    // try {
-    //   await axios.post(`/api/courses/${courseId}/chapters`, values);
-    //   toast.success("Chapter created");
-    //   toggleCreating();
-    //   router.refresh();
-    // } catch {
-    //   toast.error("Something went wrong");
-    // }
-  }
+  const afterCreated = useCallback(() => {
+    toggleCreating();
+    router.refresh();
+  }, [toggleCreating, router])
 
   const onReorder = async (updateData: { id: string; position: number }[]) => {
-    // try {
-    //   setIsUpdating(true);
-
-    //   await axios.put(`/api/courses/${courseId}/chapters/reorder`, {
-    //     list: updateData
-    //   });
-    //   toast.success("Chapters reordered");
-    //   router.refresh();
-    // } catch {
-    //   toast.error("Something went wrong");
-    // } finally {
-    //   setIsUpdating(false);
-    // }
+    setIsReorderUpdating(true);
+    try {
+      await axios.put(`/api/courses/${courseId}/chapters/${chapterId}/activities/reorder`, {
+        updatedActivities: updateData.map((activity) => ({
+          id: activity.id,
+          position: activity.position + 1
+        }))
+      });
+      toast.success("Activities reordered");
+      router.refresh();
+    } catch {
+      toast.error("Something went wrong");
+    } finally {
+      setIsReorderUpdating(false);
+    }
   }
 
   const onEdit = (id: string) => {
@@ -90,8 +67,15 @@ export const ChapterActivityForm = ({
 
   return (
     <div className="relative mt-6 border bg-slate-100 rounded-md p-4">
+      {isReorderUpdating ? (
+        <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-sky-500">
+            <Loader className='w-10 h-10'/>
+          </div>
+        </div>
+      ) : null}
       <div className="font-medium flex items-center justify-between">
-        Chapter&apos;activities
+        Chapter&apos;s activities
         <Button onClick={toggleCreating} variant="ghost">
           {isCreating ? (
             <>Cancel</>
@@ -105,8 +89,9 @@ export const ChapterActivityForm = ({
       </div>
       {isCreating && (
         <AddChapterActivityForm 
-          chapterId="1"
-          courseId="1"
+          chapterId={chapterId}
+          courseId={courseId}
+          afterCreated={afterCreated}
         />
       )}
       {!isCreating && (

@@ -12,6 +12,7 @@ import { ChapterActions } from "./_components/chapter-actions";
 import { ChapterActivityForm } from "./_components/chapter-activity-form";
 import { ChapterDescriptionForm } from "./_components/chapter-description-form";
 import { ChapterTitleForm } from "./_components/chapter-title-form";
+import { mainActivityService } from "@/core/business/activity";
 
 const ChapterIdPage = async ({
   params
@@ -50,6 +51,19 @@ const ChapterIdPage = async ({
   const completionText = `(${completedFields}/${totalFields})`;
 
   const isComplete = requiredFields.every(Boolean);
+
+  const chapterActivities = await mainActivityService
+    .getChapterActivities(params.chapterId)
+    .then(activities => {
+      return activities.map((activity) => {
+        return {
+          id: activity.id,
+          title: activity.name,
+          type: activity.type,
+          position: activity.position
+        }
+      }).sort((a, b) => a.position - b.position);
+    });
 
   return (
     <>
@@ -129,7 +143,7 @@ const ChapterIdPage = async ({
               </h2>
             </div>
             <ChapterActivityForm 
-              initialData={{activities: [{ id: '1', title: 'Hello video', type: 'video' }, { id: '2', title: 'Hello text', type: 'text' }]}}
+              initialData={{activities: chapterActivities}}
               courseId={params.courseId}
               chapterId={params.chapterId}
             />
