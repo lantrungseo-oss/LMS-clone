@@ -1,6 +1,6 @@
-import * as prismaClient from '@prisma/client'
+import { ChapterActivity } from '@prisma/client'
 
-export interface IChapterActivity extends prismaClient.ChapterActivity {};
+export interface IChapterActivity extends ChapterActivity {};
 export interface ICreateActivityInput {
   chapterId: string;
   name: string;
@@ -9,7 +9,8 @@ export interface ICreateActivityInput {
 }
 export interface IEditActivityInput {
   name?: string;
-  videoUrl?: string;
   content?: string;
+  quizData?: Record<string, any>;
   position?: number;
+  videoUrl?: string;
 }

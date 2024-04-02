@@ -1,36 +1,23 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import {
   DragDropContext,
-  Droppable,
   Draggable,
   DropResult,
+  Droppable,
 } from "@hello-pangea/dnd";
-import { FileQuestion, Grip, ListChecks, Pencil, Video, File } from "lucide-react";
+import { Grip, Pencil } from "lucide-react";
+import { useEffect, useState } from "react";
 
-import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
+import { ActivityIcon } from "@/app/(dashboard)/_components/activity-icon";
 import { ChapterActivity } from "@/core/frontend/entity-types";
+import { cn } from "@/lib/utils";
 
 interface ChapterActivityListProps {
   items: ChapterActivity[];
   onReorder: (updateData: { id: string; position: number }[]) => void;
   onEdit: (id: string) => void;
 };
-
-const ActivityIcon = ({ type }: { type: string }) => {
-  switch (type) {
-    case "video":
-      return <Video className="w-4 h-4" />;
-    case "quiz":
-      return <FileQuestion className="w-4 h-4" />;
-    case "text":
-      return <File className="w-4 h-4" />;
-    default:
-      return null;
-  }
-}
 
 export const ChapterActivityList = ({
   items,

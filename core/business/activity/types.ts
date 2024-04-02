@@ -1,5 +1,5 @@
 import * as activityAdapterType from '@/core/adapters/activity/types';
-import { Chapter, Course } from '@prisma/client';
+import { Chapter, Course, MuxData } from '@prisma/client';
 
 export interface IChapterActivity extends activityAdapterType.IChapterActivity {};
 export interface ICreateActivityInput extends Exclude<activityAdapterType.ICreateActivityInput, 'position'> {
@@ -16,9 +16,10 @@ export interface IDeleteActivityInput {
 
 export interface IEditActivityInput {
   userId: string;
+  activityId: string;
   courseId: string;
   chapterId: string;
-  data: activityAdapterType.IEditActivityInput;
+  data: Omit<activityAdapterType.IEditActivityInput, 'videoUrl'>;
 };
 
 export interface IActivityReorderInput {
@@ -31,19 +32,32 @@ export interface IActivityReorderInput {
   }[]
 }
 
+export interface IUpdateActivityVideoInput {
+  userId: string;
+  courseId: string;
+  chapterId: string;
+  activityId: string;
+  videoUrl: string;
+}
+
 export interface IActivityValidationInput {
   userId: string;
   courseId: string;
   chapterId: string;
+  activityId?: string;
 }
-
 
 export interface IActivityValidationOptions {
-  
+  validateActivity?: boolean;
 }
 
-export interface IActivityValidationResponse {}
+export interface IActivityValidationResponse {
+  activity?: IChapterActivity;
+}
 
+export interface IGetActivityOptions {
+  includeVideoData?: boolean;
+}
 export interface IActivityRepo {
   getActivityCountFromChapter(chapterId: string): Promise<number>;
   createActivity(input: activityAdapterType.ICreateActivityInput): Promise<IChapterActivity>;
@@ -68,4 +82,28 @@ export interface ICourseRepo {
 
 export interface IActivityActionValidator {
   validate(input: IActivityValidationInput, options?: IActivityValidationOptions): Promise<IActivityValidationResponse>;
+}
+
+export interface IMuxData extends MuxData {}
+
+export interface ICreateMuxData extends Omit<IMuxData, 'id'> {}
+
+export interface IMuxDataRepo {
+  getActivityMuxData(activityId: string): Promise<IMuxData | null>;
+  deleteActivityMuxData(activityId: string): Promise<void>;
+  createMuxData(data: ICreateMuxData): Promise<IMuxData>;
+}
+
+export interface IActivityVideoResult {
+  playbackId?: string | null;
+}
+
+export interface IUpdateActivityVideoResult {
+  playbackId?: string;
+}
+
+export interface IActivityVideoService {
+  getVideoDataForActivity(activityId: string): Promise<IActivityVideoResult | null>;
+  updateActivityVideo(activityId: string, videoUrl: string): Promise<IUpdateActivityVideoResult>;
+  deleteActivityVideo(activityId: string): Promise<void>;
 }

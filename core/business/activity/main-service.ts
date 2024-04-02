@@ -1,11 +1,13 @@
 import { ApiError } from '@/core/error/api-error';
 import * as activityBusinessType from './types'
+import { myMux } from '@/lib/mux';
 
 
 export class MainActivityService {
   constructor(
     private readonly activityRepo: activityBusinessType.IActivityRepo, 
-    private readonly validator: activityBusinessType.IActivityActionValidator
+    private readonly validator: activityBusinessType.IActivityActionValidator,
+    private readonly activityVideoSvc: activityBusinessType.IActivityVideoService
   ) {}
 
   async createActivity(input: activityBusinessType.ICreateActivityInput): Promise<activityBusinessType.IChapterActivity> {
@@ -17,14 +19,18 @@ export class MainActivityService {
     });
   }
 
-  async editActivity(id: string, input: activityBusinessType.IEditActivityInput): Promise<activityBusinessType.IChapterActivity> {
-    await this.validator.validate(input);
-    return this.activityRepo.editActivity(id, input.data);
+  async editActivity(input: activityBusinessType.IEditActivityInput): Promise<activityBusinessType.IChapterActivity> {
+    await this.validator.validate(input, { validateActivity: true });
+    return this.activityRepo.editActivity(input.activityId, input.data);
   }
 
-  async deleteActivity(input: activityBusinessType.IDeleteActivityInput): Promise<void> {
-    await this.validator.validate(input);
-    return this.activityRepo.deleteActivity(input.activityId);
+  async deleteActivity(input: activityBusinessType.IDeleteActivityInput) {
+    await this.validator.validate(input, { validateActivity: true });
+    await this.activityVideoSvc.deleteActivityVideo(input.activityId);
+    await this.activityRepo.deleteActivity(input.activityId);
+    return {
+      done: true
+    }
   }
 
   async getChapterActivities(chapterId: string) {
@@ -64,5 +70,30 @@ export class MainActivityService {
       done: true,
       effect: 'update'
     };
+  }
+
+  async getActivity(id: string, options?: activityBusinessType.IGetActivityOptions) {
+    const activity = await this.activityRepo.getActivity(id);
+    if(!activity) {
+      return null
+    }
+    const videoData: activityBusinessType.IActivityVideoResult | null = options?.includeVideoData ? await this.activityVideoSvc.getVideoDataForActivity(activity?.id) : null
+    return {
+      ...activity,
+      videoData
+    }
+  }
+
+  async updateActivityVideo(input: activityBusinessType.IUpdateActivityVideoInput) {
+    await this.validator.validate(input, { validateActivity: true });
+    
+    await this.activityRepo.editActivity(input.activityId, {
+      videoUrl: input.videoUrl
+    });
+    
+    await this.activityVideoSvc.updateActivityVideo(input.activityId, input.videoUrl);
+    return {
+      done: true,
+    }
   }
 }

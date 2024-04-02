@@ -1,27 +1,23 @@
 "use client";
 
-import { Loader, PlusCircle } from "lucide-react";
+import { PlusCircle } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
-import * as z from "zod";
 
+import { BasicLoader } from "@/components/ui/basic-loader";
 import { Button } from "@/components/ui/button";
 import { ChapterActivity } from "@/core/frontend/entity-types";
 import { cn } from "@/lib/utils";
-import { AddChapterActivityForm } from "./add-activity-form";
-import { ChapterActivityList } from "./chapter-activity-list";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { AddChapterActivityForm } from "./add-activity-form";
+import { ChapterActivityList } from "./chapter-activity-list";
 
 interface ChaptersFormProps {
   initialData: { activities: ChapterActivity[] };
   courseId: string;
   chapterId: string;
 };
-
-const formSchema = z.object({
-  title: z.string().min(1),
-});
 
 export const ChapterActivityForm = ({
   initialData,
@@ -31,9 +27,9 @@ export const ChapterActivityForm = ({
   const [isCreating, setIsCreating] = useState(false);
   const [isReorderUpdating, setIsReorderUpdating] = useState(false);
 
-  const toggleCreating = () => {
+  const toggleCreating = useCallback(() => {
     setIsCreating((current) => !current);
-  }
+  }, [])
 
 
   const router = useRouter();
@@ -68,11 +64,7 @@ export const ChapterActivityForm = ({
   return (
     <div className="relative mt-6 border bg-slate-100 rounded-md p-4">
       {isReorderUpdating ? (
-        <div className="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-sky-500">
-            <Loader className='w-10 h-10'/>
-          </div>
-        </div>
+        <BasicLoader />
       ) : null}
       <div className="font-medium flex items-center justify-between">
         Chapter&apos;s activities

@@ -84,6 +84,8 @@ npx prisma migrate dev --create-only
 # customize the newly generated migration.sql script
 
 npx prisma migrate deploy
+
+npx prisma generate # run this to regenerate the prisma client
 ```
 
 ### Start the app

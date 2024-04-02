@@ -61,8 +61,6 @@ model Chapter {
   isPublished Boolean @default(false)
   isFree Boolean @default(false)
 
-  muxData MuxData?
-
   courseId String
   course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
 
@@ -84,23 +82,12 @@ model ChapterActivity {
   position Int
   textContent String? @db.Text
 
-  quizQuestions QuizQuestion[]
+  quizData Json? @db.Json
 
   chapterId String
   chapter Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
-
-model QuizQuestion {
-  id String @id @default(uuid())
-  question String @db.Text
-  type String @db.Text
-  data Json @db.Json
-
-  chapterActivityId String
-  chapterActivity ChapterActivity @relation(fields: [chapterActivityId], references: [id], onDelete: Cascade)
+  muxData MuxData[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -111,8 +98,8 @@ model MuxData {
   assetId String
   playbackId String?
 
-  chapterId String @unique
-  chapter Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  activityId String?
+  activity ChapterActivity? @relation(fields: [activityId], references: [id], onDelete: Cascade)
 }
 
 model UserProgress {

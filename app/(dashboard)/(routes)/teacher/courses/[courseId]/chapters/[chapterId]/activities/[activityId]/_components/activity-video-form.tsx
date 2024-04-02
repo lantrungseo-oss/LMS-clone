@@ -10,6 +10,8 @@ import * as z from "zod";
 import { FileUpload } from "@/components/file-upload";
 import { Button } from "@/components/ui/button";
 import { EFileUploadEndpoint } from "@/core/frontend/constants";
+import axios from "axios";
+import { BasicLoader } from "@/components/ui/basic-loader";
 
 interface ActivityVideoFormProps {
   courseId: string;
@@ -31,6 +33,7 @@ export const ActivityVideoForm = ({
   activity
 }: ActivityVideoFormProps) => {
   const [isEditing, setIsEditing] = useState(false);
+  const [isVideoUpdateProgressing, setIsVideoUpdateProgressing] = useState(false);
 
   const toggleEdit = () => setIsEditing((current) => !current);
 
@@ -38,18 +41,22 @@ export const ActivityVideoForm = ({
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      console.log(values.videoUrl)
-      // await axios.patch(`/api/courses/${courseId}/chapters/${chapterId}`, values);
-      // toast.success("Chapter updated");
-      // toggleEdit();
-      // router.refresh();
+      setIsVideoUpdateProgressing(true);
+      await axios.post(`/api/courses/${courseId}/chapters/${chapterId}/activities/${activity.id}/video`, values);
+      toast.success("Activity video updated");
+      toggleEdit();
+      router.refresh();
     } catch {
       toast.error("Something went wrong");
+    }
+    finally {
+      setIsVideoUpdateProgressing(false);
     }
   }
 
   return (
     <div className="mt-6 border bg-slate-100 rounded-md p-4">
+      {isVideoUpdateProgressing && (<BasicLoader />)}
       <div className="font-medium flex items-center justify-between">
         Chapter video
         <Button onClick={toggleEdit} variant="ghost">

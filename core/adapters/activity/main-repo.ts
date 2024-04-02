@@ -42,7 +42,7 @@ export class MainAcitivyRepo {
     return await primsaDb.chapterActivity.findUnique({
       where: {
         id
-      }
+      },
     })
   }
 

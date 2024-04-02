@@ -1,5 +1,5 @@
 import { auth } from "@clerk/nextjs";
-import { ArrowLeft, Trash } from "lucide-react";
+import { ArrowLeft, Edit, Trash } from "lucide-react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
@@ -9,12 +9,9 @@ import { db } from "@/lib/db";
 import { ActivityQuizForm } from "./_components/activity-quiz-form";
 import { ActivityTextForm } from "./_components/activity-text-form";
 import { ActivityVideoForm } from "./_components/activity-video-form";
-
-const mockActivity = {
-  name: 'Hello word',
-  type: 'quiz',
-  id: '123'
-}
+import { mainActivityService } from "@/core/business/activity";
+import { ActivityIcon } from "@/app/(dashboard)/_components/activity-icon";
+import { ActivityEditorHeader } from "./_components/activity-editor-header";
 
 const ActivityEditPage = async ({
   params
@@ -32,16 +29,16 @@ const ActivityEditPage = async ({
       id: params.chapterId,
       courseId: params.courseId
     },
-    include: {
-      muxData: true,
-    },
   });
 
   if (!chapter) {
-    return redirect("/")
+    return redirect(`/teacher/courses/${params.courseId}`)
   }
 
-  const activity = mockActivity;
+  const activity = await mainActivityService.getActivity(params.activityId, { includeVideoData: true });
+  if(!activity) {
+    return redirect(`/teacher/courses/${params.courseId}/chapters/${params.chapterId}`)
+  }
 
   return (
     <div className="h-full flex flex-col">
@@ -67,13 +64,10 @@ const ActivityEditPage = async ({
       </div>
       <div className="w-100 p-6 flex-1">
         <div className="h-full w-100 flex flex-col">
-          <div className='pb-6 flex-none flex justify-between'>
-            <h1 className="text-xl">{activity.type.toUpperCase()}: {activity.name}</h1>
-            <Button variant='destructive'>
-              <Trash className="w-4 h-4 mr-2"/>
-              Delete
-            </Button>
-          </div>
+          <ActivityEditorHeader 
+            type={activity.type} name={activity.name} activityId={activity.id}
+            courseId={params.courseId} chapterId={params.chapterId}
+          />
          
           {activity.type === 'video' && (
             <ActivityVideoForm 
@@ -81,8 +75,8 @@ const ActivityEditPage = async ({
               chapterId={params.chapterId}
               activity={{
                 ...activity,
-                videoUrl: 'https://utfs.io/f/6f3503a9-1f8a-4617-ac09-75f4b89ee8f2-b3p25x.52.36.mov',
-                playbackId: 'p00aoECM01s2yVu7XiurL2rlZhGv00K24am0056T4EFTSgY'
+                videoUrl: activity.videoUrl ?? undefined,
+                playbackId: activity.videoData?.playbackId ?? undefined,
               }}
             />
           )}
