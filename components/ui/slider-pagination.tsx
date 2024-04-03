@@ -8,11 +8,8 @@ export type TSliderPaginationProps = {
 };
 
 const SliderPagination = ({ totalSlides, currentSlide, onChange }: TSliderPaginationProps) => {
-  const [sliderValue, setSliderValue] = useState(currentSlide);
 
   const handleChange = useCallback((newValues: number[]) => {
-    setSliderValue(newValues[0]);
-    console.log(newValues)
     onChange?.(newValues[0]);
   }, [onChange]);
 
@@ -20,18 +17,18 @@ const SliderPagination = ({ totalSlides, currentSlide, onChange }: TSliderPagina
     <div className="flex items-center">
       <button
         className="text-gray-400 mr-2"
-        disabled={sliderValue <= 0}
-        onClick={() => handleChange([sliderValue - 1])}
+        disabled={currentSlide <= 0}
+        onClick={() => handleChange([currentSlide - 1])}
       >
         {'<'}
       </button>
       <span className="text-gray-400">
-        {sliderValue + 1}/{totalSlides}
+        {currentSlide + 1}/{totalSlides}
       </span>
       <button
         className="text-gray-400 ml-2"
-        disabled={sliderValue >= totalSlides - 1}
-        onClick={() => handleChange([sliderValue + 1])}
+        disabled={currentSlide >= totalSlides - 1}
+        onClick={() => handleChange([currentSlide + 1])}
       >
         {'>'}
       </button>

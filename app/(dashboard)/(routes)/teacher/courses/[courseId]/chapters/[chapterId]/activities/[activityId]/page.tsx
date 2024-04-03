@@ -1,17 +1,16 @@
 import { auth } from "@clerk/nextjs";
-import { ArrowLeft, Edit, Trash } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { Banner } from "@/components/banner";
-import { Button } from "@/components/ui/button";
+import { mainActivityService } from "@/core/business/activity";
 import { db } from "@/lib/db";
+import { ActivityEditorHeader } from "./_components/activity-editor-header";
 import { ActivityQuizForm } from "./_components/activity-quiz-form";
 import { ActivityTextForm } from "./_components/activity-text-form";
 import { ActivityVideoForm } from "./_components/activity-video-form";
-import { mainActivityService } from "@/core/business/activity";
-import { ActivityIcon } from "@/app/(dashboard)/_components/activity-icon";
-import { ActivityEditorHeader } from "./_components/activity-editor-header";
+import { IQuizData } from "@/core/frontend/entity-types";
 
 const ActivityEditPage = async ({
   params
@@ -82,10 +81,20 @@ const ActivityEditPage = async ({
           )}
 
           {activity.type === 'text' && (
-            <ActivityTextForm />
+            <ActivityTextForm
+              textContent={activity.textContent ?? ""}
+              courseId={params.courseId}
+              chapterId={params.chapterId}
+              activityId={activity.id}
+            />
           )}
           {activity.type === 'quiz' && (
-            <ActivityQuizForm />
+            <ActivityQuizForm
+              quizData={activity.quizData as unknown as IQuizData ?? undefined}
+              courseId={params.courseId}
+              chapterId={params.chapterId}
+              activityId={activity.id}
+            />
           )}
         </div>
         

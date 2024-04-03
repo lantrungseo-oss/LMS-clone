@@ -25,7 +25,7 @@ const Breadcrumbs = ({ paths }: TBreadcrumbsProps) => {
             <div>
               <BreadcrumbItem
                 href={path.href ? path.href : "#"}
-                {...path.onClick ? {} : { as: "button", onClick: path.onClick }}
+                {...path.onClick ? { as: "button", onClick: path.onClick } : {}}
               >
                 {path.label}
               </BreadcrumbItem>
