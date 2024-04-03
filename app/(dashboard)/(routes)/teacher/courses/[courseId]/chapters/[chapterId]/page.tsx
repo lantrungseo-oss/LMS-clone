@@ -36,19 +36,6 @@ const ChapterIdPage = async ({
     return redirect("/")
   }
 
-  const requiredFields = [
-    chapter.title,
-    chapter.description,
-    chapter.videoUrl,
-  ];
-
-  const totalFields = requiredFields.length;
-  const completedFields = requiredFields.filter(Boolean).length;
-
-  const completionText = `(${completedFields}/${totalFields})`;
-
-  const isComplete = requiredFields.every(Boolean);
-
   const chapterActivities = await mainActivityService
     .getChapterActivities(params.chapterId)
     .then(activities => {
@@ -57,10 +44,23 @@ const ChapterIdPage = async ({
           id: activity.id,
           title: activity.name,
           type: activity.type,
-          position: activity.position
+          position: activity.position,
+
         }
       }).sort((a, b) => a.position - b.position);
     });
+
+  const allRequirementFlags = [
+    !!chapter.title,
+    !!chapter.description,
+    chapterActivities.length > 0,
+    chapterActivities.every(activity => !!activity.title)
+  ];
+
+  const totalFields = allRequirementFlags.length;
+  const completedFields = allRequirementFlags.filter(Boolean).length;
+  const completionText = `(${completedFields}/${totalFields})`;
+  const isComplete = totalFields === completedFields;
 
   return (
     <>
@@ -86,7 +86,7 @@ const ChapterIdPage = async ({
                   Chapter Creation
                 </h1>
                 <span className="text-sm text-slate-700">
-                  Complete all fields {completionText}
+                  Complete all fields {completionText}. Make sure all your activities is set up properly
                 </span>
               </div>
               <ChapterActions
