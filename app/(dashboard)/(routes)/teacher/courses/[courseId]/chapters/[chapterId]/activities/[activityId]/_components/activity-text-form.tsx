@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { FormControl, FormField, FormItem, FormMessage, Form } from "@/components/ui/form";
+import { EFileUploadEndpoint } from "@/core/frontend/constants";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import dynamic from "next/dynamic";
@@ -65,7 +66,8 @@ export const ActivityTextForm = ({
                 <FormControl>
                   <Editor
                     {...field}
-                    // imageEnabled: will come back later
+                    imageEnabled
+                    imageEndpoint={EFileUploadEndpoint.activityContentImage}
                   />
                 </FormControl>
                 <FormMessage />

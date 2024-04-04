@@ -11,6 +11,7 @@ export enum EFileUploadEndpoint {
   courseAttachment = 'courseAttachment',
   chapterVideo = 'chapterVideo',
   activityVideo = 'activityVideo',
+  activityContentImage = 'activityContentImage',
 }
 
 export const MULTI_CHOICE_QUESTION_TEMPLATE: Omit<IQuestion, 'id'> = {

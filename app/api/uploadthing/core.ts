@@ -22,7 +22,10 @@ export const ourFileRouter = {
     .onUploadComplete(() => {}),
   activityVideo: f({ video: { maxFileCount: 1, maxFileSize: "512GB" } })
     .middleware(() => handleAuth())
-    .onUploadComplete(() => {})
+    .onUploadComplete(() => {}),
+  activityContentImage: f({ image: { maxFileSize: "4MB", maxFileCount: 1 } })
+      .middleware(() => handleAuth())
+      .onUploadComplete(() => {}),
 } satisfies FileRouter;
  
 export type OurFileRouter = typeof ourFileRouter;

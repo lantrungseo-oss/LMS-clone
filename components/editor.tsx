@@ -5,6 +5,8 @@ import ReactQuill, { Quill } from "react-quill";
 import ImageUploader from "quill-image-uploader";
 
 import "react-quill/dist/quill.snow.css";
+import { EFileUploadEndpoint } from "@/core/frontend/constants";
+import { useFileUpload } from "@/core/frontend/file-upload/hooks";
 
 // #1 import quill-image-uploader
 
@@ -17,13 +19,19 @@ interface EditorProps {
   onChange: (value: string) => void;
   value: string;
   imageEnabled?: boolean;
+  imageEndpoint?: EFileUploadEndpoint;
 };
 
 const Editor = ({
   onChange,
   value,
-  imageEnabled
+  imageEnabled,
+  imageEndpoint
 }: EditorProps) => {
+
+  const { uploadFiles } = useFileUpload({
+    endpoint: imageEndpoint ?? EFileUploadEndpoint.courseImage,
+  })
 
   const modules = useMemo(() => {
     return {
@@ -46,16 +54,18 @@ const Editor = ({
       imageUploader: imageEnabled ? {
         upload: (file: File) => {
           return new Promise((resolve, reject) => {
-            const formData = new FormData();
-            formData.append("image", file);
-  
-            // upload to uploadthing via API in the NextJS
-            resolve(URL.createObjectURL(file))
-          })
+            uploadFiles([file]).then((result) => {
+              if(result && result.length) {
+                resolve(result[0].url);
+                return;
+              }
+              reject(new Error('Fail to upload image'))
+            })
+          });
         }
       } : undefined
     };
-  }, [imageEnabled])
+  }, [imageEnabled, uploadFiles])
 
   const formats = useMemo(() => {
     return [

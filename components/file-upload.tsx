@@ -3,7 +3,6 @@
 import toast from "react-hot-toast";
 
 import { UploadDropzone } from "@/lib/uploadthing";
-import { ourFileRouter } from "@/app/api/uploadthing/core";
 import { EFileUploadEndpoint } from "@/core/frontend/constants";
 
 interface FileUploadProps {

@@ -80,7 +80,7 @@ model ChapterActivity {
   type String @db.Text
   videoUrl String? @db.Text
   position Int
-  textContent String? @db.Text
+  textContent String? @db.LongText
 
   quizData Json? @db.Json
 
