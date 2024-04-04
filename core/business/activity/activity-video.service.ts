@@ -18,7 +18,7 @@ export class ActivityVideoService implements activityBusinessType.IActivityVideo
   async updateActivityVideo(activityId: string, videoUrl: string) {
     const muxData = await this.muxDataRepo.getActivityMuxData(activityId);
     if(muxData) {
-      await myMux.Video.Assets.del(muxData.assetId);
+      // await myMux.Video.Assets.del(muxData.assetId);
       await this.muxDataRepo.deleteActivityMuxData(activityId);
     }
     const asset = await myMux.Video.Assets.create({
