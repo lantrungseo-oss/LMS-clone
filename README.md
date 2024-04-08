@@ -66,6 +66,7 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 STRIPE_WEBHOOK_SECRET=
 
 NEXT_PUBLIC_TEACHER_ID=
+OPENAI_API_KEY=
 ```
 
 ### Setup Database and Prisma
