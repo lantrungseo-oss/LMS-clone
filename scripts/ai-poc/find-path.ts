@@ -3,7 +3,7 @@ dotenv.config();
 import {elasticsearchClient} from '@/lib/elasticsearch'
 import { openAI } from '@/lib/openai'
 
-const text = 'Java learning'
+const text = 'Best course about software testing'
 
 const main = async () => {
   const embeddedText = await openAI.embeddings.create({
