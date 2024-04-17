@@ -12,6 +12,7 @@ interface ICourse {
   'Course Description': string;
   'Skills': string;
   'Course URL': string;
+  'Difficulty Level': string;
 }
 
 // elasticsearchClient.ping()
@@ -28,22 +29,28 @@ const main = async () => {
   })
   
     // one course first
-  let count = 100;
+  let count = data.length;
   for(const targetedCourse of data) {
     count--;
-    if(count < 0) break;
+    if(count % 200 === 0) {
+      await wait(200);
+    }
     const courseName = targetedCourse['Course Name'];
-    const courseDescription = targetedCourse['Course Description'];
+    const courseDescription = `${targetedCourse['Course Description']}\nSkills: ${targetedCourse['Skills']}\nDifficulty Level: ${targetedCourse['Difficulty Level']}`;
 
     const response = await openAI.embeddings.create({
       model: 'text-embedding-3-small',
       input: [courseName, courseDescription]
     })
 
+    
+
 
     const embeddedCourse = {
       name: targetedCourse['Course Name'],
       desc: targetedCourse['Course Description'],
+      Skills: targetedCourse['Skills'],
+      Difficulty: targetedCourse['Difficulty Level'],
       url: targetedCourse['Course URL'],
       name_vector: response.data[0].embedding,
       desc_vector: response.data[1].embedding,
@@ -56,8 +63,6 @@ const main = async () => {
 
     console.log('Course indexed', res)
   }
-  const targetedCourse = data.find(course => course['Course URL'] === 'https://www.coursera.org/learn/android-programming-2') as ICourse;
-  
 }
 
 main().then(() => console.log('Done')).catch(err => console.error('Error', err))

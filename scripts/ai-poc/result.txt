@@ -1,0 +1,577 @@
+
+> lms-tutorial@0.1.0 script:run
+> ts-node --project ./tsconfig.script.json --transpile-only -r tsconfig-paths/register scripts/ai-poc/find-path
+
+I want to learn to be a professional content creator
+
+{
+  searchStrings: [
+    'Step 1: Introduction to Social Media Marketing - Start with a beginner course on social media marketing to understand the basics and principles of creating content for social media platforms.',
+    'Step 2: Content Creation Strategies - Take a course that focuses on different content creation strategies for social media, including types of content, storytelling techniques, and engagement tactics.',
+    'Step 3: Social Media Platforms - Learn about specific social media platforms such as Instagram, Facebook, Twitter, and LinkedIn to understand their unique features and best practices for content creation on each platform.',
+    'Step 4: Analytics and Measurement - Gain knowledge on how to analyze social media metrics and measure the success of your content campaigns through a course on social media analytics.',
+    'Step 5: Advanced Content Creation Techniques - Explore advanced techniques in content creation, such as video marketing, influencer collaborations, and user-generated content through specialized courses.'
+  ]
+}
+Search string Step 1: Introduction to Social Media Marketing - Start with a beginner course on social media marketing to understand the basics and principles of creating content for social media platforms.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: 'UHLf6Y4BR7A86jPnlNSn',
+    _score: 1.7172282,
+    _source: {
+      name: 'Introduction to Social Media Marketing',
+      desc: "This course lays the foundation of social media marketing. You�ll learn what social media marketing entails, including the history and the different social media channels that exist. You�ll learn how to select a social media channel that fits your needs, set goals and success metrics, and determine who your target audience is.  By the end of this course, you will be able to:  � Understand the landscape of traditional, digital, and social media marketing � Understand how to become certified as a Digital Marketing Associate  � Understand the major social media platforms, how they function, and what role they play in marketing � Create SMART goals and identify KPIs � Define your target audience and their customer journey � Choose the right social media platforms and learn how to create social media policies  Whatever level of knowledge you start with, this course will help you build a solid foundation for social media marketing and gain applicable skills that will allow you to make your social media marketing efforts more successful and noticeable.  Learners don't need marketing experience, but should have basic internet navigation skills and be eager to participate and connect in social media.  Having a Facebook or Instagram account helps.",
+      Skills: 'Project Management  Marketing  project management certification  social media marketing  Digital Marketing  Social Media  marketing strategy  media market  Leadership and Management  Sales business marketing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/social-media-marketing-introduction',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'GHLt6Y4BR7A86jPnTdkb',
+    _score: 1.6335918,
+    _source: {
+      name: 'Fundamentals of Social Media Advertising',
+      desc: "This course takes a deep dive into paid advertising on social media. Learn how to start advertising on platforms like Facebook and Instagram by developing effective ads. Learn how to work with design teams by capturing the essence of your ad campaign in a creative brief, and understand how privacy policies may affect your ads. Complete the course with a project where you will produce a creative brief with assets you would deliver to a design team for your ad campaign. You�ll also create your first social media ad.   By the end of this course you will be able to: � Determine why and when to invest in paid advertising on social media  � Understand the anatomy of a social media ad and how they differ from organic posts � Evaluate on which platforms to run social media ad campaigns and what makes an ad effective � Craft compelling and effective visuals and copy for social media ads � Learn how to collaborate effectively with others through creative briefs � Build foundational understanding for data, data-based advertising and privacy protection � Build an ad directly from your Facebook Business Page and your Instagram Business Account � Use Instagram Stories Ads effectively to connect with customers � Write a creative brief and create a social media ad  This course is intended for people who want to learn how to create and manage ads on social media. Learners don't need marketing experience, but they have basic internet navigation skills and are eager to participate and connect in social media.  Having a Facebook or Instagram account helps and ideally learners have already completed course 1 (Introduction to Social Media Marketing) and 2 (Social Media Management) in this program.",
+      Skills: 'asset  social media marketing  Digital Marketing  art  Digital Advertising  creative brief  Social Media  Advertising  Marketing  project management certification business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/social-media-advertising-fundamentals',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'v3Le6Y4BR7A86jPnDtN5',
+    _score: 0.82826304,
+    _source: {
+      name: 'Social Media Management',
+      desc: "This course equips you with critical content creation and management skills. You�ll learn how to create effective social media posts and how to create a strong brand to help you build a social media presence. You�ll also learn how to establish an ongoing process to manage your content. This includes setting up a content calendar, managing and moderating your posts, analyzing data for insights and iteration, and how to increase post effectiveness. You will end the course with real-world application of your skills through a content management project.  By the end of this course, you will be able to:  � Establish and manage a social media presence  � Create a Facebook business page and an Instagram account for business � Understand how and why to create content for social media  � Create a brand, tone, and voice for a social media presence � Manage a content calendar for your social media presence � Evaluate the performance of your content on social media and to iterate and optimize the performance � Create a content calendar for your social media presence � Manage social media content using real world data  This course is intended for people who want to learn how to create and manage a business presence on social media, including creating content, interacting and engaging with customers on social media and evaluating the results of different posts.    Learners don't need marketing experience, but they have basic internet navigation skills and are eager to participate and connect in social media.  Having a Facebook or Instagram account helps and ideally learners already completed course 1 (Introduction to Social Media Marketing) in this program.",
+      Skills: 'Digital Marketing  Social Media  social media marketing  project management certification  Project Management  content marketing  Leadership and Management  Public Relations  Marketing  content creation business marketing',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/social-media-management',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'g3Lr6Y4BR7A86jPnmNj1',
+    _score: 0.80252576,
+    _source: {
+      name: 'What is Social?',
+      desc: 'The �What Is Social?" MOOC is for business owners, executives, and marketing professionals who want to significantly improve their abilities to grow their social strategy using effective, proven methodologies. This hands on, "how to" program won�t just tell you how to grow your professional persona using social � you will actually do it! This course is the first in the six-course specialization, Social Media Marketing: How to Profit in a Digital World.   While the course can be audited for free, paid learners will receive additional content beyond the course basics. For MOOC 1, the toolkit includes a special video from Alessandro Acquisti on Big Data and a set of studies done by IBM on engagement and social marketing strategies with bottom-line profits.   This course has been designed to give you the tools, insights, knowledge, and skills to immediately impact your organization. In addition, we will help you network with thought leaders in social.  After completing this course, you and your organization�s staff will be able to position, engage, and grow relationships with the consumers of highest value to you.  Today, we are living in a period of massive disruption. New technologies are changing the way people engage with each other and with the organizations that interest them. This course will start you on the path to growing your own social strategy using effective, proven methodologies.  Additional MOOC 1 faculty include:  * Judy Ungar Franks (President, The Marketing Democracy, Ltd. & Lecturer, Medill Integrated Marketing Communications, Northwestern)',
+      Skills: 'social media marketing  social marketing  Marketing  Social Media Tools  Social Media  Social Networking  audience  social network  market (economics)  media market business marketing',
+      Difficulty: 'Conversant',
+      url: 'https://www.coursera.org/learn/what-is-social',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'FXLk6Y4BR7A86jPnhNaV',
+    _score: 0.80235916,
+    _source: {
+      name: 'Content, Advertising & Social IMC',
+      desc: `Want your content to go viral? Who doesn't! It takes a thoughtful, integrated approach to make content that stands out in our increasingly oversaturated world. In this fourth course of the Social Marketing Specialization - "Content, Advertising & Social IMC" - you will learn how marketers are successfully navigating today's media landscape. You will learn why developing engaging content for your audience is an essential component in effective social marketing. A panel of experts will unlock the paid/owned/earned media riddle and replace it with an integrated who/what/where approach that utilizes platform-specific messaging to grow your market share. This course also includes an overview of the integrated marketing communications strategy for social and how it is being deployed around the globe, as well as gamification tips to keep your audiences coming back for more. In addition, you will learn the secrets to advertising on Facebook and other social sites.  Additional MOOC 4 faculty include: * Judy Ungar Franks (President, The Marketing Democracy, Ltd. & Lecturer, Medill Integrated Marketing Communications, Northwestern) * Steffi Decker (Junior Partner, Chong and Koster) * Joey Strawn (Director of Integrated Marketing, Industrial Strength Marketing)`,
+      Skills: 'marketing strategy  Advertising  Social Media  earned media  Marketing  media market  a/b testing  social media marketing  social marketing  Strategy business marketing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/social-imc',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: '13L36Y4BR7A86jPnnNyJ',
+    _score: 0.78858876,
+    _source: {
+      name: 'Introduction to PicsArt for Social Media Marketing',
+      desc: 'Consumers are constantly overloaded with information and images in social media. Part of social media marketing is learning creative ways to draw attention to products and services, oftentimes on a lean budget. In this course, learners will create an edited photo project for social media using the free version of PicsArt. PicsArt is a web-based photo and video editing program.  Learners can easily create and implement creative edits with online design tools to use when marketing their business.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.',
+      Skills: 'media psychology  Social Media  Video Editing  visual arts  media market  project  Accounting  budget  ordered pair  social media marketing business marketing',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/introduction-to-picsart-for-social-media-marketing',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'KXLw6Y4BR7A86jPnbNoj',
+    _score: 0.7884764,
+    _source: {
+      name: 'Introduction to Social Media Analytics',
+      desc: 'Social media not only provides marketers with a means of communicating with their customers, but also a way to better understand their customers. Viewing consumers� social media activity as the �voice of the consumer,� this session exposes learners to the analytic methods that can be used to convert social media data to marketing insights. In Introduction to Social Media Analytics, learners will be exposed to both the benefits and limitations of relying on social media data compared to traditional methods of marketing research. Partnering with a leading social media listening platform, this course provides learners with the foundational skills of social media listening including the creation of monitors and common social media metrics. Moving beyond social media listening, this course shows learners how social media data can be used to provide insights into market structure and consumers� perceptions of the brand.  Learners will have the opportunity to assess data and discern how to "listen" to the data by watching video lectures and completing activities, practice quizzes, discussion boards, and peer assessments.',
+      Skills: 'analysis  Market Analysis  utility  Data Mining  analytics  Social Media  social media measurement  media monitoring  social media analytics  consumer behaviour business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/social-media-analytics-introduction',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'f3Lg6Y4BR7A86jPnHNTM',
+    _score: 0.78150374,
+    _source: {
+      name: 'Digital Media and Marketing Principles',
+      desc: 'The digital revolution has led to a titanic shift in the landscape of the marketing communication, while also creating new opportunities for businesses to reach and engage consumers through smart, social, and mobile media technologies. In this course, you will learn about the impacts of digital technologies on marketing communication strategies and practices. By understanding the underlying processes of marketing communication and the core features of new media technologies, you can strategically select the appropriate channels to deliver the right marketing message to the right audience at the right moment.',
+      Skills: 'Marketing  mobile marketing  Strategy  marketing channel  market (economics)  Digital Marketing  digital media  media market  Social Media  social media marketing business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/marketing-channels',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Search string Step 2: Content Creation Strategies - Take a course that focuses on different content creation strategies for social media, including types of content, storytelling techniques, and engagement tactics.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: 'x3Le6Y4BR7A86jPnIdOj',
+    _score: 1.5671384,
+    _source: {
+      name: 'Content Strategy for Professionals: Expanding Your Content�s Reach',
+      desc: "In this, the third Content Strategy course, participants will learn actionable ways to grow internal and external audiences.  They will deepen their understanding about those target individuals and will use a host of known and emerging tools and social networks to meaningfully reach them. As its name makes clear, this course will expand your content's impact and reach.   You will begin by learning how to utilize content trends to jump-start your organization's influence. You'll also look at how to engage with multi-channel digital communities across all social media. Finally, you'll hear about some of the best ways to enhance your content with new interactivity tools and gamification.  In this information age, every organization depends on its employees and those it serves to understand where it is going and what advances the organization has made. Content Strategy will enable you to tell your important stories with far greater impact and to a large, more valuable audience.  Guest lecturers in this course include: -- Randy Hlavac, Lecturer, Medill, Northwestern (and lead professor of the Social Media Marketing Specialization also on Coursera)  -- Emily Withrow, Assistant Professor, Medill, Northwestern",
+      Skills: 'content marketing  copywriting  content strategy  lifestyle trends and media  Communication  social network  gamification  blogging  interactivity  Strategy business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/increase-reach',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'v3Le6Y4BR7A86jPnDtN5',
+    _score: 0.8132694,
+    _source: {
+      name: 'Social Media Management',
+      desc: "This course equips you with critical content creation and management skills. You�ll learn how to create effective social media posts and how to create a strong brand to help you build a social media presence. You�ll also learn how to establish an ongoing process to manage your content. This includes setting up a content calendar, managing and moderating your posts, analyzing data for insights and iteration, and how to increase post effectiveness. You will end the course with real-world application of your skills through a content management project.  By the end of this course, you will be able to:  � Establish and manage a social media presence  � Create a Facebook business page and an Instagram account for business � Understand how and why to create content for social media  � Create a brand, tone, and voice for a social media presence � Manage a content calendar for your social media presence � Evaluate the performance of your content on social media and to iterate and optimize the performance � Create a content calendar for your social media presence � Manage social media content using real world data  This course is intended for people who want to learn how to create and manage a business presence on social media, including creating content, interacting and engaging with customers on social media and evaluating the results of different posts.    Learners don't need marketing experience, but they have basic internet navigation skills and are eager to participate and connect in social media.  Having a Facebook or Instagram account helps and ideally learners already completed course 1 (Introduction to Social Media Marketing) in this program.",
+      Skills: 'Digital Marketing  Social Media  social media marketing  project management certification  Project Management  content marketing  Leadership and Management  Public Relations  Marketing  content creation business marketing',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/social-media-management',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'I3L46Y4BR7A86jPnet3g',
+    _score: 0.81318146,
+    _source: {
+      name: 'Content Strategy for Professionals: Managing Content',
+      desc: `In the second course of the Content Strategy Specialization - "Managing Content" - you will dive deeper into Content Strategy by learning some great options for managing your important content once it's been created. You will look at media platforms and how best to tell an organization�s �content story� across those platforms using a human-centered design. Then, you'll take a close look at ways to best utilize social and mobile media, as well as some of the issues around insourcing/outsourcing content. Finally, you'll get an inside look at how legal issues associated with Content Strategy are handled in companies large and small around the globe.  This course serves professionals who want to learn to manage their trustable, engaging and often interactive content to advance their enterprise�s future and their own career in it. As a bonus, we've also included a toolkit to download and take back to work. Can�t remember the 3 truths that frame all communications in the digital age? Need to convince a co-worker that a human centered design approach is best for your project? Want to review how you create an engaging brand for your content? You will find answers to those questions and more in the toolkit.  Guest lecturers in this course include: -- Emily Withrow, Assistant Professor, Medill, Northwestern -- Jeremy Gilbert, Director of Strategic Initiatives, The Washington Post -- Randy Hlavac, Lecturer, Medill, Northwestern (and lead professor of the Social Media Marketing Specialization also on Coursera)`,
+      Skills: 'content creation  Strategy  content marketing  content strategy  blogging  content management system  multimedia  consumer behaviour  copywriting  Communication business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/content-management-strategy',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'FnLq6Y4BR7A86jPnY9ie',
+    _score: 0.8130378,
+    _source: {
+      name: "Content Strategy for Professionals: Ensuring Your Content's Impact",
+      desc: "In the fourth course of the Content Strategy Specialization - Ensuring Your Content's Impact - you will look at visual communication and the ways you can be more effective with your font choices, photography, and video. You'll also dive deeper into social communities to help you understand how these communities form and what you can do to build your role within them. The last module is pivotal for Content Strategists. It will help you to understand how best to measure your content to maximize its effectiveness relative to the time you commit to it.  While this MOOC does share the theoretical elements of Content Strategy, there is a much greater emphasis on its application. Creating trend-worthy headlines and blogs, social media plans, digital measurement templates, video and photography content are all skills you will have in your toolkit by the end of the MOOC, ready to apply at your organization. And speaking of toolkits, we have included one that you can download and take back to work which includes the practical tips from the learnings in this course as well as the previous one on Expanding Your Content's Reach.  Guest lecturers in this course include: -- Zach Wise, Associate Professor, Medill Northwestern -- Rich Gordon, Professor & Director of Digital Innovation, Medill, Northwestern -- Randy Hlavac, Lecturer, Medill, Northwestern (and lead professor of the Social Media Marketing Specialization also on Coursera)",
+      Skills: 'content marketing  Communication  content strategy  copywriting  Innovation  visual communication  blogging  Strategy  content management system  media (communication) business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/effective-content-strategy',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: '8HLp6Y4BR7A86jPn59e8',
+    _score: 0.8032336,
+    _source: {
+      name: 'Content Strategy for Professionals: Engaging Audiences',
+      desc: 'In this course, professionals at all levels of an organization will learn the best ways to engage an audience they want and need by smartly implementing their important, strategic stories and information and by using proven tools and techniques to enhance an audience�s experiences and interest.  Content Strategy is a conversation that provides thought-leadership. It starts a �conversation� with users and stakeholders inside and outside an organization.  Conversations are the natural way people think about complex issues. Conversations also enable people to develop �stories,� which lead to understanding and helpful mental pictures. Content Strategy practitioners are at all levels of the best enterprises � in all departments and sectors from the top leader to the newcomer in the ranks.   In this complex information age, forward-thinking employees know that if they and their organizations are to thrive, they need to go beyond their job descriptions. They must master the most demanding communications frontier � creating engaging, strategic, honest stories and information that is valued by their most important audiences. In turn that will make their enterprise stand out.   Regardless of their area of work, position or expertise, Content Strategy practitioners know how to use words, pictures, video, and social and mobile media to interact with their most important constituents with trustable, actionable information that the audience values and will use. The strategic content they produce enhances the user�s lives and deepens their understanding and engagement with the organization.  Guest lecturers in this course include: -- Rachel Davis Mersey, Associate Professor, Medill, Northwestern -- Ed Malthouse, Theodore R. and Annie Laurie Sills Professor of Integrated Marketing Communications, Medill, Northwestern -- Bobby Calder, Charles H. Kellstadt Professor of Marketing & Director of the Center for Cultural Marketing, Kellogg, Northwestern -- Steven Duke, Associate Professor, Medill, Northwestern -- Janice Castro, Assistant Professor Emerita, Medill, Nothwestern',
+      Skills: 'content strategy  persona (user experience)  Strategy  content creation  User Experience  marketing communications  experience  Marketing  audience  content marketing business marketing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/engagement-strategy',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'inLu6Y4BR7A86jPni9nY',
+    _score: 0.79901123,
+    _source: {
+      name: 'The Strategy of Content Marketing',
+      desc: 'This course is a partnership between the leading content marketing authority, Copyblogger, and UC Davis Continuing and Professional Education. In this course, you will learn the core strategies content marketers use to acquire and retain customers profitably. Specifically, you will learn how to develop, organize and implement a content marketing strategy, analyze and measure the effectiveness of content marketing, write compelling copy, use a strategic framework when writing, and build your professional brand and authority through content marketing. You will also learn how to put the ideas presented to you into action and build your own personal brand through content marketing.',
+      Skills: 'Marketing  Writing  content strategy  Marketing Content Development  content marketing  Marketing Copy  Strategy  Content Development  Leadership and Management  marketing strategy business marketing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/content-marketing',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'NnLk6Y4BR7A86jPn49b0',
+    _score: 0.78148526,
+    _source: {
+      name: 'Digital Media and Marketing Strategies',
+      desc: 'The proliferation of digital technology gives businesses a diverse new set of tools to reach, engage, monitor, and respond to consumers to an unprecedented degree. The aggregated and voluminous digital data can also be leveraged to better target specific consumer segments. Following the Digital Marketing Channels: The Landscape, this course aims to give you a deeper understanding of core processes of planning a digital marketing campaign and the role of various digital channels in an integrated marketing communication.',
+      Skills: 'market (economics)  Digital Marketing  Planning  media market  Social Media  digital media  Marketing  digital strategy  Strategy  marketing strategy business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/marketing-plan',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'THLz6Y4BR7A86jPnZNtM',
+    _score: 0.77292573,
+    _source: {
+      name: 'Advanced Content and Social Tactics to Optimize SEO',
+      desc: 'Discover the content marketing and social media ecosystems and how these interconnected channels drive search results to a website. Leverage content marketing and social media as part of your SEO strategy, and how to use influence marketing to establish a website�s authority.',
+      Skills: 'Social Media  mathematical optimization  media market  influencer marketing  Building Relationships  social media marketing  Marketing  search engine optimization  Digital Marketing  content marketing business marketing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/seo-tactics',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'TXLq6Y4BR7A86jPn_Ng3',
+    _score: 0.75262374,
+    _source: {
+      name: 'Strategies for Effective Engagement',
+      desc: 'Being a successful professional requires creative, innovative, and entrepreneurial thinking, and to continually have a problem-solving mindset. As a systems thinker, you are expected to engage complex problems from multiple perspectives and different angles, viewing them holistically. This course exposes the student to a variety of tools used to engage stakeholders, collect data, and more deeply understand the community. This course will have three modules. Techniques for Data Collection will reinforce the importance of built trust and rapport with your client and stakeholders, which in turn creates buy in. Students will then learn how to enter a community, conduct rapid assessments to provide a snapshot of the community or organization, and maintain ethical conduct throughout. System Mapping & Analysis will focus on mapping systems and stakeholders, two different techniques that are useful to visualize systems and identify and evaluate a network of stakeholders. Finally, in Conducting Interviews & Surveys, students will learn different techniques to collect information. From focus group interview to one-on-one interviews, to surveys, systems thinkers need a mix of approaches in their toolbox to identify assess needs and assets, engage stakeholders, and collect information throughout all phases of project implementation.',
+      Skills: 'community engagement  Map  community development  interact  Strategy  asset  rapport  Mapping  interview  strategic thinking business leadership-and-management',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/effective-engagement',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Search string Step 3: Social Media Platforms - Learn about specific social media platforms such as Instagram, Facebook, Twitter, and LinkedIn to understand their unique features and best practices for content creation on each platform.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: 'v3Le6Y4BR7A86jPnDtN5',
+    _score: 1.5777829,
+    _source: {
+      name: 'Social Media Management',
+      desc: "This course equips you with critical content creation and management skills. You�ll learn how to create effective social media posts and how to create a strong brand to help you build a social media presence. You�ll also learn how to establish an ongoing process to manage your content. This includes setting up a content calendar, managing and moderating your posts, analyzing data for insights and iteration, and how to increase post effectiveness. You will end the course with real-world application of your skills through a content management project.  By the end of this course, you will be able to:  � Establish and manage a social media presence  � Create a Facebook business page and an Instagram account for business � Understand how and why to create content for social media  � Create a brand, tone, and voice for a social media presence � Manage a content calendar for your social media presence � Evaluate the performance of your content on social media and to iterate and optimize the performance � Create a content calendar for your social media presence � Manage social media content using real world data  This course is intended for people who want to learn how to create and manage a business presence on social media, including creating content, interacting and engaging with customers on social media and evaluating the results of different posts.    Learners don't need marketing experience, but they have basic internet navigation skills and are eager to participate and connect in social media.  Having a Facebook or Instagram account helps and ideally learners already completed course 1 (Introduction to Social Media Marketing) in this program.",
+      Skills: 'Digital Marketing  Social Media  social media marketing  project management certification  Project Management  content marketing  Leadership and Management  Public Relations  Marketing  content creation business marketing',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/social-media-management',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'UHLf6Y4BR7A86jPnlNSn',
+    _score: 1.5567417,
+    _source: {
+      name: 'Introduction to Social Media Marketing',
+      desc: "This course lays the foundation of social media marketing. You�ll learn what social media marketing entails, including the history and the different social media channels that exist. You�ll learn how to select a social media channel that fits your needs, set goals and success metrics, and determine who your target audience is.  By the end of this course, you will be able to:  � Understand the landscape of traditional, digital, and social media marketing � Understand how to become certified as a Digital Marketing Associate  � Understand the major social media platforms, how they function, and what role they play in marketing � Create SMART goals and identify KPIs � Define your target audience and their customer journey � Choose the right social media platforms and learn how to create social media policies  Whatever level of knowledge you start with, this course will help you build a solid foundation for social media marketing and gain applicable skills that will allow you to make your social media marketing efforts more successful and noticeable.  Learners don't need marketing experience, but should have basic internet navigation skills and be eager to participate and connect in social media.  Having a Facebook or Instagram account helps.",
+      Skills: 'Project Management  Marketing  project management certification  social media marketing  Digital Marketing  Social Media  marketing strategy  media market  Leadership and Management  Sales business marketing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/social-media-marketing-introduction',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'GHLt6Y4BR7A86jPnTdkb',
+    _score: 1.542572,
+    _source: {
+      name: 'Fundamentals of Social Media Advertising',
+      desc: "This course takes a deep dive into paid advertising on social media. Learn how to start advertising on platforms like Facebook and Instagram by developing effective ads. Learn how to work with design teams by capturing the essence of your ad campaign in a creative brief, and understand how privacy policies may affect your ads. Complete the course with a project where you will produce a creative brief with assets you would deliver to a design team for your ad campaign. You�ll also create your first social media ad.   By the end of this course you will be able to: � Determine why and when to invest in paid advertising on social media  � Understand the anatomy of a social media ad and how they differ from organic posts � Evaluate on which platforms to run social media ad campaigns and what makes an ad effective � Craft compelling and effective visuals and copy for social media ads � Learn how to collaborate effectively with others through creative briefs � Build foundational understanding for data, data-based advertising and privacy protection � Build an ad directly from your Facebook Business Page and your Instagram Business Account � Use Instagram Stories Ads effectively to connect with customers � Write a creative brief and create a social media ad  This course is intended for people who want to learn how to create and manage ads on social media. Learners don't need marketing experience, but they have basic internet navigation skills and are eager to participate and connect in social media.  Having a Facebook or Instagram account helps and ideally learners have already completed course 1 (Introduction to Social Media Marketing) and 2 (Social Media Management) in this program.",
+      Skills: 'asset  social media marketing  Digital Marketing  art  Digital Advertising  creative brief  Social Media  Advertising  Marketing  project management certification business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/social-media-advertising-fundamentals',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'InLf6Y4BR7A86jPnGdRw',
+    _score: 0.8024567,
+    _source: {
+      name: 'Social Media Advertising',
+      desc: 'Social media platforms are driven by digital advertising. As a result, social media advertising is affordable and can be purchased at almost any budget. Targeting options in social media advertising are also sophisticated. It is possible to tailor ads around a user�s behaviors (e.g., likes, posts and clicks). This course unpacks small business use cases of Facebook, Instagram and Twitter advertising. From basic campaigns, to Advanced techniques including lookalike modeling and audience retargeting, this course shows how to effectively advertise on three major social media platforms.',
+      Skills: 'Marketing  media market  Social Media  Entrepreneurship  Social Media Platforms  advertising campaigns  influencer marketing  social media marketing  Digital Advertising  Advertising business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/social-media-advertising',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'FXLk6Y4BR7A86jPnhNaV',
+    _score: 0.7733837,
+    _source: {
+      name: 'Content, Advertising & Social IMC',
+      desc: `Want your content to go viral? Who doesn't! It takes a thoughtful, integrated approach to make content that stands out in our increasingly oversaturated world. In this fourth course of the Social Marketing Specialization - "Content, Advertising & Social IMC" - you will learn how marketers are successfully navigating today's media landscape. You will learn why developing engaging content for your audience is an essential component in effective social marketing. A panel of experts will unlock the paid/owned/earned media riddle and replace it with an integrated who/what/where approach that utilizes platform-specific messaging to grow your market share. This course also includes an overview of the integrated marketing communications strategy for social and how it is being deployed around the globe, as well as gamification tips to keep your audiences coming back for more. In addition, you will learn the secrets to advertising on Facebook and other social sites.  Additional MOOC 4 faculty include: * Judy Ungar Franks (President, The Marketing Democracy, Ltd. & Lecturer, Medill Integrated Marketing Communications, Northwestern) * Steffi Decker (Junior Partner, Chong and Koster) * Joey Strawn (Director of Integrated Marketing, Industrial Strength Marketing)`,
+      Skills: 'marketing strategy  Advertising  Social Media  earned media  Marketing  media market  a/b testing  social media marketing  social marketing  Strategy business marketing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/social-imc',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: '13L36Y4BR7A86jPnnNyJ',
+    _score: 0.7590133,
+    _source: {
+      name: 'Introduction to PicsArt for Social Media Marketing',
+      desc: 'Consumers are constantly overloaded with information and images in social media. Part of social media marketing is learning creative ways to draw attention to products and services, oftentimes on a lean budget. In this course, learners will create an edited photo project for social media using the free version of PicsArt. PicsArt is a web-based photo and video editing program.  Learners can easily create and implement creative edits with online design tools to use when marketing their business.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.',
+      Skills: 'media psychology  Social Media  Video Editing  visual arts  media market  project  Accounting  budget  ordered pair  social media marketing business marketing',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/introduction-to-picsart-for-social-media-marketing',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'KXLw6Y4BR7A86jPnbNoj',
+    _score: 0.75047207,
+    _source: {
+      name: 'Introduction to Social Media Analytics',
+      desc: 'Social media not only provides marketers with a means of communicating with their customers, but also a way to better understand their customers. Viewing consumers� social media activity as the �voice of the consumer,� this session exposes learners to the analytic methods that can be used to convert social media data to marketing insights. In Introduction to Social Media Analytics, learners will be exposed to both the benefits and limitations of relying on social media data compared to traditional methods of marketing research. Partnering with a leading social media listening platform, this course provides learners with the foundational skills of social media listening including the creation of monitors and common social media metrics. Moving beyond social media listening, this course shows learners how social media data can be used to provide insights into market structure and consumers� perceptions of the brand.  Learners will have the opportunity to assess data and discern how to "listen" to the data by watching video lectures and completing activities, practice quizzes, discussion boards, and peer assessments.',
+      Skills: 'analysis  Market Analysis  utility  Data Mining  analytics  Social Media  social media measurement  media monitoring  social media analytics  consumer behaviour business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/social-media-analytics-introduction',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Search string Step 4: Analytics and Measurement - Gain knowledge on how to analyze social media metrics and measure the success of your content campaigns through a course on social media analytics.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: 'IHLt6Y4BR7A86jPnY9lM',
+    _score: 1.6641659,
+    _source: {
+      name: 'Measure and Optimize Social Media Marketing Campaigns',
+      desc: "This course provides you with skills to optimize your social media marketing efforts. Learn to evaluate and interpret the results of your advertising campaigns. Learn how to assess advertising effectiveness through lift studies and optimize your campaigns with A/B testing. Understand how advertising effectiveness is measured across platforms and devices, learn how to evaluate the ROI of your marketing, and master how to communicate your social media marketing results to others in the company. You will end the course with a project where you will gain hands-on experience with communicating results and formulating recommendations based on the results of a social marketing campaign.   By the end of this course, you will be able to: � Use basic and customized reports to evaluate the results of your advertising campaign  � Evaluate advertising effectiveness using lift tests � Understand different techniques used to measure the effectiveness of marketing campaigns across channels  � Implement an A/B test to optimize your campaign � Analyze dashboards and evaluate the ROI from your social media marketing efforts � Present and communicate your findings to a team  This course is for people who want to learn how to analyze their campaign marketing results, optimize their campaigns and effectively communicate findings to their teams. Learners don't need marketing experience but should have basic internet navigation skills and be eager to participate and connect on social media. Having a Facebook or Instagram account helps, and ideally, learners have already completed the four previous courses in this program.",
+      Skills: 'project management certification  content marketing  advertising campaigns  Social Media  social media marketing  Project Management  Digital Marketing  measurement  mathematical optimization  Marketing business marketing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/measure-and-optimize-social-media-marketing-campaigns',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'KXLw6Y4BR7A86jPnbNoj',
+    _score: 1.6607225,
+    _source: {
+      name: 'Introduction to Social Media Analytics',
+      desc: 'Social media not only provides marketers with a means of communicating with their customers, but also a way to better understand their customers. Viewing consumers� social media activity as the �voice of the consumer,� this session exposes learners to the analytic methods that can be used to convert social media data to marketing insights. In Introduction to Social Media Analytics, learners will be exposed to both the benefits and limitations of relying on social media data compared to traditional methods of marketing research. Partnering with a leading social media listening platform, this course provides learners with the foundational skills of social media listening including the creation of monitors and common social media metrics. Moving beyond social media listening, this course shows learners how social media data can be used to provide insights into market structure and consumers� perceptions of the brand.  Learners will have the opportunity to assess data and discern how to "listen" to the data by watching video lectures and completing activities, practice quizzes, discussion boards, and peer assessments.',
+      Skills: 'analysis  Market Analysis  utility  Data Mining  analytics  Social Media  social media measurement  media monitoring  social media analytics  consumer behaviour business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/social-media-analytics-introduction',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'FXLk6Y4BR7A86jPnhNaV',
+    _score: 0.82290894,
+    _source: {
+      name: 'Content, Advertising & Social IMC',
+      desc: `Want your content to go viral? Who doesn't! It takes a thoughtful, integrated approach to make content that stands out in our increasingly oversaturated world. In this fourth course of the Social Marketing Specialization - "Content, Advertising & Social IMC" - you will learn how marketers are successfully navigating today's media landscape. You will learn why developing engaging content for your audience is an essential component in effective social marketing. A panel of experts will unlock the paid/owned/earned media riddle and replace it with an integrated who/what/where approach that utilizes platform-specific messaging to grow your market share. This course also includes an overview of the integrated marketing communications strategy for social and how it is being deployed around the globe, as well as gamification tips to keep your audiences coming back for more. In addition, you will learn the secrets to advertising on Facebook and other social sites.  Additional MOOC 4 faculty include: * Judy Ungar Franks (President, The Marketing Democracy, Ltd. & Lecturer, Medill Integrated Marketing Communications, Northwestern) * Steffi Decker (Junior Partner, Chong and Koster) * Joey Strawn (Director of Integrated Marketing, Industrial Strength Marketing)`,
+      Skills: 'marketing strategy  Advertising  Social Media  earned media  Marketing  media market  a/b testing  social media marketing  social marketing  Strategy business marketing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/social-imc',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'v3Le6Y4BR7A86jPnDtN5',
+    _score: 0.80428815,
+    _source: {
+      name: 'Social Media Management',
+      desc: "This course equips you with critical content creation and management skills. You�ll learn how to create effective social media posts and how to create a strong brand to help you build a social media presence. You�ll also learn how to establish an ongoing process to manage your content. This includes setting up a content calendar, managing and moderating your posts, analyzing data for insights and iteration, and how to increase post effectiveness. You will end the course with real-world application of your skills through a content management project.  By the end of this course, you will be able to:  � Establish and manage a social media presence  � Create a Facebook business page and an Instagram account for business � Understand how and why to create content for social media  � Create a brand, tone, and voice for a social media presence � Manage a content calendar for your social media presence � Evaluate the performance of your content on social media and to iterate and optimize the performance � Create a content calendar for your social media presence � Manage social media content using real world data  This course is intended for people who want to learn how to create and manage a business presence on social media, including creating content, interacting and engaging with customers on social media and evaluating the results of different posts.    Learners don't need marketing experience, but they have basic internet navigation skills and are eager to participate and connect in social media.  Having a Facebook or Instagram account helps and ideally learners already completed course 1 (Introduction to Social Media Marketing) in this program.",
+      Skills: 'Digital Marketing  Social Media  social media marketing  project management certification  Project Management  content marketing  Leadership and Management  Public Relations  Marketing  content creation business marketing',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/social-media-management',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: '_HIA6o4BR7A86jPnVt_u',
+    _score: 0.8022684,
+    _source: {
+      name: 'Digital Marketing Analytics in Practice',
+      desc: "Successfully marketing brands today requires a well-balanced blend of art and science. This course introduces students to the science of web analytics while casting a keen eye toward the artful use of numbers found in the digital space. The goal is to provide the foundation needed to apply data analytics to real-world challenges marketers confront daily. Students will learn to identify the web analytic tool right for their specific needs; understand valid and reliable ways to collect, analyze, and visualize data from the web; and utilize data in decision making for agencies, organizations or clients.  Digital Analytics for Marketing Professionals: Marketing Analytics in Practice is the second in a two-part series of complementary courses and focuses on the skills and practical abilities analysts need to be successful in today's digital business world.  This course is part of the iMBA offered by the University of Illinois, a flexible, fully-accredited online MBA at an incredibly competitive price. For more information, please see the Resource page in this course and onlinemba.illinois.edu.",
+      Skills: 'Data Visualization  market (economics)  Planning  Marketing  analysis  Leadership and Management  Data Analysis  analytics  Digital Marketing  Market Analysis data-science data-analysis',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/digital-analytics',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'UHLf6Y4BR7A86jPnlNSn',
+    _score: 0.8003509,
+    _source: {
+      name: 'Introduction to Social Media Marketing',
+      desc: "This course lays the foundation of social media marketing. You�ll learn what social media marketing entails, including the history and the different social media channels that exist. You�ll learn how to select a social media channel that fits your needs, set goals and success metrics, and determine who your target audience is.  By the end of this course, you will be able to:  � Understand the landscape of traditional, digital, and social media marketing � Understand how to become certified as a Digital Marketing Associate  � Understand the major social media platforms, how they function, and what role they play in marketing � Create SMART goals and identify KPIs � Define your target audience and their customer journey � Choose the right social media platforms and learn how to create social media policies  Whatever level of knowledge you start with, this course will help you build a solid foundation for social media marketing and gain applicable skills that will allow you to make your social media marketing efforts more successful and noticeable.  Learners don't need marketing experience, but should have basic internet navigation skills and be eager to participate and connect in social media.  Having a Facebook or Instagram account helps.",
+      Skills: 'Project Management  Marketing  project management certification  social media marketing  Digital Marketing  Social Media  marketing strategy  media market  Leadership and Management  Sales business marketing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/social-media-marketing-introduction',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'mnLj6Y4BR7A86jPnJtXW',
+    _score: 0.7920985,
+    _source: {
+      name: 'Social Media Data Analytics',
+      desc: 'Learner Outcomes: After taking this course, you will be able to: - Utilize various Application Programming Interface (API) services to collect data from different social media sources such as YouTube, Twitter, and Flickr. - Process the collected data - primarily structured - using methods involving correlation, regression, and classification to derive insights about the sources and people who generated that data. - Analyze unstructured data - primarily textual comments - for sentiments expressed in them. - Use different tools for collecting, analyzing, and exploring social media data for research and development purposes.  Sample Learner Story: Data analyst wanting to leverage social media data. Isabella is a Data Analyst working as a consultant for a multinational corporation. She has experience working with Web analysis tools as well as marketing data. She wants to now expand into social media arena, trying to leverage the vast amounts of data available through various social media channels. Specifically, she wants to see how their clients, partners, and competitors view their products/services and talk about them. She hopes to build a new workflow of data analytics that incorporates traditional data processing using Web and marketing tools, as well as newer methods of using social media data.  Sample Job Roles requiring these skills:  - Social Media Analyst - Web Analyst - Data Analyst - Marketing and Public Relations   Final Project Deliverable/ Artifact: The course will have a series of small assignments or mini-projects that involve data collection, analysis, and presentation involving various social media sources using the techniques learned in the class.  The course was developed by Dr. Chirag Shah while he was a faculty member at Rutgers University. He is currently a faculty member at University of Washington.',
+      Skills: 'Data Model  sentiment analysis  Computer Programming  text mining  Python Programming  social media analytics  Data Analysis  Social Media  analysis  R Programming data-science data-analysis',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/social-media-data-analytics',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'RnL-6Y4BR7A86jPnbd8W',
+    _score: 0.7803516,
+    _source: {
+      name: 'Digital Marketing Analytics in Theory',
+      desc: "Successfully marketing brands today requires a well-balanced blend of art and science. This course introduces students to the science of web analytics while casting a keen eye toward the artful use of numbers found in the digital space. The goal is to provide the foundation needed to apply data analytics to real-world challenges marketers confront daily. Students will learn to identify the web analytic tool right for their specific needs; understand valid and reliable ways to collect, analyze, and visualize data from the web; and utilize data in decision making for agencies, organizations or clients.  Digital Analytics for Marketing Professionals: Marketing Analytics in Theory is the first in a two-part series of complementary courses and focuses on the background information and frameworks analysts need to be successful in today's digital business world.  This course is part of the iMBA offered by the University of Illinois, a flexible, fully-accredited online MBA at an incredibly competitive price. For more information, please see the Resource page in this course and onlinemba.illinois.edu.",
+      Skills: 'web  analytics  Digital Marketing  web analytics  Marketing  analysis  market (economics)  Market Analysis  Data Analysis  moment of truth (marketing) data-science data-analysis',
+      Difficulty: 'Conversant',
+      url: 'https://www.coursera.org/learn/marketing-analytics',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Search string Step 5: Advanced Content Creation Techniques - Explore advanced techniques in content creation, such as video marketing, influencer collaborations, and user-generated content through specialized courses.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: 'inLu6Y4BR7A86jPni9nY',
+    _score: 1.5669892,
+    _source: {
+      name: 'The Strategy of Content Marketing',
+      desc: 'This course is a partnership between the leading content marketing authority, Copyblogger, and UC Davis Continuing and Professional Education. In this course, you will learn the core strategies content marketers use to acquire and retain customers profitably. Specifically, you will learn how to develop, organize and implement a content marketing strategy, analyze and measure the effectiveness of content marketing, write compelling copy, use a strategic framework when writing, and build your professional brand and authority through content marketing. You will also learn how to put the ideas presented to you into action and build your own personal brand through content marketing.',
+      Skills: 'Marketing  Writing  content strategy  Marketing Content Development  content marketing  Marketing Copy  Strategy  Content Development  Leadership and Management  marketing strategy business marketing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/content-marketing',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'x3Le6Y4BR7A86jPnIdOj',
+    _score: 1.563009,
+    _source: {
+      name: 'Content Strategy for Professionals: Expanding Your Content�s Reach',
+      desc: "In this, the third Content Strategy course, participants will learn actionable ways to grow internal and external audiences.  They will deepen their understanding about those target individuals and will use a host of known and emerging tools and social networks to meaningfully reach them. As its name makes clear, this course will expand your content's impact and reach.   You will begin by learning how to utilize content trends to jump-start your organization's influence. You'll also look at how to engage with multi-channel digital communities across all social media. Finally, you'll hear about some of the best ways to enhance your content with new interactivity tools and gamification.  In this information age, every organization depends on its employees and those it serves to understand where it is going and what advances the organization has made. Content Strategy will enable you to tell your important stories with far greater impact and to a large, more valuable audience.  Guest lecturers in this course include: -- Randy Hlavac, Lecturer, Medill, Northwestern (and lead professor of the Social Media Marketing Specialization also on Coursera)  -- Emily Withrow, Assistant Professor, Medill, Northwestern",
+      Skills: 'content marketing  copywriting  content strategy  lifestyle trends and media  Communication  social network  gamification  blogging  interactivity  Strategy business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/increase-reach',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'I3L46Y4BR7A86jPnet3g',
+    _score: 1.5468584,
+    _source: {
+      name: 'Content Strategy for Professionals: Managing Content',
+      desc: `In the second course of the Content Strategy Specialization - "Managing Content" - you will dive deeper into Content Strategy by learning some great options for managing your important content once it's been created. You will look at media platforms and how best to tell an organization�s �content story� across those platforms using a human-centered design. Then, you'll take a close look at ways to best utilize social and mobile media, as well as some of the issues around insourcing/outsourcing content. Finally, you'll get an inside look at how legal issues associated with Content Strategy are handled in companies large and small around the globe.  This course serves professionals who want to learn to manage their trustable, engaging and often interactive content to advance their enterprise�s future and their own career in it. As a bonus, we've also included a toolkit to download and take back to work. Can�t remember the 3 truths that frame all communications in the digital age? Need to convince a co-worker that a human centered design approach is best for your project? Want to review how you create an engaging brand for your content? You will find answers to those questions and more in the toolkit.  Guest lecturers in this course include: -- Emily Withrow, Assistant Professor, Medill, Northwestern -- Jeremy Gilbert, Director of Strategic Initiatives, The Washington Post -- Randy Hlavac, Lecturer, Medill, Northwestern (and lead professor of the Social Media Marketing Specialization also on Coursera)`,
+      Skills: 'content creation  Strategy  content marketing  content strategy  blogging  content management system  multimedia  consumer behaviour  copywriting  Communication business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/content-management-strategy',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'FnLq6Y4BR7A86jPnY9ie',
+    _score: 0.8128917,
+    _source: {
+      name: "Content Strategy for Professionals: Ensuring Your Content's Impact",
+      desc: "In the fourth course of the Content Strategy Specialization - Ensuring Your Content's Impact - you will look at visual communication and the ways you can be more effective with your font choices, photography, and video. You'll also dive deeper into social communities to help you understand how these communities form and what you can do to build your role within them. The last module is pivotal for Content Strategists. It will help you to understand how best to measure your content to maximize its effectiveness relative to the time you commit to it.  While this MOOC does share the theoretical elements of Content Strategy, there is a much greater emphasis on its application. Creating trend-worthy headlines and blogs, social media plans, digital measurement templates, video and photography content are all skills you will have in your toolkit by the end of the MOOC, ready to apply at your organization. And speaking of toolkits, we have included one that you can download and take back to work which includes the practical tips from the learnings in this course as well as the previous one on Expanding Your Content's Reach.  Guest lecturers in this course include: -- Zach Wise, Associate Professor, Medill Northwestern -- Rich Gordon, Professor & Director of Digital Innovation, Medill, Northwestern -- Randy Hlavac, Lecturer, Medill, Northwestern (and lead professor of the Social Media Marketing Specialization also on Coursera)",
+      Skills: 'content marketing  Communication  content strategy  copywriting  Innovation  visual communication  blogging  Strategy  content management system  media (communication) business marketing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/effective-content-strategy',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'FXLk6Y4BR7A86jPnhNaV',
+    _score: 0.8005028,
+    _source: {
+      name: 'Content, Advertising & Social IMC',
+      desc: `Want your content to go viral? Who doesn't! It takes a thoughtful, integrated approach to make content that stands out in our increasingly oversaturated world. In this fourth course of the Social Marketing Specialization - "Content, Advertising & Social IMC" - you will learn how marketers are successfully navigating today's media landscape. You will learn why developing engaging content for your audience is an essential component in effective social marketing. A panel of experts will unlock the paid/owned/earned media riddle and replace it with an integrated who/what/where approach that utilizes platform-specific messaging to grow your market share. This course also includes an overview of the integrated marketing communications strategy for social and how it is being deployed around the globe, as well as gamification tips to keep your audiences coming back for more. In addition, you will learn the secrets to advertising on Facebook and other social sites.  Additional MOOC 4 faculty include: * Judy Ungar Franks (President, The Marketing Democracy, Ltd. & Lecturer, Medill Integrated Marketing Communications, Northwestern) * Steffi Decker (Junior Partner, Chong and Koster) * Joey Strawn (Director of Integrated Marketing, Industrial Strength Marketing)`,
+      Skills: 'marketing strategy  Advertising  Social Media  earned media  Marketing  media market  a/b testing  social media marketing  social marketing  Strategy business marketing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/social-imc',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'THLz6Y4BR7A86jPnZNtM',
+    _score: 0.77534956,
+    _source: {
+      name: 'Advanced Content and Social Tactics to Optimize SEO',
+      desc: 'Discover the content marketing and social media ecosystems and how these interconnected channels drive search results to a website. Leverage content marketing and social media as part of your SEO strategy, and how to use influence marketing to establish a website�s authority.',
+      Skills: 'Social Media  mathematical optimization  media market  influencer marketing  Building Relationships  social media marketing  Marketing  search engine optimization  Digital Marketing  content marketing business marketing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/seo-tactics',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'w3L06Y4BR7A86jPnptsl',
+    _score: 0.7393547,
+    _source: {
+      name: 'Brand & Content Marketing',
+      desc: "Brand & Content Marketing is a IE University course for professionals who want to learn how to produce memorable content through quality storytelling.   Students will go through a learning process that will start with a deep understanding of the term Branded Content and its main differences with traditional advertising, simultaneously creating an effective story-line through powerful values. The course analyses the production of quality journalism and explores how to create memorable and long lasting connections with a given target audience in a world of constant content surplus. It concludes with a deeper insight into the term of Brand Entertainment, giving them the opportunity to amplify their knowledge about how to produce a good call to action and retain the audience's attention.",
+      Skills: 'branded content  audience  Marketing  Brand Management  Advertising  Storytelling  gamification  brand  Journalism  content marketing arts-and-humanities history',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/brand-and-content-marketing',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Done
