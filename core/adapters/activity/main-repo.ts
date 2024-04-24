@@ -62,4 +62,22 @@ export class MainAcitivyRepo {
     })
     return count + 1;
   }
+
+  async getActivityWithVideoData(id: string) {
+    const activity = await primsaDb.chapterActivity.findUnique({
+      where: { id },
+      include: {
+        muxData: true
+      }
+    })
+    if(!activity) {
+      return null;
+    }
+    return {
+      ...activity,
+      videoData: {
+        playbackId: activity?.muxData?.[0]?.playbackId
+      } 
+    }
+  }
 }
