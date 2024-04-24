@@ -1,0 +1,953 @@
+
+> lms-tutorial@0.1.0 script:run
+> ts-node --project ./tsconfig.script.json --transpile-only -r tsconfig-paths/register scripts/ai-poc/find-path
+
+{
+  searchStrings: [
+    'Learn HTML, CSS, and JavaScript to build a strong foundation in web development.',
+    'Advance to learning a frontend framework like React or Angular for building dynamic user interfaces.',
+    'Improve your backend development skills by learning a server-side language such as Node.js or Python.',
+    'Explore databases and learn how to work with SQL or NoSQL databases.',
+    'Familiarize yourself with version control systems like Git for managing code.',
+    'Learn about containerization and deployment with Docker and Kubernetes for DevOps skills.',
+    'Gain knowledge in continuous integration/continuous deployment (CI/CD) practices for automating software delivery processes.',
+    'Understand infrastructure as code by learning tools like Terraform or Ansible for automated setup and management of cloud resources.',
+    'Enhance your monitoring and logging skills using tools like Prometheus or ELK stack for tracking performance and detecting issues in applications.'
+  ]
+}
+Search string Learn HTML, CSS, and JavaScript to build a strong foundation in web development.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: 'sXL36Y4BR7A86jPnLdxQ',
+    _score: 1.6884359,
+    _source: {
+      name: 'Programming Foundations with JavaScript, HTML and CSS',
+      desc: 'Learn foundational programming concepts (e.g., functions, for loops, conditional statements) and how to solve problems like a programmer. In addition, learn basic web development as you build web pages using HTML, CSS, JavaScript. By the end of the course, will create a web page where others can upload their images and apply image filters that you create.  After completing this course, you will be able to: 1. Think critically about how to solve a problem using programming; 2. Write JavaScript programs using functions, for loops, and conditional statements; 3. Use HTML to construct a web page with paragraphs, divs, images, links, and lists; 4. Add styles to a web page with CSS IDs and classes; and 5. Make a web page interactive with JavaScript commands like alert, onClick, onChange, adding input features like an image canvas, button, and slider.',
+      Skills: 'HTML and CSS  web page  Javascript  Web Development  Computer Programming  Web Design  html  HTML5  web  CSS computer-science mobile-and-web-development',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/duke-programming-web',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: '3HLy6Y4BR7A86jPnVNpW',
+    _score: 1.6671073,
+    _source: {
+      name: 'HTML, CSS, and Javascript for Web Developers',
+      desc: 'Do you realize that the only functionality of a web application that the user directly interacts with is through the web page? Implement it poorly and, to the user, the server-side becomes irrelevant! Today�s user expects a lot out of the web page: it has to load fast, expose the desired service, and be comfortable to view on all devices: from a desktop computers to tablets and mobile phones.  In this course, we will learn the basic tools that every web page coder needs to know. We will start from the ground up by learning how to implement modern web pages with HTML and CSS. We will then advance to learning how to code our pages such that its components rearrange and resize themselves automatically based on the size of the user�s screen. You�ll be able to code up a web page that will be just as useful on a mobile phone as on a desktop computer. No �pinch and zoom� required! Last but certainly not least, we will get a thorough introduction to the most ubiquitous, popular, and incredibly powerful language of the web: Javascript. Using Javascript, you will be able to build a fully functional web application that utilizes Ajax to expose server-side functionality and data to the end user.',
+      Skills: 'web  Web Development  ajax (programming)  html  HTML5  bootstrap (front-end framework)  HTML and CSS  CSS  Computer Programming  Javascript computer-science mobile-and-web-development',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/html-css-javascript-for-web-developers',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'FnIA6o4BR7A86jPnnuCM',
+    _score: 1.6288184,
+    _source: {
+      name: 'Introduction to Web Development',
+      desc: 'This course is designed to start you on a path toward future studies in web development and design, no matter how little experience or technical knowledge you currently have. The web is a very big place, and if you are the typical internet user, you probably visit several websites every day, whether for business, entertainment or education. But have you ever wondered how these websites actually work? How are they built? How do browsers, computers, and mobile devices interact with the web? What skills are necessary to build a website? With almost 1 billion websites now on the internet, the answers to these questions could be your first step toward a better understanding of the internet and developing a new set of internet skills.    By the end of this course you�ll be able to describe the structure and functionality of the world wide web, create dynamic web pages using a combination of HTML, CSS, and JavaScript, apply essential programming language concepts when creating HTML forms, select an appropriate web hosting service, and publish your webpages for the world to see. Finally, you�ll be able to develop a working model for creating your own personal or business websites in the future and be fully prepared to take the next step in a more Advanced web development or design course or specialization.',
+      Skills: 'web  Web Design  HTML5  Web Development  web page  Javascript  CSS  web hosting service  html  Front-End Web Development computer-science mobile-and-web-development',
+      Difficulty: 'Conversant',
+      url: 'https://www.coursera.org/learn/web-development',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'tHLs6Y4BR7A86jPnKtgd',
+    _score: 0.81925184,
+    _source: {
+      name: 'Interactivity with JavaScript',
+      desc: 'If you want to take your website to the next level, the ability to incorporate interactivity is a must.    But adding some of these types of capabilities requires a stronger programming language than HTML5 or CSS3, and JavaScript can provide just what you need.  With just a basic understanding of the language, you can create a page that will react to common events such as page loads, mouse clicks & movements, and even keyboard input.        This course will introduce you to the basics of the JavaScript language.  We will cover concepts such as variables, looping, functions, and even a little bit about debugging tools.  You will understand how the Document Object Model (DOM) is used by JavaScript to identify and modify specific parts of your page.  After the course, learners will be able to react to DOM Events and dynamically alter the contents and style of their page.   The class will culminate in a  final project - the creation of an interactive HTML5 form that accepts and verifies input.  This is the third course in the Web Design For Everybody specialization.  A basic understanding of HTML and CSS is expected when you enroll in this class.    Additional courses focus on enhancing the styling with responsive design and completing a capstone project.',
+      Skills: 'document object model  syntax  HTML5  interactivity  javascript syntax  Computer Programming  web  Web Development  html  Javascript computer-science mobile-and-web-development',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/javascript',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'PXL46Y4BR7A86jPnyN2j',
+    _score: 0.81587625,
+    _source: {
+      name: 'Getting Started with Cascading Style Sheet',
+      desc: 'In this 1.5-hour long project-based course, you will gain hands-on experience with one of the most fundamental skills for a web developer: CSS, cascading style sheet. You will transform a very plain website to a beautifully presented one in this project! If you have some basic knowledge of HTML but found CSS perplexing, or just want to hone your CSS skill, this course is for you!  By the end of this course You will understand how CSS works, have a basic understanding of the essential topics, and be able to apply it to web development and web design projects!',
+      Skills: 'web  HTML5  CSS  html  ordered pair  Style Sheets  Operating Systems  Web Development  Graphic Design  Javascript computer-science mobile-and-web-development',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/getting-started-cascading-style-sheet',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: '2XLh6Y4BR7A86jPnBtS5',
+    _score: 0.80146426,
+    _source: {
+      name: 'Responsive Website Basics: Code with HTML, CSS, and JavaScript',
+      desc: 'In this course you will learn three key website programming and design languages: HTML, CSS and JavaScript. You will create a web page using basic elements to control layout and style.  Additionally, your web page will support interactivity.   At the end of the course, you will be able to:  1. Define the purpose of HTML, CSS and JavaScript 2. Make a simple web page using HTML 3. Use CSS to control text styles and layout 4. Use CSS libraries such as Bootstrap to create responsive layouts 5. Use JavaScript variables and functions 6. Manipulate web page content using JavaScript 7. Respond to user input using JavaScript  In this course, you will complete:  2 assignments writing HTML, CSS and JavaScript, each taking ~1 hour to complete 4 quizzes, each taking ~20 minutes to complete 1 programming exercise~30 minutes to complete multiple practice quizzes, each taking ~5 minutes to complete  Participation in or completion of this online course will not confer academic credit for University of London programmes.',
+      Skills: 'jquery  web  HTML and CSS  responsive web design  Javascript  Web Development  CSS  Web Design  HTML5  html computer-science mobile-and-web-development',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/website-coding',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'XnLr6Y4BR7A86jPnLdim',
+    _score: 0.7920922,
+    _source: {
+      name: 'Introduction to CSS in Web Development',
+      desc: 'In this beginning-level course you will explore the use of CSS (Cascading Style Sheets) in web development. As HTML is used to add content to a website, CSS is used to make that content visually appealing to website visitors. This course focuses on improvements that can be made to the text on a website�s pages, including color, font style, size, and alignment. CSS is a very powerful tool and learning to control textual data on a website is a great first step in harnessing that power.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.',
+      Skills: 'web  internality  Web Development  CSS  text corpus  text editors  html  pageable memory  Style Sheets  web page computer-science mobile-and-web-development',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/intro-css-web-development',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Search string Advance to learning a frontend framework like React or Angular for building dynamic user interfaces.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: 'AXIA6o4BR7A86jPnZeC5',
+    _score: 1.6348408,
+    _source: {
+      name: 'Front-End Web Development with React',
+      desc: 'This course explores Javascript based front-end application development, and in particular the React library (Currently Ver. 16.3). This course will use JavaScript ES6 for developing React application. You will also get an introduction to the use of Reactstrap for Bootstrap 4-based responsive UI design. You will be introduced to various aspects of React components. You will learn about React router and its use in developing single-page applications. You will also learn about designing controlled forms. You will be introduced to the Flux architecture and Redux. You will explore various aspects of Redux and use it to develop React-Redux powered applications. You will then learn to use Fetch for client-server communication and the use of REST API on the server side. A quick tour through React animation support and testing rounds off the course. You must have preferably completed the previous course in the specialization on Bootstrap 4, or have a working knowledge of Bootstrap 4 to be able to navigate this course. Also a good working knowledge of JavaScript, especially ES 5 is strongly recommended.  At the end of this course you will:  - Be familiar with client-side Javascript application development and the React library - Be able to implement single page applications in React - Be able to use various React features including components and forms - Be able to implement a functional front-end web application using React - Be able to use Reactstrap for designing responsive React applications - Be able to use Redux to design the architecture for a React-Redux application',
+      Skills: 'web  Javascript  representational state transfer  Redux  Web Development  javascript library  json  bootstrap (front-end framework)  React (web framework)  Front-End Web Development computer-science mobile-and-web-development',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/front-end-react',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'v3Lg6Y4BR7A86jPnwtTl',
+    _score: 1.6100457,
+    _source: {
+      name: 'Front-End JavaScript Frameworks: Angular',
+      desc: 'This course concentrates mainly on Javascript based front-end frameworks, and in particular the Angular framework (Currently Ver. 6.x). This course will use Typescript for developing Angular application. Typescript features will be introduced in the context of Angular as part of the exercises. You will also get an introduction to the use of Angular Material and Angular Flex-Layout for responsive UI design. You will be introduced to various aspects of Angular including components, directives and services. You will learn about data binding, Angular router and its use for developing single-page applications. You will also learn about designing both template-driven forms and reactive forms. A quick introduction to Observables, reactive programming and RxJS in the context of Angular is included. You will then learn about Angular support for client-server communication through the HTTP client and the use of REST API on the server side. A quick tour through Angular animation support and Angular testing rounds off the course. You must have either completed the previous course in the specialization on Bootstrap 4, or have a working knowledge of front end web-UI frameworks to be able to navigate this course. Also a good working knowledge of JavaScript, especially ES 5 is strongly recommended.  At the end of this course you will:  - Be familiar with client-side Javascript frameworks and the Angular framework - Be able to implement single page applications in Angular - Be able to use various Angular features including directives, components and services - Be able to implement a functional front-end web application using Angular - Be able to use Angular Material and Angular Flex-Layout for designing responsive Angular applications - Be able to use Observables and RxJS in the context of Angular applications',
+      Skills: 'Front-End Web Development  materials  Web Development  reactive programming  Angular  Computer Programming  typescript  web  angularjs  Javascript computer-science mobile-and-web-development',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/angular',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'bHL26Y4BR7A86jPnctxh',
+    _score: 1.6081028,
+    _source: {
+      name: 'Introduction to Front-end Development with ReactJS',
+      desc: 'In this 1-hour long project-based course, you will learn about React Basics & Theory, Initialization, React Router, Components, Hooks, State, and deployment with Netlify. You should know basic HTML & CSS before beginning this project. For development, your cloud desktop will come installed with Visual Studio Code.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.',
+      Skills: "javascript framework  Javascript  project  html  React (web framework)  project networks  web  internet  Web Development  euler's totient function computer-science mobile-and-web-development",
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/into-to-reactjs',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'aXLr6Y4BR7A86jPnUNiU',
+    _score: 1.5558512,
+    _source: {
+      name: 'Build Your First React Website',
+      desc: 'In this 1-hour long project-based course, you will gain hands-on experience with one of the hottest web development framework, React. If you have some experience with HTML, CSS, JavaScript and want to start developing with React, this course is for you!  By the end of this course You will understand the fundamental of React and be able to create and build a website with React with ease.',
+      Skills: "web  euler's totient function  Web Development  Databases  recursion  React (web framework)  project  php  Javascript  html computer-science mobile-and-web-development",
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/build-first-react-website',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'LHLh6Y4BR7A86jPn69UJ',
+    _score: 0.7849473,
+    _source: {
+      name: 'Single Page Web Applications with AngularJS',
+      desc: 'Do you want to write powerful, maintainable, and testable front end applications faster and with less code? Then consider joining this course to gain skills in one of the most popular Single Page Application (SPA) frameworks today, AngularJS. Developed and backed by Google, AngularJS is a very marketable skill to acquire.  In this course, we will explore the core design of AngularJS 1.x (latest version of AngularJS 1), its components and code organization techniques. We will enhance the functionality of our web app by utilizing dependency injection to reuse existing services as well as write our own. We will create reusable HTML components that take advantage of AngularJS data binding as well as extend HTML syntax with a very powerful feature of AngularJS called directives. We�ll set up routing so our SPA can have multiple views. We will also learn how to unit test our functionality. At the end of this course, you will build a fully functional, well organized and tested web application using AngularJS and deploy it to the cloud.',
+      Skills: 'software  web  Software Architecture  unit testing  angularjs  Javascript  architecture  Angular  capgemini  Web Development computer-science mobile-and-web-development',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/single-page-web-apps-with-angularjs',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'H3Lq6Y4BR7A86jPnfNhO',
+    _score: 0.7601427,
+    _source: {
+      name: 'Build Your First React Website (Part II)',
+      desc: 'This 1.5 hours guided project is part 2 of the project "Build Your First React Website." In this project, we focus on persistent states for class components and different strategies for them to communicate with each other.  At the end of this course, you will be able to choose and deploy different communication strategies for communications among React components.  This class requires basic React and intermediate to advance experiment in JavaScript development as a prerequisite.',
+      Skills: 'web  Strategy  Javascript  rendering (computer graphics)  web application  constant (computer programming)  Communication  Web Development  cryptocurrency  internality computer-science mobile-and-web-development',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/build-first-react-website-2',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Search string Improve your backend development skills by learning a server-side language such as Node.js or Python.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: 'wnL86Y4BR7A86jPn3N5l',
+    _score: 1.5231332,
+    _source: {
+      name: 'Server-side Development with NodeJS, Express and MongoDB',
+      desc: 'This course deals with all things server-side. We base the entire course around the NodeJS platform. We start with a brief overview of the Web protocols: HTTP and HTTPS. We examine NodeJS and NodeJS modules: Express for building web servers. On the database side, we review basic CRUD operations, NoSQL databases, in particular MongoDB and Mongoose for accessing MongoDB from NodeJS. We examine the REST concepts and building a RESTful API. We touch upon authentication and security. Finally we review backend as a service (BaaS) approaches, including mobile BaaS, both open-source and commercial BaaS services.  At the end of this course, you will be able to:  - Demonstrate an understanding of server-side concepts, CRUD and REST - Build and configure a backend server using NodeJS framework - Build a RESTful API for the front-end to access backend services',
+      Skills: 'application programming interfaces  web  front and back ends  mongodb  authentication  node.js  representational state transfer  oauth  https  server-side computer-science mobile-and-web-development',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/server-side-nodejs',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'w3L86Y4BR7A86jPn3940',
+    _score: 1.5231332,
+    _source: {
+      name: 'Server-side Development with NodeJS, Express and MongoDB',
+      desc: 'This course deals with all things server-side. We base the entire course around the NodeJS platform. We start with a brief overview of the Web protocols: HTTP and HTTPS. We examine NodeJS and NodeJS modules: Express for building web servers. On the database side, we review basic CRUD operations, NoSQL databases, in particular MongoDB and Mongoose for accessing MongoDB from NodeJS. We examine the REST concepts and building a RESTful API. We touch upon authentication and security. Finally we review backend as a service (BaaS) approaches, including mobile BaaS, both open-source and commercial BaaS services.  At the end of this course, you will be able to:  - Demonstrate an understanding of server-side concepts, CRUD and REST - Build and configure a backend server using NodeJS framework - Build a RESTful API for the front-end to access backend services',
+      Skills: 'application programming interfaces  web  front and back ends  mongodb  authentication  node.js  representational state transfer  oauth  https  server-side computer-science mobile-and-web-development',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/server-side-nodejs',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'unL06Y4BR7A86jPnjdto',
+    _score: 1.4827183,
+    _source: {
+      name: 'Become a JavaScript Pro with these 7 Skills',
+      desc: 'In this 2-hour long project-based course, you will gain hands-on experience with 7 essential JavaScript topics. If you have some experience with JavaScript, HTML, CSS, and object-oriented programming and want to elevate your level of competency and be ready to solve real-world problems, this course is for you!  By the end of this course, you will understand and be able to apply 7 of the most important concepts and skills in JavaScript.',
+      Skills: 'web application  Web Development  Computer Programming  Mobile Development  node.js  parameter (computer programming)  web  Javascript  CSS  front and back ends computer-science mobile-and-web-development',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/become-a-js-pro-7-skills',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'nnLd6Y4BR7A86jPnuNOf',
+    _score: 0.77291286,
+    _source: {
+      name: 'Build a Twitter Clone Backend',
+      desc: 'In this 1-hour 30-minute long project-based course, you will learn how to set up a Node project and your development environment, create a basic express server and routes, set up a MongoDB Database and Mongoose models, and implement Twitter functionality (CRUDs).   By the end of this project, you will create a fully functioning backend server for a Twitter clone with Node, express and MongoDB. You will have enough knowledge to start working on any backend projects comfortably.   This project will give you a head start into backend development which could lead to, if pursued and expanded on properly, a brand new back-end development career.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.',
+      Skills: "mongodb  modeling  php  euler's totient function  project  brand-new  front and back ends  web  cloning  application programming interfaces computer-science mobile-and-web-development",
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/twitter-clone-backend',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'xXL_6Y4BR7A86jPnwt_c',
+    _score: 0.752306,
+    _source: {
+      name: 'AWS: Publish a NodeJS Website from Scratch',
+      desc: 'In this project-based course, you will learn how to launch your own server at Amazon AWS Lightsail, configure your own SSH client and upload files to the server. Then, you will learn how to modify the server to access it privately. Further, you will learn how to change the server configuration to have a simple NodeJS game with both a backend and frontend started automatically and its content served through the Apache webserver.  Note: To avoid distraction for setup during the course, we would recommend that you create an Amazon AWS account beforehand.',
+      Skills: 'React (web framework)  download  ip address  project mine  english language  web  project  node.js  upload  Javascript information-technology cloud-computing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/aws-publish-nodejs-website-from-scratch',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: '3HLy6Y4BR7A86jPnVNpW',
+    _score: 0.7201984,
+    _source: {
+      name: 'HTML, CSS, and Javascript for Web Developers',
+      desc: 'Do you realize that the only functionality of a web application that the user directly interacts with is through the web page? Implement it poorly and, to the user, the server-side becomes irrelevant! Today�s user expects a lot out of the web page: it has to load fast, expose the desired service, and be comfortable to view on all devices: from a desktop computers to tablets and mobile phones.  In this course, we will learn the basic tools that every web page coder needs to know. We will start from the ground up by learning how to implement modern web pages with HTML and CSS. We will then advance to learning how to code our pages such that its components rearrange and resize themselves automatically based on the size of the user�s screen. You�ll be able to code up a web page that will be just as useful on a mobile phone as on a desktop computer. No �pinch and zoom� required! Last but certainly not least, we will get a thorough introduction to the most ubiquitous, popular, and incredibly powerful language of the web: Javascript. Using Javascript, you will be able to build a fully functional web application that utilizes Ajax to expose server-side functionality and data to the end user.',
+      Skills: 'web  Web Development  ajax (programming)  html  HTML5  bootstrap (front-end framework)  HTML and CSS  CSS  Computer Programming  Javascript computer-science mobile-and-web-development',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/html-css-javascript-for-web-developers',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'b3Ld6Y4BR7A86jPnPNNy',
+    _score: 0.71523064,
+    _source: {
+      name: 'Web Application Development with JavaScript and MongoDB',
+      desc: 'In this course, you will develop more Advanced web application programming skills. You will learn how to control data read and write access using methods, publish and subscribe. You will learn how to access your database and server shells using command line tools. You will use the SimpleSchema system to validate data and generate input forms automatically. You will see a complete collaborative code editing environment, TextCircle, being built from scratch.   At the end of this course, you will be able to: - use Meteor methods to control data write access - use publish and subscribe to control data read access - install and use Advanced Meteor packages - add user accounts to your applications - implement complex MongoDB filters - use the MongoDB and meteor server shells - define data validations schemas using SimpleSchema - generate data input forms automatically using SimpleSchema  In this course, you will complete: 2 programming assignments taking ~4 hours each to complete 4 quizzes, each taking ~20 minutes to complete multiple practice quizzes, each taking ~5 minutes to complete  Participation in or completion of this online course will not confer academic credit for University of London programmes',
+      Skills: 'meteor  html  mongodb  Databases  Web Development  web  file system permissions  web application  user (computing)  Javascript computer-science software-development',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/web-application-development',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Search string Explore databases and learn how to work with SQL or NoSQL databases.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: '1HLm6Y4BR7A86jPnidYE',
+    _score: 1.6485227,
+    _source: {
+      name: 'Databases and SQL for Data Science',
+      desc: "Much of the world's data resides in databases. SQL (or Structured Query Language) is a powerful language which is used for communicating with and extracting data from databases. A working knowledge of databases and SQL is a must if you want to become a data scientist.  The purpose of this course is to introduce relational database concepts and help you learn and apply foundational knowledge of the SQL language. It is also intended to get you started with performing SQL access in a data science environment.    The emphasis in this course is on hands-on and practical learning . As such, you will work with real databases, real data science tools, and real-world datasets. You will create a database instance in the cloud. Through a series of hands-on labs you will practice building and running SQL queries. You will also learn how to access databases from Jupyter notebooks using SQL and Python.  No prior knowledge of databases, SQL, Python, or programming is required.  Anyone can audit this course at no-charge. If you choose to take this course and earn the Coursera course certificate, you can also earn an IBM digital badge upon successful completion of the course.  LIMITED TIME OFFER: Subscription is only $39 USD per month for access to graded materials and a certificate.",
+      Skills: 'Computer Programming  Python Programming  Databases  ipython  SQL  Leadership and Management  ibm db2  Database Connection  Cloud Computing  relational database data-science data-analysis',
+      Difficulty: 'Conversant',
+      url: 'https://www.coursera.org/learn/sql-data-science',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'H3L-6Y4BR7A86jPnAN__',
+    _score: 1.6081927,
+    _source: {
+      name: 'NoSQL systems',
+      desc: "Welcome to the specialization course of NoSQL Systems.  This course will be completed on six weeks, it will be supported with videos and exercises that will allow you to identify the differences between the relational and NoSQL databases.  As part of these alternative technologies the student will learn the main characteristics and how to implement the typical NoSQL databases, such as Key-value, columnar, document and graph.  Let's start!  After completing this course, a learner will be able to ?\\tIdentify what type of NoSQL database to implement based on business requirements (key-value, document, full text, graph, etc.) ?\\tApply NoSQL data modeling from application specific queries ?\\tUse Atomic Aggregates and denormalization as data modelling techniques to optimize query processing  Software to download: MongoDB Neo4j SAPIQ Cassandra  In case you have a Mac / IOS operating system you will need to use a virtual Machine (VirtualBox, Vmware).",
+      Skills: 'graph database  scalability  key-value databases  relational database  in-memory database  SQL  graphs  Databases  NoSQL  mongodb data-science data-analysis',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/nosql-databases',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'LnLq6Y4BR7A86jPnpdj-',
+    _score: 0.8465791,
+    _source: {
+      name: 'Databases and SQL for Data Science',
+      desc: "Much of the world's data resides in databases. SQL (or Structured Query Language) is a powerful language which is used for communicating with and extracting data from databases. A working knowledge of databases and SQL is a must if you want to become a data scientist.  The purpose of this course is to introduce relational database concepts and help you learn and apply foundational knowledge of the SQL language. It is also intended to get you started with performing SQL access in a data science environment.    The emphasis in this course is on hands-on and practical learning . As such, you will work with real databases, real data science tools, and real-world datasets. You will create a database instance in the cloud. Through a series of hands-on labs you will practice building and running SQL queries. You will also learn how to access databases from Jupyter notebooks using SQL and Python.  No prior knowledge of databases, SQL, Python, or programming is required.  Anyone can audit this course at no-charge. If you choose to take this course and earn the Coursera course certificate, you can also earn an IBM digital badge upon successful completion of the course.  LIMITED TIME OFFER: Subscription is only $39 USD per month for access to graded materials and a certificate.",
+      Skills: 'Computer Programming  Python Programming  Databases  ipython  SQL  Leadership and Management  ibm db2  Database Connection  Cloud Computing  relational database data-science data-analysis',
+      Difficulty: 'Conversant',
+      url: 'https://www.coursera.org/learn/sql-data-science',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'L3Lq6Y4BR7A86jPnqNjG',
+    _score: 0.8465791,
+    _source: {
+      name: 'Databases and SQL for Data Science',
+      desc: "Much of the world's data resides in databases. SQL (or Structured Query Language) is a powerful language which is used for communicating with and extracting data from databases. A working knowledge of databases and SQL is a must if you want to become a data scientist.  The purpose of this course is to introduce relational database concepts and help you learn and apply foundational knowledge of the SQL language. It is also intended to get you started with performing SQL access in a data science environment.    The emphasis in this course is on hands-on and practical learning . As such, you will work with real databases, real data science tools, and real-world datasets. You will create a database instance in the cloud. Through a series of hands-on labs you will practice building and running SQL queries. You will also learn how to access databases from Jupyter notebooks using SQL and Python.  No prior knowledge of databases, SQL, Python, or programming is required.  Anyone can audit this course at no-charge. If you choose to take this course and earn the Coursera course certificate, you can also earn an IBM digital badge upon successful completion of the course.  LIMITED TIME OFFER: Subscription is only $39 USD per month for access to graded materials and a certificate.",
+      Skills: 'Computer Programming  Python Programming  Databases  ipython  SQL  Leadership and Management  ibm db2  Database Connection  Cloud Computing  relational database data-science data-analysis',
+      Difficulty: 'Conversant',
+      url: 'https://www.coursera.org/learn/sql-data-science',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'uXLp6Y4BR7A86jPnTNe_',
+    _score: 0.81492853,
+    _source: {
+      name: 'Create Your First NoSQL Database with MongoDB and Compass',
+      desc: 'In this Guided Project you will create a MongoDB database and collection to store blog posts, and optimize it using indexes, while having an overview of some of the basic commands, in order to learn the basics of NoSQL document databases structure, the MongoDB shell and the usage of the powerful MongoDB Compass GUI to manage, inspect and optimize a MongoDB database.  NoSQL is an alternative to traditional relational databases. NoSQL databases sacrifice some relational databases characteristics, such as a well-defined structure and strict relations between entities, in order to achieve better and easier scaling and replication, to handle large quantities of data, while being more generally flexible, cheaper and easier to manage. Instead of using tables, rows and columns, NoSQL document databases such as MongoDB use collections, documents and fields, represented with the well known JSON format.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.',
+      Skills: 'documents  Databases  mongodb  row (database)  NoSQL  SQL  Blog Posts  relational database  sap erp  cloud computing security information-technology data-management',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/nosql-database-with-mongodb-and-compass',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'J3Lc6Y4BR7A86jPndNOL',
+    _score: 0.8065626,
+    _source: {
+      name: 'Create Relational Database Tables Using SQLiteStudio',
+      desc: 'In this project-based course, you will learn how to use the SQLiteStudio database management system to create a relational database, add tables to the database, and populate the tables.    Data is at the heart of all computing practices and plays an important role in our business and personal lives. Data is manipulated by programs, displayed on web browsers, transferred from location to location by networking systems, and used for business and personal decision making. Organizing, storing and safeguarding data in a database is the main purpose of database management software. Since data is such a large part of your life--whether used for your mobile phone address list or your medical record at your doctor�s office--wouldn�t it be great to know a little more about how a database works? By the end of this project, you will have a new appreciation for the importance of data and how it�s organized in a database.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.',
+      Skills: 'database management systems  Databases  web browsers  BlockChain  relational database  sqlite  web  Average  SQL  table (database) information-technology data-management',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/create-relational-database-table-sqlitestudio',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: '_nL46Y4BR7A86jPnC9yX',
+    _score: 0.80545986,
+    _source: {
+      name: 'Analyzing Big Data with SQL',
+      desc: "In this course, you'll get an in-depth look at the SQL SELECT statement and its main clauses. The course focuses on big data SQL engines Apache Hive and Apache Impala, but most of the information is applicable to SQL with traditional RDBMs as well; the instructor explicitly addresses differences for MySQL and PostgreSQL.  By the end of the course, you will be able to � explore and navigate databases and tables using different tools; � understand the basics of SELECT statements; � understand how and why to filter results; � explore grouping and aggregation to answer analytic questions; � work with sorting and limiting results; and  ��combine multiple tables in different ways.  To use the hands-on environment for this course, you need to download and install a virtual machine and the software on which to run it. Before continuing, be sure that you have access to a computer that meets the following hardware and software requirements: ��Windows, macOS, or Linux operating system (iPads and Android tablets will not work) � 64-bit operating system (32-bit operating systems will not work) � 8 GB RAM or more ��25GB free disk space or more � Intel VT-x or AMD-V virtualization support enabled (on Mac computers with Intel processors, this is always enabled; on Windows and Linux computers, you might need to enable it in the BIOS) � For Windows XP computers only: You must have an unzip utility such as 7-Zip or WinZip installed (Windows XP�s built-in unzip utility will not work)",
+      Skills: 'Databases  ternary conditional operator  command-line interface  join (sql)  hive  relational algebra  Big Data  SQL  Apache  order by data-science data-analysis',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/cloudera-big-data-analysis-sql-queries',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'gXL_6Y4BR7A86jPnCt9L',
+    _score: 0.7854266,
+    _source: {
+      name: 'Introduction to Relational Database and SQL',
+      desc: 'In this guided project, you will get hands-on experience working with a relational database using MySQL Workbench from Oracle. The basic knowledge you learn will allow you to work with any other relational database.  At the end of this project, you will be able to create a billing report and a club member roster.',
+      Skills: 'mysql workbench  mysql  Leadership and Management  sorting  oracle database  Databases  SQL  relational database management system  relational database  associative entity computer-science software-development',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/introduction-to-relational-database-and-sql',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Search string Familiarize yourself with version control systems like Git for managing code.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: 'znL_6Y4BR7A86jPn3N-m',
+    _score: 1.6220491,
+    _source: {
+      name: 'Version Control with Git',
+      desc: 'The Version Control with Git course provides  you with a solid, hands-on foundation for understanding the Git version control system.  Git is open source software originally created by Linus Torvalds. Git manages team files for large and small projects. This allows the team to continuously improve its product. It is used by most major technology companies, and is assumed knowledge for many modern programming and IT jobs.  It is a core component of DevOps, continuous delivery pipelines and cloud-native computing. You could also use Git to manage the many continuously improving revisions of that book that you are writing.   In this course, you will not learn everything there is to know about Git, but you will build a strong conceptual understanding of the technology, and afterward will be able to confidently dig deeper on any topic that interests you. This course assumes no previous knowledge of Git, but if you do have experience with it, you may find this course to be both useful and challenging. This is especially true if you currently "know just enough Git to be dangerous".   There are two paths in this course. Both rely heavily on hands-on labs. One path assumes that you have experience using a command line interface, and the other path uses the Sourcetree graphical client. If you are not experienced with a command line, we highly suggest that you go through the Sourcetree path. Eventually, you might want to go through both paths, so that you can decide which tool to use for specific tasks. Besides, repetition is good for learning :)  You can watch the videos and take the quizzes from your phone if you want, but the hands-on labs require you to have a Windows or Mac computer. If you use the command line path through the course, you can also use Linux.   This course uses Bitbucket (bitbucket.org) as the hosted provider for remote Git repositories. Bitbucket is free for teams of up to 5 people, including private repositories. However, most of the knowledge that you gain in this course applies to Git itself, and you can apply this knowledge to other hosted Git providers (such as GitHub).   This course tries to be as concise as possible. It will probably take you about 5-10 hours to go through one of the two paths, but your mileage may vary.',
+      Skills: 'version control  command-line interface  git (software)  bitbucket  software  software versioning  github  distributed version control  version control systems  Mergers & Acquisitions computer-science software-development',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/version-control-with-git',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'enLd6Y4BR7A86jPnWdOD',
+    _score: 1.6069431,
+    _source: {
+      name: 'Introduction to Git and GitHub',
+      desc: "In this course, you�ll learn how to keep track of the different versions of your code and configuration files using a popular version control system (VCS) called Git. We'll also go through how to setup an account with a service called GitHub so that you can create your very own remote repositories to store your code and configuration.   Throughout this course, you'll learn about Git's core functionality so you can understand how and why it�s used in organizations. We�ll look into both basic and more Advanced features, like branches and merging. We'll demonstrate how having a working knowledge of a VCS like Git can be a lifesaver in emergency situations or when debugging. And then we'll explore how to use a VCS to work with others through remote repositories, like the ones provided by GitHub.  By the end of this course, you'll be able to store your code's history in Git and collaborate with others in GitHub, where you�ll also start creating your own portfolio!   In order to follow along and complete the assessments, you�ll need a computer where you can install Git or ask your administrator to install it for you.",
+      Skills: 'version control  version control systems  Python Programming  Computer Programming  software  github  code review  Collaboration  git (software)  software versioning information-technology cloud-computing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/introduction-git-github',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'BXLy6Y4BR7A86jPnw9v0',
+    _score: 1.595335,
+    _source: {
+      name: 'Version Control of a Python Project using Git',
+      desc: 'Version Control Systems keep track of files by saving changes over time. For example, a developer can make changes to a file and check the file in to the system. The system will create a version for that file and any other files that were changed. If any subsequent changes are made later that prove to break the software, a previous working version of the software can be recalled. Git was developed to provide an efficient means of version control and was originally developed to track Linux Kernel development.  In this course, you will create a local Git repository using an existing directory structure containing directories and files. You will use Git commands such as add, commit, and status to commit changes to your local Git repository.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.',
+      Skills: 'software  Python Programming  saving  directory structure  Average  project  commit (version control)  version control  Machine Learning  Deep Learning computer-science software-development',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/version-control-of-a-python-project-using-git',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'cHL56Y4BR7A86jPnVt3v',
+    _score: 1.5918977,
+    _source: {
+      name: 'Source control management for test automation with Git',
+      desc: 'Every development team or automation team needs a good way to collaborate and manage changes and to version code in their codebase. That�s why they use source control or version control.  Source control refers to tracking and managing changes to code. This ensures that developers are always working on the right version of the source code.  Git is one of the most widely used open-source distributed source code management systems for tracking changes in source code during software development.  In this 1-hour long project-based course, you will learn how to   1. Execute GIT commands via Eclipse plugin and CLI 2. Clone, Fetch and Pull code from remote repository 3. Commit, merge and push code to the remote repository',
+      Skills: 'tracking  sources  Software Engineering  cloning  codebase  Leadership and Management  version control  control (management)  test automation  source code computer-science software-development',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/source-control-management-test-automation-git',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'CXLe6Y4BR7A86jPn1NTb',
+    _score: 0.8035853,
+    _source: {
+      name: 'Use Commands and Create a Remote Git Repository',
+      desc: 'A key to maintaining a project under version control is to store it as a remote repository on a server that is backed up over time. Keeping a project on a remote repository not only provides a back-up of the project; it also allows others to collaborate on the project. In the case of Git there are several remote repository options out there. Github and BitBucket are two of the more popular choices, each with a free option and a subscription option.    In this course, you will create a remote Git repository using an existing Git project containing directories and files. You will use Git commands such as push, pull, fetch, branch, and merge to make changes to your local Git repository and add them to the remote repository.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.',
+      Skills: 'html  php  Python Programming  credential  c dynamic memory allocation  github  Mergers & Acquisitions  ordered pair  Software Engineering  version control computer-science software-development',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/commands-create-git-remote-repository',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'xXLm6Y4BR7A86jPnYdal',
+    _score: 0.78826696,
+    _source: {
+      name: 'Using Git for Distributed Development',
+      desc: 'Course 4 focuses on using git for open source software distributed development. Git is a revision control system which arose out of the Linux kernel development community. Git was designed to help developers spread across the globe working on complicated projects coordinate their work in a rational way and keep track of everything they were doing. Overtime, Git has grown to be used by millions of projects today. This course gives you the opportunity to learn how to use git efficiently and make contributions in a relatively short amount of time. It will cover:  How to install git How to initialize a repository How to make changes in a repository How to make changes in repositories available to others How to acquire changes made by other individuals How to find errors in your work and go back to earlier states of yoru projects How to make commits, diffs, merges, rebases.  The course will help you get the skills to have a good understanding on how to use git. You will have a good knowledge about git workflows, identifying problems in your workflows, and finding solutions to solve these problems.',
+      Skills: 'bash (unix shell)  php  gitlab  distributed development  open source  unix  data comparison  version control  github  diff utility computer-science software-development',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/git-distributed-development',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Search string Learn about containerization and deployment with Docker and Kubernetes for DevOps skills.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: '-XLk6Y4BR7A86jPnNtWf',
+    _score: 1.6178771,
+    _source: {
+      name: 'Introduction to Containers w/ Docker, Kubernetes & OpenShift',
+      desc: 'After completing this course, you will be able to build applications in a cloud native way using containerization tools and technologies, and deploy your applications in any public, private or hybrid cloud at incredible scale. This course introduces you to containers and explains how containers differ from virtual machines.  It also covers the importance of containers in cloud computing, as well as the emerging ecosystem of related technologies such as Docker, Kubernetes, Red Hat OpenShift, and Istio.  Throughout the course you will apply what you learn with hands-on labs. From getting started with Docker, to orchestration and scaling with Kubernetes, and simplifying deployments with OpenShift. The labs are performed using your web browser on IBM Cloud and Skills Network Labs environments, that are made available to you at no charge. in the project at the end of the course you will build a container image and deploy and scale it on Cloud using OpenShift.   Containerization is likely the most significant invention in IT since the introduction of virtualization. Open source projects like Kubernetes and products like Red Hat OpenShift have become standards for people looking to deploy and manage containers at scale. Everyone from small startups to large multinational corporations is transitioning to these technologies, and they are looking for people who are skilled in these areas.  This course is of interest to anyone who wants to be a cloud practitioner - cloud developers, cloud architects, cloud system engineers, devops engineers, cloud networking specialists and many other roles. The material also serves the needs of those who perform the tasks of advising, consulting, building, moving and managing cloud solutions.  There are no hard requirements needed to be able to take this course other than basic computer literacy, and a foundation level understanding of Cloud Computing.',
+      Skills: 'modulo operation  microservices  source code  ternary conditional operator  data clustering algorithms  null coalescing operator  information sensitivity  openshift  streams  control plane information-technology cloud-computing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/ibm-containers-docker-kubernetes-openshift',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'd3Ld6Y4BR7A86jPnT9Op',
+    _score: 0.8130624,
+    _source: {
+      name: 'Building Containerized Applications on AWS',
+      desc: 'This course introduces you to container technologies and how they can be used to modernize your applications, as well as exploring how different AWS services can be used to manage and orchestrate those containers.  Container technologies have existed for years, and are still gaining popularity. Two of the most prevalent options are Docker and Kubernetes - each with its own distinct set of features. Regardless of which technology you choose, one of the biggest challenges with containers is their orchestration. Unlike traditional, monolithic applications where you can only scale at a macro level - an executable, for example - containerized applications scale at the container level. When coupled with a microservices approach, each container can contain the code necessary to execute a single task or function. While this provides a number of benefits, a single application can consist of hundreds of containerized microservices. How do you handle starting, stopping, scaling out and scaling in all of these containers?  AWS offers a number of services that help with container orchestration, including Amazon Elastic Container Service (ECS), Amazon Elastic Kubernetes Service (EKS), Amazon Lightsail, and Amazon Elastic Container Registry (ECR). Throughout this course, expert instructors will dive deep into these services as well as general container technologies and capabilities.  This course uses a combination of video-based lectures, delivered by AWS technical trainers, demonstrations, and hands-on lab exercises to enable you to deploy and manage a containerized application.',
+      Skills: 'Kubernetes  microservices  docker (software)  subnetwork  command-line interface  node.js  macro (computer science)  service discovery  virtual machine  Operating Systems information-technology cloud-computing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/containerized-apps-on-aws',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'nXL_6Y4BR7A86jPnVt95',
+    _score: 0.8072345,
+    _source: {
+      name: 'Getting Started with Google Kubernetes Engine',
+      desc: 'This one-week, accelerated online class equips students to containerize workloads in Docker containers, deploy them to Kubernetes clusters provided by Google Kubernetes Engine, and scale those workloads to handle increased traffic.  Students also learn how to continuously deploy new code in a Kubernetes cluster to provide application updates.  At the end of the course, you will be able to: � Understand container basics � Containerize an existing application � Understand Kubernetes concepts and principles � Deploy applications to Kubernetes using the CLI � Set up a continuous delivery pipeline using Jenkins � Locate more documentation and training.  To get the most of out of this course, learners should have basic proficiency with command-line tools and Linux operating system environments, as well as Web server technologies such as Nginx. We also recommend systems operations experience, including deploying and managing applications, either on-premises or in a public cloud environment.  Note: This is an abbreviated overview of Kubernetes. For the full Kubernetes content see the Architecting with Google Kubernetes Engine Specialization or start with the Architecting with Google Kubernetes Engine: Foundations course.  >>> By enrolling in this course you agree to the Qwiklabs Terms of Service as set out in the FAQ and located at: https://qwiklabs.com/terms_of_service <<<',
+      Skills: 'jenkins (software)  software  Continuous Delivery  Google Cloud Platform  spinnaker  Cloud Computing  Kubernetes  Cloud Platforms  deployment environment  Continuous Integration information-technology cloud-computing',
+      Difficulty: 'Conversant',
+      url: 'https://www.coursera.org/learn/google-kubernetes-engine',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'Q3L46Y4BR7A86jPn2d0M',
+    _score: 0.7991415,
+    _source: {
+      name: 'Build local development environments using Docker containers',
+      desc: 'By the end of this project, you will create two independent and replicable local development environments for two servers and make them communicate with each other, avoiding terminal hell, issues with dependencies, and automating the process of setting up a fresh setup of your projects.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.',
+      Skills: 'Web Development  deployment environment  Kubernetes  Software Engineering  running  docker (software)  c++  Python Programming  web  project information-technology support-and-operations',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/build-local-development-environments-using-docker-containers',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'OnLk6Y4BR7A86jPn7tbu',
+    _score: 0.7948626,
+    _source: {
+      name: 'Docker Essentials & Building a Containerized Web Application',
+      desc: "This is a 2-hour long project-based course and the most comprehensive one about Docker Containers. By the end of this project, you will have packaged, built, and deployed a static web application using Docker. Along the way, you will also learn the essential concepts and commands about Docker containers. Apart from demystifying the Docker landscape, it'll prepare you with hands-on experience for building and containerizing your own applications.  Even if you have no prior experience with containers, this project should be all you need to:  - Get started with Docker containers & related concepts. - Deep-dive to get your hands dirty with Docker command-line. - Emerge as someone who knows how to use Docker and build containerized applications.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.",
+      Skills: 'project  hand  ordered pair  web  command-line interface  experience  Deep Learning  Web Design  project mine  web application information-technology cloud-computing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/docker-container-essentials-web-app',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'O3L-6Y4BR7A86jPnTN_1',
+    _score: 0.76708937,
+    _source: {
+      name: 'Fundamentals of Kubernetes Deployment',
+      desc: "This course is designed to give you a deeper understanding of Kubernetes.   Over the next few weeks, you'll learn about several features of Kubernetes, the Kubernetes Architecture, how to create clusters, and different installation configurations. We'll also explore deployments and how they are scaled, updated, and rolled back. We will discuss clusters, pods, and nodes, and dive into Persistent Volumes as well as Kubernetes Authorization and Authentication.   Lastly, we'll show you how it all comes together in a Kubernetes demo, so you can see it in action.",
+      Skills: 'Kubernetes  Switch Installation  Cloud Computing  hybrid scheduling  microservices  PyTorch  cgns  rmon  distributed computing  stackable switch computer-science mobile-and-web-development',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/kubernetes-deployment',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'ZnL76Y4BR7A86jPn6d7Y',
+    _score: 0.7665353,
+    _source: {
+      name: 'Continuous Delivery & DevOps',
+      desc: 'Amazon famously delivers new code every 11.6 seconds. Just a few years ago, this was unthinkable: many �cutting edge� firms would release software quarterly. When it comes to digital innovation, velocity is critical and many would say it�s the most reliable determinant of success.   Bringing an organization to the state of the art (or even functional capability) in this area requires strong work in a combination of disciplines and a combination of both technical and managerial skills. There is no single cookie-cutter approach for achieving this capability. Much like agile, the right focus and formulation depends a lot on the facts and circumstances of the team. This course, developed at the Darden School of Business at the University of Virginia and taught by top-ranked faculty, will provide you with the interdisciplinary skill set to cultivate a continuous deployment capability in your organization.   After completing this course, you will be able to:  1. Diagnose a team�s delivery pipeline and bring forward prioritized recommendations to improve it 2. Explain the skill sets and roles involved in DevOps and how they contribute toward a continuous delivery capability 3. Review and deliver automation tests across the development stack 4. Explain the key jobs of system operations and how today�s leading techniques and tools apply to them 5. Explain how high-functioning teams use DevOps and related methods to reach a continuous delivery capability  6. Facilitate prioritized, iterative team progress on improving a delivery pipeline',
+      Skills: 'integration testing  test automation  unit testing  Software Testing  DevOps  system testing  continuous testing  Continuous Integration  software  Continuous Delivery computer-science software-development',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/uva-darden-continous-delivery-devops',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'sHL66Y4BR7A86jPnAt2P',
+    _score: 0.7549524,
+    _source: {
+      name: 'Containerization Using Docker',
+      desc: 'Welcome to "Containerization using Docker".   In this guided project you will learn how to use Docker to create a customised image of your application using Dockerfiles, enable data persistence and will also learn various methods to share your Docker images. Also, the task-based approach that we follow in our guided project will get you a better understanding of basic commands in Docker that comes very handy while working on your real-life project. . Most importantly you will leave this course with more confidence that will get you to work in Docker platform more efficiently.   If you have questions about course content, please post them in the forums to get help from others in the course community. For technical problems with the Coursera platform, visit the Learner Help Center.  Good luck as you get started, and I hope you enjoy the course! Happy learning !!!!!',
+      Skills: 'project  enabling  organizational learning  extract  persistence  i-deas  learning styles  problem-based learning  e-nable  meta learning information-technology cloud-computing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/containerization-using-docker',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'rXL36Y4BR7A86jPnItwc',
+    _score: 0.7543902,
+    _source: {
+      name: 'Introduction to Docker: Build Your Own Portfolio Site',
+      desc: 'In this 1-hour long project-based course on Introduction to Docker: Build your own portfolio website, you will learn how to use Docker on the command line and create your own portfolio website from a Bootstrap template in a Docker container. You will get to explore and demystify the Docker landscape and see how Docker works by using it.   You will learn many fundamental concepts which will help you progress in your career, studies and knowledge, such as images, containers, the registry, the client/server model in Docker via the Docker Engine etc.   You will use various commands and become comfortable spinning up containers, doing basic debugging to see statuses of containers, linking local files to files inside of Docker and learning basic networking to map a container port to a port on your local host machine to set up a development environment with Docker.   Most importantly you will leave this course more confident in your knowledge of Docker and ready to understand Docker at a more Advanced level, and ready to contribute better to your technical or development teams  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.',
+      Skills: 'redis  docker (software)  software  angularjs  laravel  HTML and CSS  project  html  demos  Angular information-technology cloud-computing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/introduction-to-docker-build-portfolio-site',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Search string Gain knowledge in continuous integration/continuous deployment (CI/CD) practices for automating software delivery processes.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: 'ZnL76Y4BR7A86jPn6d7Y',
+    _score: 1.6530075,
+    _source: {
+      name: 'Continuous Delivery & DevOps',
+      desc: 'Amazon famously delivers new code every 11.6 seconds. Just a few years ago, this was unthinkable: many �cutting edge� firms would release software quarterly. When it comes to digital innovation, velocity is critical and many would say it�s the most reliable determinant of success.   Bringing an organization to the state of the art (or even functional capability) in this area requires strong work in a combination of disciplines and a combination of both technical and managerial skills. There is no single cookie-cutter approach for achieving this capability. Much like agile, the right focus and formulation depends a lot on the facts and circumstances of the team. This course, developed at the Darden School of Business at the University of Virginia and taught by top-ranked faculty, will provide you with the interdisciplinary skill set to cultivate a continuous deployment capability in your organization.   After completing this course, you will be able to:  1. Diagnose a team�s delivery pipeline and bring forward prioritized recommendations to improve it 2. Explain the skill sets and roles involved in DevOps and how they contribute toward a continuous delivery capability 3. Review and deliver automation tests across the development stack 4. Explain the key jobs of system operations and how today�s leading techniques and tools apply to them 5. Explain how high-functioning teams use DevOps and related methods to reach a continuous delivery capability  6. Facilitate prioritized, iterative team progress on improving a delivery pipeline',
+      Skills: 'integration testing  test automation  unit testing  Software Testing  DevOps  system testing  continuous testing  Continuous Integration  software  Continuous Delivery computer-science software-development',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/uva-darden-continous-delivery-devops',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'GXIA6o4BR7A86jPnp-A_',
+    _score: 1.6349856,
+    _source: {
+      name: 'Continuous Integration',
+      desc: "In today's world, software development is highly complex and often has large teams of developers working on small pieces of a larger software project. This course will go over the basic principles of using a continuous integration system effectively to constantly improve software. We're going to describe the different stations of continuous test, build, integration and deploy processes required for DevOps practices and apply best practices for quality software management, and tooling to accomplish iterative software build & test processes. You will be able to create an automated job for continuous build, test, integrate, and deploy with Travis CI and use branching and project workflows to enhance the quality, speed and feedback loops for your software assets. We'll describe the attributes of Deterministic Builds and how they are applied within the CI pipeline and use the Continuous Integration data and analytics to measure and improve the health of your software assets. Automation at scale is now more achievable for software development teams, as continuous integration makes it possible.",
+      Skills: "flow network  software development process  shippable  software configuration management  euler's totient function  reusability  packaging  software project management  DevOps  Continuous Integration computer-science software-development",
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/continuous-integration',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'qHLx6Y4BR7A86jPnwtpW',
+    _score: 1.5450383,
+    _source: {
+      name: 'DevOps Culture and Mindset',
+      desc: "This course gives you the basic foundational principles of DevOps with a particular focus on culture and the DevOps mindset. We�ll learn about how DevOps is grounded in lean principles, and how it can help improve collaboration between developers and operations team members. We'll learn about ideas regarding systems thinking, feedback loops, continuous improvement, loosely coupled architecture and teams, managing risk, and dealing with unplanned work. We�ll learn about strategies to manage work, monitor it, keep it organized, and maintain a high level of quality by following key DevOps principles. We�ll also discuss various organizational models and structures that are used by companies in their DevOps transformations. You�ll learn about value stream mapping, and ensuring continuous workflow. Ultimately, we'll learn key ideas and tactics that you can employ at your own organizations to improve both time-to-market and increase the value delivered for your customers, no matter your product line or industry.",
+      Skills: 'uptime  proactivity  software development process  Continuous Integration  lean manufacturing  a3 problem solving  organizational structure  value stream mapping  DevOps  Continuous Delivery computer-science software-development',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/devops-culture-and-mindset',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: '_HLh6Y4BR7A86jPnZNRe',
+    _score: 0.75833553,
+    _source: {
+      name: 'Scheduling Selenium TestNG tests via Jenkins CI/CD tool',
+      desc: 'Selenium is one of the most widely used test automation tools for UI functional testing.  The maximum ROI of test automation comes from its frequent execution either as a part of the CI/CD pipeline or running them often  Jenkins is one of the most widely used DevOps tools used in automating the complete life cycle of Continuous Integration, Delivery, and Deployment.  In this 1-hour long project-based course, you will learn concepts like creating a job in Jenkins, fetching code from source code management tool like GitHub, executing and scheduling Selenium and TestNG tests.    Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.',
+      Skills: 'version control  jenkins (software)  selenium  DevOps  github  test automation  running  source code  Software Testing  schedule computer-science software-development',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/scheduling-selenium-testng-tests-via-ci-cd-tools-jenkins',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'WXLo6Y4BR7A86jPnOdeM',
+    _score: 0.7557024,
+    _source: {
+      name: 'Software Development Processes and Methodologies',
+      desc: "Software is quickly becoming integral part of human life as we see more and more automation and technical advancements. Just like we expect car to work all the time and can't afford to break or reboot unexpectedly, software industry needs to continue to learn better way to build software if it were to become integral part of human life.  In this course,  you will get an overview of  how software teams work? What processes they use?  What are some of the industry standard methodologies? What are pros and cons of each?  You will learn enough to have meaningful conversation around software development processes.  After completing this course, a learner will be able to  1) Apply core software engineering practices at conceptual level for a given problem.  2) Compare and contrast traditional, agile, and lean development methodologies at high level.  These include Waterfall, Rational Unified Process, V model, Incremental, Spiral models and overview of agile mindset  3) Propose a methodology best suited for a given situation",
+      Skills: 'waterfall model  modeling  software  scrum (software development)  methodology  process  Software Engineering  software development process  Software Testing  Agile Software Development computer-science software-development',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/software-processes',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'wnLg6Y4BR7A86jPny9Qm',
+    _score: 0.74687815,
+    _source: {
+      name: 'Software Processes and Agile Practices',
+      desc: 'This course delves into a variety of processes to structure software development. It also covers the foundations of core Agile practices, such as Extreme Programming and Scrum.',
+      Skills: 'lean software development  process  kanban  software development process  software  Software Engineering  Leadership and Management  scrum (software development)  unified process  Agile Software Development computer-science design-and-product',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/software-processes-and-agile-practices',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'uHL06Y4BR7A86jPnh9v3',
+    _score: 0.74376065,
+    _source: {
+      name: 'Lean Software Development',
+      desc: 'While scrum and XP were transforming the software development industry, there were another set of ideas (derived from lean manufacturing and Six Sigma) that started to influence software development methods.  These ideas around Lean Software Development forms the foundation of number of agile methods.   In this course, we will explore lean concepts and cover some of the common Lean methods and techniques like Kanban, Value Stream Mapping, etc.   In this course, we will also learn techniques like Lean Startup and Design Thinking that can help team learn about user and market needs much faster and cheaper.   As part of this course, you will also apply the knowledge gained  in this course to fictional case studies.  These projects will help you gain experience to confidently apply these techniques in real world.  At the end of the course,  you will be able to apply lean techniques / methods to software development.  You will also be able to apply methods to learn about your users and market needs much faster and cheaper.',
+      Skills: 'process  Mobile Development  software  Agile Software Development  value stream mapping  software development process  Software Testing  Software Engineering  scrum (software development)  lean software development computer-science software-development',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/lean-software-development',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Search string Understand infrastructure as code by learning tools like Terraform or Ansible for automated setup and management of cloud resources.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: 'u3Lm6Y4BR7A86jPnRtZC',
+    _score: 1.6054413,
+    _source: {
+      name: 'Terraform Basics: Automate Provisioning of AWS EC2 Instances',
+      desc: "In this Guided Project, you will do a quick tour of Terraform, one of the most popular tools used by DevOps teams to automate infrastructure tasks. Terraform's main appeal is that we just declare what our infrastructure should look like, and the tool will decide which actions must be taken to �materialize� that infrastructure.   By the end of this project, you will have learnt how to automate your infrastructure with Terraform. This project will also prepare you with hands-on knowledge for automatically provisioning AWS EC2 server instances using Terraform scripts.  Please note: You will need an AWS account to complete this course. All the resources used in the course come under free-tier provided by AWS for new users. But you might be charged if you have already used up your free-tier credits.",
+      Skills: 'Writing  project mine  Planning  project  provisioning  Continuous Function  must  command-line interface  resource  entry point information-technology cloud-computing',
+      Difficulty: 'Intermediate',
+      url: 'https://www.coursera.org/learn/terraform-devops-aws-cloud-iac-ec2',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'd3Lr6Y4BR7A86jPnd9jH',
+    _score: 1.5315312,
+    _source: {
+      name: 'Configuration Management and the Cloud',
+      desc: "In this course, you�ll learn how to apply automation to manage fleets of computers. You�ll understand how to automate the process for deploying new computers, keeping those machines updated, managing large-scale changes, and a lot more. We'll discuss managing both physical machines running in our offices and virtual machines running in the Cloud.  We'll start by looking into an automation technique called configuration management, which lets you manage the configuration of our computers at scale. Specifically, you'll learn how to use Puppet, the current industry standard for configuration management. We'll look at some simple examples, and then see how we can apply the same concepts to more complex cases. You�ll be a Puppet-master in no time!  Later on, you'll expand your automation skills by understanding how to use the Cloud to help scale your infrastructure. You'll check out some best practices for handling hundreds of virtual machines running in the Cloud and troubleshooting them when things don't go according to plan.",
+      Skills: 'Google Cloud Platform  virtual machine  Cloud Platforms  Cloud Computing  Leadership and Management  software  Puppet (software)  Troubleshooting  configuration management  software configuration management information-technology cloud-computing',
+      Difficulty: 'Conversant',
+      url: 'https://www.coursera.org/learn/configuration-management-cloud',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: '-HL96Y4BR7A86jPnlt6A',
+    _score: 1.5087163,
+    _source: {
+      name: 'Azure Infrastructure Fundamentals',
+      desc: 'Microsoft Azure is a service created by Microsoft to provide cloud computing for creating and managing applications and services using a cloud environment. Azure provides software as a service (SaaS), platform as a service (PaaS) and infrastructure as a service (IaaS). The platform supports many programming languages and frameworks and can be used alone or in a multi-vendor cloud environment.   This course focuses on the Fundamentals of Azure Infrastructure including infrastructure as a service. We�ll begin with understanding the subscription, configuring security and acquiring storage. Then you�ll build virtual machines and VNETS. Azure environments can be highly available and very resilient. Data can be backed up to the cloud for safety. These are the concepts we will discuss in this course.',
+      Skills: 'Microsoft Azure  Machine Learning  coroutine  openshift  sap erp  reliability engineering  archimate  BlockChain  windows services  site reliability engineering computer-science computer-security-and-networks',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/azure-infrastructure',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'Q3L-6Y4BR7A86jPnYt_7',
+    _score: 0.76388943,
+    _source: {
+      name: 'System Administration and IT Infrastructure Services',
+      desc: "This course will transition you from working on a single computer to an entire fleet. Systems administration is the field of IT that�s responsible for maintaining reliable computers systems in a multi-user environment. In this course, you�ll learn about the infrastructure services that keep all organizations, big and small, up and running. We�ll deep dive on cloud so that you�ll understand everything from typical cloud infrastructure setups to how to manage cloud resources. You'll also learn how to manage and configure servers and how to use industry tools to manage computers, user information, and user productivity. Finally, you�ll learn how to recover your organization�s IT infrastructure in the event of a disaster.  By the end of this course you�ll be able to: ? utilize best practices for choosing hardware, vendors, and services for your organization ? understand how the most common infrastructure services that keep an organization running work, and how to manage infrastructure servers ? understand how to make the most of the cloud for your organization ? manage an organization�s computers and users using the directory services, Active Directory, and OpenLDAP ? choose and manage the tools that your organization will use ? backup your organization�s data and know how to recover your IT infrastructure in the case of a disaster ? utilize systems administration knowledge to plan and improve processes for IT environments",
+      Skills: 'disaster  directory services  lightweight directory access protocol  Cloud Computing  backup  directory access protocol  Planning  lightweight  Server Systems  infrastructure as a service information-technology support-and-operations',
+      Difficulty: 'Conversant',
+      url: 'https://www.coursera.org/learn/system-administration-it-infrastructure-services',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'iXLl6Y4BR7A86jPnqNb3',
+    _score: 0.75003934,
+    _source: {
+      name: 'Google Cloud Fundamentals for Azure Professionals: Core Infrastructure',
+      desc: 'This course introduces you to important concepts and terminology for working with Google Cloud Platform (GCP). You learn about, and compare, many of the computing and storage services available in Google Cloud Platform, including Google App Engine, Google Compute Engine, Google Kubernetes Engine, Google Cloud Storage, Google Cloud SQL, and BigQuery. You learn about important resource and policy management tools, such as the Google Cloud Resource Manager hierarchy and Google Cloud Identity and Access Management. Hands-on labs give you foundational skills for working with GCP.  Note: �Google services are currently unavailable in China.',
+      Skills: 'Network Infrastructure  data centers  use case  Google Cloud Platform  Databases  Cloud Computing  virtual machine  software  scalability  recursively enumerable set information-technology cloud-computing',
+      Difficulty: 'Conversant',
+      url: 'https://www.coursera.org/learn/gcp-fundamentals-azure',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'J3L16Y4BR7A86jPnu9yK',
+    _score: 0.7470954,
+    _source: {
+      name: 'AWS Fundamentals: Going Cloud-Native',
+      desc: "This course will introduce you to Amazon Web Services (AWS) core services and infrastructure. Through demonstrations you'll learn how to use and configure AWS services to deploy and host a cloud-native application.   Early in the course, your AWS instructors will discuss how the AWS cloud infrastructure is built, walk you through Amazon Elastic Compute Cloud (Amazon EC2) and Amazon Lightsail compute services. They'll also introduce you to networking on AWS, including how to set up Amazon Virtual Public Cloud (VPC) and different cloud storage options, including Amazon Elastic Block Storage (EBS), Amazon Simple Storage Service (S3) and Amazon Elastic File Service (EFS). Later in the course you'll learn about AWS Database services, such as Amazon Relational Database Service (RDS) and Amazon DynomoDB. Your instructors will also walk you through how to monitor and scale you application on AWS using Amazon CloudWatch and Amazon EC2 Elastic Load Balancing (ELB) and Auto Scaling. Lastly, you'll learn about security on AWS, as well as how to manage costs when using the AWS cloud platform.   In this course, you won't be required to complete hands-on exercises, but we strongly suggest you take advantage of the AWS Free Tier to follow along as the instructors demonstrate the AWS services. Class forums will also allow you to ask questions and interact with AWS training instructors. After completing this course, you'll have the basic fundamentals to get started on AWS.   This course has been developed by AWS, and is delivered by AWS technical instructors who teach cloud computing courses around the globe.",
+      Skills: 'Databases  amazon elastic compute cloud  amazon dynamodb  load balancing  Amazon Web Services  web  security  Cloud Storage  web service  Cloud Computing information-technology cloud-computing',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/aws-fundamentals-going-cloud-native',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'vHLv6Y4BR7A86jPnIdnw',
+    _score: 0.73839986,
+    _source: {
+      name: 'Cloud Systems Software',
+      desc: 'This course provides an introduction to programming frameworks and their implementation issues in the Cloud. It explains multiple topics, including: scalable distributed data stores, resource management (for supporting multi-tenancy and elasticity) and virtualization techniques. Optionally, the student will also be guided in the implementation of a basic version of the distributed runtime system for the Map-Reduce programming framework',
+      Skills: 'orchestration (computing)  i/o virtualization  health  architecture neutral distribution format  Cloud-Based Integration  Software Framework  System Programming  SQL  Cloud Engineering  multitier architecture information-technology cloud-computing',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/cloud-sys-software',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Search string Enhance your monitoring and logging skills using tools like Prometheus or ELK stack for tracking performance and detecting issues in applications.
+search result [
+  {
+    _index: 'lms-ai-poc',
+    _id: 'wXLp6Y4BR7A86jPnYtdD',
+    _score: 1.5307653,
+    _source: {
+      name: 'Logging, Monitoring and Observability in Google Cloud',
+      desc: 'This three-day instructor-led course teaches participants techniques for monitoring, troubleshooting, and improving infrastructure and application performance in Google Cloud. Guided by the principles of Site Reliability Engineering (SRE), and using a combination of presentations, demos, hands-on labs, and real-world case studies, attendees gain experience with full-stack monitoring, real-time log management, and analysis, debugging code in production, tracing application performance bottlenecks, and profiling CPU and memory usage.',
+      Skills: 'incident management  software bug  Troubleshooting  metadata  Cost Control  Operations Management  performance measurement  business transaction management  audit trail  Cloud Applications information-technology support-and-operations',
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/logging-monitoring-observability-google-cloud',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'OXLn6Y4BR7A86jPn1tez',
+    _score: 1.4266062,
+    _source: {
+      name: 'Identifying, Monitoring, and Analyzing Risk and Incident Response and Recovery',
+      desc: 'Risk Identification, Monitoring, and Analysis: In the Risk Identification, Monitoring, and Analysis session, you will learn how to identify, measure, and control losses associated with adverse events. You will review, analyze, select, and evaluate safeguards for mitigating risk.You will learn processes for collecting information, providing methods of identifying security events, assigning priority levels, taking the appropriate actions, and reporting the findings to the correct individuals. After collection of the details from monitoring, we can analyze to determine if the system is being operated in accordance with accepted industry practices, and in compliance with organization policies and procedures.          Incident Response and Recovery: In the Incident Response and Recovery Session, you will gain an understanding of how to handle incidents using consistent, applied approaches in order to resolve. Once an incident is identified, action will be necessary in order to resolve. We will examine processes such as damage recovery, data integrity and preservation, and the collection, handling, reporting, and prevention. You will be introduced to the Business Continuity Plan (BCP) and Disaster Recovery Plan (DRP) concepts and how they can be utilized in order to mitigate damages, recover business operations, and avoid critical business interruption. Through the use of the DRP, you will understand the procedures for emergency response and post-disaster recovery.       Course Objectives    1.  Describe the risk management process 2. Perform security assessment activities 3. Describe processes for operating and maintaining monitoring systems 4. Identify events of interest 5. Describe the various source systems 6. Interpret reporting findings from monitoring results 7. Describe the incident handling process 8. Contribute to the incident handling process based upon role within the organization 9. Describe the supporting role in forensics investigation processes 10. Describe the supporting role in the business continuity planning process 11. Describe the supporting role in the disaster recovery planning process',
+      Skills: 'Leadership and Management  Risk  Computer Security Incident Management  business continuity  risk assessment  incident management  incremental backup  security information and event management  differential backup  security information-technology security',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/incident-response-recovery-risks-sscp',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: '_3Lv6Y4BR7A86jPn79l9',
+    _score: 0.7229985,
+    _source: {
+      name: 'Reviews & Metrics for Software Improvements',
+      desc: 'This course covers techniques for monitoring your projects in order to align client needs, project plans, and software production. It focuses on metrics and reviews to track and improve project progress and software quality.',
+      Skills: 'software metrics  software project management  scrum (software development)  Project Management  software  Leadership and Management  Software Engineering  software product management  project  Product Management computer-science design-and-product',
+      Difficulty: 'Advanced',
+      url: 'https://www.coursera.org/learn/reviews-and-metrics-for-software-improvements',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'vXL06Y4BR7A86jPnldun',
+    _score: 0.7184726,
+    _source: {
+      name: 'App Deployment, Debugging, and Performance',
+      desc: 'In this course, application developers learn how to design and develop cloud-native applications that seamlessly integrate managed services from Google Cloud. Through a combination of presentations, demos, and hands-on labs, participants learn how to apply best practices for application development and use the appropriate Google Cloud storage services for object storage, relational data, caching, and analytics. Learners can choose to complete labs in their favorite language: Node.js, Java, or Python.\\t  � Completed Google Cloud Platform Fundamentals or have equivalent experience � Working knowledge of Node.js, Java, or Python � Basic proficiency with command-line tools and Linux operating system environments � Previous course(s) in the specialization',
+      Skills: 'stack trace  Cloud Computing  multicloud  Google App Engine  performance  debugging  dataflow  stack (abstract data type)  Cloud Platforms  Google Cloud Platform computer-science software-development',
+      Difficulty: 'Conversant',
+      url: 'https://www.coursera.org/learn/app-deployment-debugging-performance',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: '4HLs6Y4BR7A86jPnptjH',
+    _score: 0.70664454,
+    _source: {
+      name: 'Leveraging Real-Time Analytics in Slack',
+      desc: 'By the end of this course, you will access and leverage analytics in Slack. Leveraging analytics in your Slack digital work environment will allow you to make data-driven decisions, foster a feedback culture, and define tactics that move your work group closer to its goals. You will do this by gaining hands-on experience accessing Slack�s internal analytics, reviewing external integrations and how they work in concert with them, and building an integration to the SurveyMonkey application from within Slack.   You will also have the opportunity to set up a free SurveyMonkey account to begin capturing new data from the team in your Slack workspace. Your hands-on project will include techniques that will enable you to integrate any cloud-based/outside service within your Slack environment and then leverage its functions and resources to maximize the effectiveness of collaborations and your team�s productivity through the practice of making data-driven decisions. For the purpose of this course, we will use the free-to-use, SurveyMonkey external integration and set it up from within your Slack environment.  You will work through this guided project in the Slack app on your Rhyme virtual machine, where you will use your current Slack workspace or set up a sample workspace under Slack�s free plan so that you can gain hands-on experience leveraging analytics in Slack with local and external integrations.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.',
+      Skills: "workspace  leverage (finance)  analytics  enabling  data-informed decision-making  e-nable  Planning  Accounting  business analytics  euler's totient function business business-strategy",
+      Difficulty: 'Beginner',
+      url: 'https://www.coursera.org/learn/leveraging-real-time-analytics-in-slack-local-and-surveymonkey-integrations',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'Q3Ln6Y4BR7A86jPn8tc0',
+    _score: 0.7061538,
+    _source: {
+      name: "On Premises Capacity Upgrade and Monitoring with Google Cloud's Apigee API Platform",
+      desc: "This course helps you build understanding on key considerations for capacity planning and how to add and remove logical and physical capacity to the platform. Here you will learn how to add and remove logical elements such as Organizations, Environments and Virtual Hosts. It will also cover how to add new and remove components as well as how to add entire regions.  The course will also cover the Apigee API Platform's monitoring capabilities, how to organize ideas for quickly detect and address failure scenarios as well as how to reach out to Apigee support for help.",
+      Skills: 'Apache Zookeeper  Computer Networking  Operations Management  node.js  Planning  cloud computing security  application programming interfaces  java management extensions  apache qpid  gratitude computer-science software-development',
+      Difficulty: 'Conversant',
+      url: 'https://www.coursera.org/learn/onprem-upgrade-apigee-gcp',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'c3Ij4o4BR7A86jPnzNIH',
+    _score: 0.70568734,
+    _source: {
+      name: 'Hacking and Patching',
+      desc: 'In this MOOC, you will learn how to hack web apps with command injection vulnerabilities in a web site of your AWS Linux instance.   You will learn how to search valuable information on a typical Linux systems with LAMP services, and deposit and hide Trojans for future exploitation.  You will learn how to patch these web apps with input validation using regular expression. You will learn a security design pattern to avoid introducing injection vulnerabilities by input validation and replacing generic system calls with specific function calls.  You will learn how to hack web apps with SQL injection vulnerabilities and retrieve user profile information and passwords.  You will learn how to patch them with input validation and SQL parameter binding.  You will learn the hacking methodology, Nessus tool for scanning vulnerabilities, Kali Linux for penetration testing, and Metasploit Framework for gaining access to vulnerable Windows Systems, deploying keylogger, and perform Remote VNC server injection.  You will learn security in memory systems and virtual memory layout, and understand buffer overflow attacks and their defenses.  You will learn how to clone a Kali instance with AWS P2 GPU support and perform hashcat password cracking using dictionary attacks and known pattern mask attacks.',
+      url: 'https://www.coursera.org/learn/hacking-patching',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  },
+  {
+    _index: 'lms-ai-poc',
+    _id: 'XXLf6Y4BR7A86jPnt9Q7',
+    _score: 0.70565546,
+    _source: {
+      name: 'Troubleshooting and Debugging Techniques',
+      desc: "In this course, we'll give you the tools to quickly identify and solve real-world problems that you might come across in your IT role. We'll look at a bunch of different strategies and approaches for tackling the most common pitfalls of your code and IT infrastructure. You'll learn strategies for approaching almost any technical problem and then see how those apply to solving different real-world scenarios.   We picked examples that include general system issues, issues with software that someone else wrote, and issues with programs that we wrote. We'll talk about problems that can affect any operating system, and we'll also look at challenges specific to certain platforms and scripting languages.  We strongly recommend that you�ve taken the prior courses in this program, or already have knowledge of Python and Linux so that you can follow along with our troubleshooting examples.",
+      Skills: 'Computer Programming  Python Programming  Troubleshooting  resource  profilers  software  debugging  Problem Solving  Leadership and Management  debug code information-technology cloud-computing',
+      Difficulty: 'Conversant',
+      url: 'https://www.coursera.org/learn/troubleshooting-debugging-techniques',
+      name_vector: [Array],
+      desc_vector: [Array]
+    }
+  }
+]
+Done
