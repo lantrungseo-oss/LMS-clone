@@ -1,5 +1,5 @@
 "use client";
-import { Video, FileQuestion, File } from 'lucide-react'
+import { Video, FileQuestion, File, BookOpen, Info } from 'lucide-react'
 
 export type TActivityIconProps = {
   type: string;
@@ -14,7 +14,9 @@ export const ActivityIcon = ({ type, className }: TActivityIconProps) => {
     case "quiz":
       return <FileQuestion className={clsNme} />;
     case "text":
-      return <File className={clsNme} />;
+      return <BookOpen className={clsNme} />
+    case "info":
+      return <Info className={clsNme}/>
     default:
       return null;
   }

@@ -1,14 +1,18 @@
-import { Chapter, Course, UserProgress } from "@prisma/client"
+"use client";
 
+import { Chapter, ChapterActivity, Course } from "@prisma/client";
 import { NavbarRoutes } from "@/components/navbar-routes";
-
 import { CourseMobileSidebar } from "./course-mobile-sidebar";
 
 interface CourseNavbarProps {
   course: Course & {
     chapters: (Chapter & {
-      userProgress: UserProgress[] | null;
-    })[];
+      activities: (ChapterActivity & {
+        videoData: {
+          playbackId?: string | null;
+        }
+      })[]
+    })[]
   };
   progressCount: number;
 };
