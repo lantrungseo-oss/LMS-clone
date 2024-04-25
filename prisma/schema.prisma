@@ -64,7 +64,7 @@ model Chapter {
   courseId String
   course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
 
-  activties ChapterActivity[]
+  activities ChapterActivity[]
 
   userProgress UserProgress[]
 

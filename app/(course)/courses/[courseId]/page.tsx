@@ -1,32 +1,25 @@
-import { db } from "@/lib/db";
+import { learningMainService } from "@/core/business/learning";
 import { redirect } from "next/navigation";
+import { CourseDescription } from "./_components/course-description";
 
 const CourseIdPage = async ({
   params
 }: {
   params: { courseId: string; }
 }) => {
-  const course = await db.course.findUnique({
-    where: {
-      id: params.courseId,
-    },
-    include: {
-      chapters: {
-        where: {
-          isPublished: true,
-        },
-        orderBy: {
-          position: "asc"
-        }
-      }
-    }
-  });
+  const course = await learningMainService.getCourse(params.courseId);
 
   if (!course) {
     return redirect("/");
   }
 
-  return redirect(`/courses/${course.id}/chapters/${course.chapters[0].id}`);
+  return (
+    <CourseDescription
+      imageUrl={course.imageUrl || ""}
+      title={course.title}
+      description={course.description || ""}
+    />
+  )
 }
  
 export default CourseIdPage;

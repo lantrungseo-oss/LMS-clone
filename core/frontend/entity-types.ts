@@ -1,3 +1,5 @@
+import type prisma from "@prisma/client";
+
 export type ChapterActivity = {
   id: string;
   title: string;
@@ -14,3 +16,15 @@ export interface IQuestion {
 export interface IQuizData {
   questions: IQuestion[];
 }
+
+export type FullCourseData = prisma.Course & {
+  chapters: (prisma.Chapter & {
+    activities: (prisma.ChapterActivity & {
+      videoData: {
+        playbackId?: string | null;
+      }
+    })[]
+  })[]
+}
+
+export type ChapterActivityFullData = FullCourseData["chapters"][number]["activities"][number];
