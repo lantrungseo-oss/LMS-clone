@@ -1,11 +1,6 @@
 "use client";
 
-import Editor from "@/components/editor";
 import { Preview } from "@/components/preview";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { DialogDescription } from "@radix-ui/react-dialog";
-import { useState } from "react";
 
 type ActivityTextBookProps = {
   value?: string | null;

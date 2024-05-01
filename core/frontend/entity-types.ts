@@ -17,6 +17,10 @@ export interface IQuizData {
   questions: IQuestion[];
 }
 
+export type QuizStudentAnswerData = {
+  answerMap: Record<string, { chosenOptionIndex: number; }>;
+}
+
 export type FullCourseData = prisma.Course & {
   chapters: (prisma.Chapter & {
     activities: (prisma.ChapterActivity & {

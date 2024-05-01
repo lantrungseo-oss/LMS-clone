@@ -9,6 +9,7 @@ import { useContext, useState } from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { CourseChapterActivityList } from "./course-chapter-activities";
 import { CourseContext } from "../contexts/course-context";
+import { useRouter } from "next/navigation";
 
   interface CourseSidebarProps {
     course: FullCourseData;
@@ -27,6 +28,7 @@ export const CourseSidebar = ({
   isPurchased
 }: CourseSidebarProps) => {
   const [collapsedChapterIds, setCollapsedChapterIds] = useState<string[]>([]);
+  const router = useRouter();
   
 
   
@@ -35,11 +37,13 @@ export const CourseSidebar = ({
   }
 
   const courseContext = useContext(CourseContext);
-
+  const redirectToCourse = () => {
+    router.push(`/courses/${course.id}`)
+  }
   return (
     <div className="h-full border-r flex flex-col overflow-y-auto shadow-sm">
       <div className="p-8 flex flex-col border-b">
-        <h1 className="font-semibold">
+        <h1 className="font-semibold cursor-pointer" onClick={redirectToCourse}>
           {course.title}
         </h1>
         {isPurchased && (
