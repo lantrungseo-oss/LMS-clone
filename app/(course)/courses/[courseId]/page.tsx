@@ -7,7 +7,7 @@ const CourseIdPage = async ({
 }: {
   params: { courseId: string; }
 }) => {
-  const course = await learningMainService.getCourse(params.courseId);
+  const { course } = await learningMainService.checkCourseAccess(params.courseId, { readFullCourse: false })
 
   if (!course) {
     return redirect("/");

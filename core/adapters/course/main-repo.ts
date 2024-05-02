@@ -24,4 +24,13 @@ export class MainCourseRepo {
       }
     }) as Promise<t.FullCourseData | null>;
   }
+
+  doesCourseBelongToUser(courseId: string, userId: string) {
+    return db.course.count({
+      where: {
+        id: courseId,
+        userId
+      }
+    }).then(count => count > 0);
+  }
 }

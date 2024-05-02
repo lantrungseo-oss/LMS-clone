@@ -21,6 +21,7 @@ export type CourseRepoReadFullCourseResponse = prisma.Course & {
 export interface CourseRepo {
   readFullCourse(id: string): Promise<CourseRepoReadFullCourseResponse | null>;
   read(id: string): Promise<prisma.Course | null>
+  doesCourseBelongToUser(courseId: string, userId: string): Promise<boolean>;
 }
 
 export interface ChapterRepo {
@@ -34,4 +35,25 @@ export type ActivityReadResult = prisma.ChapterActivity & {
 }
 export interface ActivityRepo {
   getActivityWithVideoData(id: string): Promise<ActivityReadResult | null>;
+}
+
+export interface PurchaseRepo {
+  getPurchase(userId: string, courseId: string): Promise<prisma.Purchase | null>
+}
+
+export interface IGetAuthContextInput {}
+export interface IAuthContext {
+  userId?: string | null;
+}
+export interface AuthService {
+  getAuthContext(input: IGetAuthContextInput): Promise<IAuthContext>;
+}
+
+export interface ICheckCourseAccessOptions {
+  readFullCourse?: boolean;
+}
+
+export interface CheckCourseAccessResult {
+  course?: Course | null;
+  userId?: string | null;
 }

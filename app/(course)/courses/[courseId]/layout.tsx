@@ -15,15 +15,12 @@ const CourseLayout = async ({
   children: React.ReactNode;
   params: { courseId: string; };
 }) => {
-  const { userId } = auth();
+   const { course, userId } = await learningMainService
+    .checkCourseAccess(
+      params.courseId, { readFullCourse: true }
+    );
 
-  if (!userId) {
-    return redirect("/")
-  }
-
-  const course = await learningMainService.getFullCourseData(params.courseId);
-
-  if (!course) {
+  if (!course || !userId) {
     return redirect("/");
   }
 
