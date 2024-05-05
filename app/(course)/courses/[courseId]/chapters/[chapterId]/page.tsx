@@ -8,7 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { Preview } from "@/components/preview";
 
 import { VideoPlayer } from "./_components/video-player";
-import { CourseEnrollButton } from "./_components/course-enroll-button";
+import { CourseEnrollButton } from "../../_components/course-enroll-button";
 import { CourseProgressButton } from "./_components/course-progress-button";
 import { learningMainService } from "@/core/business/learning";
 import { CourseDescription } from "../../_components/course-description";
@@ -19,20 +19,31 @@ const ChapterIdPage = async ({
 }: {
   params: { courseId: string; chapterId: string }
 }) => {
-  const { userId } = auth();
-  
+  const { userId, grantedAccessRole, isFree } = await learningMainService
+    .checkCourseAccessForChapter(
+      params.chapterId, { readFullCourse: true }
+    );
+
   if (!userId) {
     return redirect("/");
-  } 
+  }
+
+  if(!grantedAccessRole && !isFree) {
+    return redirect(`/courses/${params.courseId}`)
+  }
 
   const chapter = await learningMainService.getChapter(params.chapterId);
+  const course = await learningMainService.getCourse(params.courseId);
 
-  if(!chapter) {
-    return redirect("/")
+  if(!chapter || !course) {
+    return redirect(`/courses/${params.courseId}`)
   }
 
   return (
     <ChapterDescription
+      coursePrice={course.price ?? undefined}
+      courseId={params.courseId}
+      isPurchased={!!grantedAccessRole}
       title={chapter.title}
       description={chapter.description || ''}
     />

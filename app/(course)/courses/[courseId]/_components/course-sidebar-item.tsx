@@ -13,7 +13,7 @@ interface CourseSidebarItemProps {
   isLocked: boolean;
 };
 
-export const CourseSidebarItem = ({
+export const Item = ({
   label,
   id,
   isCompleted,

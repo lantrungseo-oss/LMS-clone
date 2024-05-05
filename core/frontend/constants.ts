@@ -24,3 +24,8 @@ export const MULTI_CHOICE_QUESTION_TEMPLATE: Omit<IQuestion, 'id'> = {
   ],
   correctAnswerIndex: 0,
 }
+
+export enum ECourseAccessRole {
+  TEACHER = 'TEACHER',
+  STUDENT = 'STUDENT'
+}

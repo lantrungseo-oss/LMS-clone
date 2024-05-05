@@ -22,6 +22,7 @@ export interface CourseRepo {
   readFullCourse(id: string): Promise<CourseRepoReadFullCourseResponse | null>;
   read(id: string): Promise<prisma.Course | null>
   doesCourseBelongToUser(courseId: string, userId: string): Promise<boolean>;
+  getCourseFullDataWithFreeChaptersOnly(courseId: string): Promise<CourseRepoReadFullCourseResponse | null>
 }
 
 export interface ChapterRepo {
@@ -35,6 +36,8 @@ export type ActivityReadResult = prisma.ChapterActivity & {
 }
 export interface ActivityRepo {
   getActivityWithVideoData(id: string): Promise<ActivityReadResult | null>;
+  getActivityWithChapter(id: string): Promise<prisma.ChapterActivity & { chapter: prisma.Chapter } | null>;
+
 }
 
 export interface PurchaseRepo {
@@ -49,11 +52,19 @@ export interface AuthService {
   getAuthContext(input: IGetAuthContextInput): Promise<IAuthContext>;
 }
 
-export interface ICheckCourseAccessOptions {
-  readFullCourse?: boolean;
+export interface ICheckCourseAccessOptions {}
+
+export enum ECourseAccessRole {
+  TEACHER = 'TEACHER',
+  STUDENT = 'STUDENT'
 }
 
 export interface CheckCourseAccessResult {
-  course?: Course | null;
+  grantedAccessRole?: ECourseAccessRole;
   userId?: string | null;
+  isFree?: boolean;
+}
+
+export type GetFullCourseDataOptions = {
+  freeChapterOnly?: boolean;
 }

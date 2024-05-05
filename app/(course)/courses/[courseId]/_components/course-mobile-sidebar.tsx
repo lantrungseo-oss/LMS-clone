@@ -14,11 +14,13 @@ import { FullCourseData } from "@/core/frontend/entity-types";
 interface CourseMobileSidebarProps {
   course: FullCourseData;
   progressCount: number;
+  isPurchased: boolean;
 };
 
 export const CourseMobileSidebar = ({ 
   course,
   progressCount,
+  isPurchased
 }: CourseMobileSidebarProps) => {
   return (
     <Sheet>
@@ -27,6 +29,7 @@ export const CourseMobileSidebar = ({
       </SheetTrigger>
       <SheetContent side="left" className="p-0 bg-white w-72">
         <CourseSidebar
+          isPurchased={isPurchased}
           course={course}
           progressCount={progressCount}
         />

@@ -3,23 +3,20 @@
 import { CourseProgress } from "@/components/course-progress";
 import * as Accordion from '@radix-ui/react-accordion';
 
-import { CourseSidebarItem } from "./course-sidebar-item";
 import { FullCourseData } from "@/core/frontend/entity-types";
-import { useContext, useState } from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
-import { CourseChapterActivityList } from "./course-chapter-activities";
-import { CourseContext } from "../contexts/course-context";
 import { useRouter } from "next/navigation";
+import { useContext, useState } from "react";
+import { CourseContext } from "../contexts/course-context";
+import { CourseChapterActivityList } from "./course-chapter-activities";
+import { CourseEnrollButton } from "./course-enroll-button";
 
-  interface CourseSidebarProps {
-    course: FullCourseData;
-    progressCount: number;
-  isPurchased?: boolean;
+interface CourseSidebarProps {
+  course: FullCourseData;
+  progressCount: number;
+  isPurchased: boolean;
 };
 
-// hard code here
-const currentActivityId = "171e0ea4-390e-4d71-9d5b-ea78360591a2"
-const currentChapterId = "23e625b3-aa32-43f9-b778-9a5b0836b2b9"
 
 
 export const CourseSidebar = ({
@@ -29,8 +26,6 @@ export const CourseSidebar = ({
 }: CourseSidebarProps) => {
   const [collapsedChapterIds, setCollapsedChapterIds] = useState<string[]>([]);
   const router = useRouter();
-  
-
   
   const onAccordionValueChange = (value: string[]) => {
     setCollapsedChapterIds(value)
@@ -52,6 +47,11 @@ export const CourseSidebar = ({
               variant="success"
               value={progressCount}
             />
+          </div>
+        )}
+        {!isPurchased && course.price && (
+          <div className='pt-3'>
+            <CourseEnrollButton price={course.price} courseId={course.id} />
           </div>
         )}
       </div>

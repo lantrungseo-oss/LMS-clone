@@ -10,7 +10,7 @@ export type CourseContextValue = {
 
 export const CourseContext = createContext<CourseContextValue | null>(null);
 
-export const CourseContextProvider = ({ children }: { children: React.ReactNode }) => {
+export const CourseContextProvider = ({ children,}: { children: React.ReactNode; }) => {
   const value = useParams<CourseContextValue>()
   return (
     <CourseContext.Provider value={value}>

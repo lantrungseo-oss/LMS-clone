@@ -7,9 +7,20 @@ const CourseIdPage = async ({
 }: {
   params: { courseId: string; }
 }) => {
-  const { course } = await learningMainService.checkCourseAccess(params.courseId, { readFullCourse: false })
+  const { userId, grantedAccessRole } = await learningMainService
+    .checkCourseAccess(
+      params.courseId, {}
+    );
 
-  if (!course) {
+  if (!userId) {
+    return redirect("/");
+  }
+
+  const course = await learningMainService.getFullCourseData(params.courseId, {
+    freeChapterOnly: !grantedAccessRole
+  });
+
+  if(!course) {
     return redirect("/");
   }
 

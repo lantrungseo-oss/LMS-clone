@@ -1,4 +1,5 @@
 import type * as learningType from './types';
+import { ECourseAccessRole } from './types';
 
 export class LearningMainService {
   constructor(
@@ -21,8 +22,8 @@ export class LearningMainService {
     return this.couresRepo.read(courseId);
   }
 
-  async getFullCourseData(courseId: string) {
-    const course =  await this.couresRepo.readFullCourse(courseId);
+  async getFullCourseData(courseId: string, options: learningType.GetFullCourseDataOptions) {
+    const course = !options.freeChapterOnly ? await this.couresRepo.readFullCourse(courseId) : await this.couresRepo.getCourseFullDataWithFreeChaptersOnly(courseId);
     if(!course) {
       return null;
     }
@@ -48,22 +49,41 @@ export class LearningMainService {
     const doesCourseBelongToUser = await this.couresRepo.doesCourseBelongToUser(courseId, userId);
     if(!doesCourseBelongToUser) {
       const purchase = await this.purchaseRepo.getPurchase(userId, courseId);
-      if(!purchase) {
-        return { userId, course: null };
+      if(purchase) {
+        return { userId, grantedAccessRole: ECourseAccessRole.STUDENT };
       }
+      return { userId, }
     }
-    if(options.readFullCourse) {
-      return {
-        course: await this.getFullCourseData(courseId),
-        userId
-      } 
-    }
-   
-    const course = await this.getCourse(courseId);
+
     
     return {
-      course: course && { ...course, chapters: [] },
-      userId
+      userId,
+      grantedAccessRole: ECourseAccessRole.TEACHER // owner of the course
+    }
+  }
+
+  async checkCourseAccessForChapter(chapterId: string, options: learningType.ICheckCourseAccessOptions): Promise<learningType.CheckCourseAccessResult> {
+    const chapter = await this.chapterRepo.read(chapterId);
+    if(!chapter) {
+      return {};
+    }
+    const result = await this.checkCourseAccess(chapter.courseId, options);
+    return {
+      ...result,
+      isFree: chapter.isFree
+    }
+  }
+
+  async checkCourseAccessForActivity(activityId: string, options: learningType.ICheckCourseAccessOptions): Promise<learningType.CheckCourseAccessResult> {
+    const activity = await this.activityRepo.getActivityWithChapter(activityId);
+    if(!activity) {
+      return {};
+    }
+    const result = await this.checkCourseAccess(activity.chapter.courseId, options)
+    return {
+      ...result,
+      grantedAccessRole: result.grantedAccessRole,
+      isFree: activity.chapter.isFree
     }
   }
 }

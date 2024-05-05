@@ -13,8 +13,14 @@ export class MainCourseRepo {
       where: { id },
       include: {
         chapters: {
+          orderBy: {
+            position: 'asc',
+          },
           include: {
             activities: {
+              orderBy: {
+                position: 'asc',
+              },
               include: {
                 muxData: true
               }
@@ -32,5 +38,29 @@ export class MainCourseRepo {
         userId
       }
     }).then(count => count > 0);
+  }
+
+  getCourseFullDataWithFreeChaptersOnly(courseId: string) {
+    return db.course.findUnique({
+      where: { id: courseId },
+      include: {
+        chapters: {
+          orderBy: {
+            position: 'asc',
+          },
+          where: { isFree: true },
+          include: {
+            activities: {
+              orderBy: {
+                position: 'asc',
+              },
+              include: {
+                muxData: true
+              }
+            }
+          }
+        }
+      }
+    })
   }
 }

@@ -80,4 +80,13 @@ export class MainAcitivyRepo {
       } 
     }
   }
+
+  async getActivityWithChapter(id: string) {
+    return primsaDb.chapterActivity.findUnique({
+      where: { id },
+      include: {
+        chapter: true
+      }
+    })
+  }
 }

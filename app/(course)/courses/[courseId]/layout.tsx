@@ -7,6 +7,7 @@ import { learningMainService } from "@/core/business/learning";
 import { CourseNavbar } from "./_components/course-navbar";
 import { CourseSidebar } from "./_components/course-sidebar";
 import { CourseContextProvider } from "./contexts/course-context";
+import { ECourseAccessRole } from "@/core/frontend/constants";
 
 const CourseLayout = async ({
   children,
@@ -15,23 +16,23 @@ const CourseLayout = async ({
   children: React.ReactNode;
   params: { courseId: string; };
 }) => {
-   const { course, userId } = await learningMainService
+   const { userId, grantedAccessRole } = await learningMainService
     .checkCourseAccess(
-      params.courseId, { readFullCourse: true }
+      params.courseId, {}
     );
 
-  if (!course || !userId) {
+
+  if (!userId) {
     return redirect("/");
   }
 
-  const purchase = await db.purchase.findUnique({
-    where: {
-      userId_courseId: {
-        userId,
-        courseId: course.id
-      }
-    }
+  const course = await learningMainService.getFullCourseData(params.courseId, {
+    freeChapterOnly: !grantedAccessRole
   });
+
+  if(!course) {
+    return redirect("/");
+  }
 
   const progressCount = 0
 
@@ -42,13 +43,14 @@ const CourseLayout = async ({
           <CourseNavbar
             course={course}
             progressCount={progressCount}
+            isPurchased={!!grantedAccessRole}
           />
         </div>
         <div className="hidden md:flex h-full w-80 flex-col fixed inset-y-0 z-50">
           <CourseSidebar
             course={course}
             progressCount={progressCount}
-            isPurchased
+            isPurchased={!!grantedAccessRole}
           />
         </div>
         <main className="md:pl-80 pt-[80px] h-full">
