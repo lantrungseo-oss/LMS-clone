@@ -76,7 +76,7 @@ export const CourseSidebar = ({
                   <div className="w-full flex items-center">
                     {isOpen ? <ChevronDown size={18} color="gray" /> : <ChevronRight size={18} color="gray" />}
                     <Accordion.Header className="p-4">
-                      <Accordion.Trigger className="text-md font-semibold text-gray-700">
+                      <Accordion.Trigger className="text-md text-left font-semibold text-gray-700">
                         {chapter.title}
                       </Accordion.Trigger>
                     </Accordion.Header>
