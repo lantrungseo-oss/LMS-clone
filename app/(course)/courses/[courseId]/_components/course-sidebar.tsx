@@ -7,23 +7,21 @@ import { FullCourseData } from "@/core/frontend/entity-types";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useContext, useState } from "react";
-import { CourseContext } from "../contexts/course-context";
+import { CourseContext } from "../_contexts/course-context";
 import { CourseChapterActivityList } from "./course-chapter-activities";
 import { CourseEnrollButton } from "./course-enroll-button";
 
 interface CourseSidebarProps {
-  course: FullCourseData;
   progressCount: number;
-  isPurchased: boolean;
 };
 
 
 
 export const CourseSidebar = ({
-  course,
   progressCount,
-  isPurchased
 }: CourseSidebarProps) => {
+  const courseCtxVal = useContext(CourseContext);
+  const course = courseCtxVal?.initialData.course;
   const [collapsedChapterIds, setCollapsedChapterIds] = useState<string[]>([]);
   const router = useRouter();
   
@@ -33,15 +31,15 @@ export const CourseSidebar = ({
 
   const courseContext = useContext(CourseContext);
   const redirectToCourse = () => {
-    router.push(`/courses/${course.id}`)
+    router.push(`/courses/${course?.id}`)
   }
   return (
     <div className="h-full border-r flex flex-col overflow-y-auto shadow-sm">
       <div className="p-8 flex flex-col border-b">
         <h1 className="font-semibold cursor-pointer" onClick={redirectToCourse}>
-          {course.title}
+          {course?.title}
         </h1>
-        {isPurchased && (
+        {courseCtxVal?.initialData.coursePurchased && (
           <div className="mt-10">
             <CourseProgress
               variant="success"
@@ -49,7 +47,7 @@ export const CourseSidebar = ({
             />
           </div>
         )}
-        {!isPurchased && course.price && (
+        {!courseCtxVal?.initialData.coursePurchased && course?.price && (
           <div className='pt-3'>
             <CourseEnrollButton price={course.price} courseId={course.id} />
           </div>
@@ -58,7 +56,7 @@ export const CourseSidebar = ({
       <div className="flex flex-col w-full">
         <Accordion.Root type='multiple' value={collapsedChapterIds} onValueChange={onAccordionValueChange}>
         {/**Use accordion to group activities into chapter */}
-          {course.chapters.map((chapter) => {
+          {course?.chapters.map((chapter) => {
 
             // (
             //   <CourseSidebarItem
@@ -91,6 +89,7 @@ export const CourseSidebar = ({
                         type: activity.type,
                         title: activity.name,
                         id: activity.id,
+                        completed: activity.completed
                       }))}
                     />
                   </Accordion.Content>

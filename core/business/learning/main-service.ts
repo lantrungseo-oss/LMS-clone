@@ -23,7 +23,7 @@ export class LearningMainService {
   }
 
   async getFullCourseData(courseId: string, options: learningType.GetFullCourseDataOptions) {
-    const course = !options.freeChapterOnly ? await this.couresRepo.readFullCourse(courseId) : await this.couresRepo.getCourseFullDataWithFreeChaptersOnly(courseId);
+    const course = !options.freeChapterOnly ? await this.couresRepo.readFullCourse(courseId, options) : await this.couresRepo.getCourseFullDataWithFreeChaptersOnly(courseId);
     if(!course) {
       return null;
     }
@@ -33,9 +33,12 @@ export class LearningMainService {
         ...chapter,
         activities: chapter.activities.map((activity) => ({
           ...activity,
+          muxData: [],
+          userProgress: [],
           videoData: {
             playbackId: activity.muxData?.[0]?.playbackId
-          }
+          },
+          completed: !!activity.userProgress?.[0]?.completedAt
         }))
       }))
     }
