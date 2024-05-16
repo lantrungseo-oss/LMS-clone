@@ -3,6 +3,8 @@ import { ChapterActivity } from "@/core/frontend/entity-types";
 import clsx from "clsx";
 import { CheckCircle } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
+import { CourseContext } from "../_contexts/course-context";
+import { useContext } from "react";
 
 type CourseChapterProps = {
   courseId: string;
@@ -24,6 +26,7 @@ export const CourseChapterActivityList = ({
     },
     ...activities
   ]
+;
 
   const router = useRouter();
   const pathName = usePathname();

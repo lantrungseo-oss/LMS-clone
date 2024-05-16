@@ -21,7 +21,7 @@ export const POST = routeErrorHandler(
 
     const { isCompleted } = await req.json();
 
-    const res = await learningMainService.updateLearningProgress(params.activityId, userId, isCompleted);
+    const res = await learningMainService.updateLearningCompletionStatus(params.activityId, userId, isCompleted);
     
     return NextResponse.json(res);
   }

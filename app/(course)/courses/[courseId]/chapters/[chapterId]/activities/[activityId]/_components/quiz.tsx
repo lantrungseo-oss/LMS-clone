@@ -2,7 +2,7 @@
 
 import { IQuizData, QuizStudentAnswerData } from "@/core/frontend/entity-types";
 import React, { use, useState } from 'react';
-import { Root as RadioGroupRoot, RadioGroupItem, Indicator as RadioGroupIndicator } from '@radix-ui/react-radio-group';
+import { Root as RadioGroupRoot, RadioGroupItem } from '@radix-ui/react-radio-group';
 import { Circle, CheckCircle } from 'lucide-react';
 import classNames from 'classnames';
 import { Preview } from "@/components/preview";
@@ -17,6 +17,7 @@ type QuizProps = {
 export const Quiz = ({ data, studentAnswers: initialStudentAnswers }: QuizProps) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(data.questions.length > 0 ? 0 : -1);
   const [studentAnswers, setStudentAnswers] = useState<QuizStudentAnswerData>(initialStudentAnswers ?? { answerMap: {} })
+  const currentQuestion = data.questions[currentQuestionIndex];
 
   const onCurrentQuestionChange = (qIndex: number) => {
     setCurrentQuestionIndex(qIndex)
@@ -47,15 +48,16 @@ export const Quiz = ({ data, studentAnswers: initialStudentAnswers }: QuizProps)
     return <div>No questions. Please ask the teacher to add some questions here</div>
   }
   return (
+    <>
     <div className="flex flex-col w-5/6 p-8 h-full items-stretch">
       <div className="flex-1 w-full">
         <div className="py-2">
           <Preview value={data.questions[0].question} />
         </div>
-        <RadioGroupRoot onValueChange={(optionId: string) => setAnswer(optionId, currentQuestionIndex)}>
+        <RadioGroupRoot onValueChange={(optionId: string) => setAnswer(optionId, currentQuestion.id.toString())}>
           <div className='flex flex-col'>
             {data.questions[currentQuestionIndex].options.map((o, index) => {
-              const isChosenAnswer = studentAnswers.answerMap[currentQuestionIndex.toString()]?.chosenOptionIndex === index
+              const isChosenAnswer = studentAnswers.answerMap[currentQuestion.id.toString()]?.chosenOptionIndex === index
               return (
                 <RadioGroupItem key={o.id} value={o.id.toString()}>
                   <div className="flex items-center p-2">
@@ -77,6 +79,8 @@ export const Quiz = ({ data, studentAnswers: initialStudentAnswers }: QuizProps)
         <Button onClick={() => console.log(studentAnswers)}>Submit</Button>
       </div>
     </div>
+    
+    </>
   );
 };
 

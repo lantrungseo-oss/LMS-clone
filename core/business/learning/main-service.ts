@@ -75,7 +75,7 @@ export class LearningMainService {
     }
   }
 
-  async updateLearningProgress(activityId: string, userId: string, isCompleted?: boolean) {
+  async updateLearningCompletionStatus(activityId: string, userId: string, isCompleted?: boolean) {
     const { grantedAccessRole } = await this.checkCourseAccessForActivity(activityId, {});
     if(!grantedAccessRole) {
       throw new ApiError({
@@ -85,10 +85,7 @@ export class LearningMainService {
     }
 
     if(_.isNil(isCompleted)) {
-      throw new ApiError({
-        message: 'isCompleted is required',
-        statusCode: 400
-      })
+      return {};
     }
 
     if(isCompleted) {
