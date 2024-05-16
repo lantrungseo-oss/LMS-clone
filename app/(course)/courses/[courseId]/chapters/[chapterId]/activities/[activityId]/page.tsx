@@ -6,6 +6,7 @@ import { ActivityTextBook } from "./_components/activity-textbook";
 import { Quiz } from "./_components/quiz";
 import { IQuizData } from "@/core/frontend/entity-types";
 import { CourseEnrollBanner } from "../../../../_components/course-enroll-banner";
+import { MarkCompleteButton } from "../../_components/mark-complete-btn";
 
 const ActivityPage = async ({
   params
@@ -37,10 +38,15 @@ const ActivityPage = async ({
       {!grantedAccessRole && course.price && (
         <CourseEnrollBanner courseId={course.id} price={course.price} />
       )}
-      <div className="flex flex-col items-center h-[90%]">
-        <div className='flex items-center py-3'>
-          <ActivityIcon type={activity.type} className='w-6 h-6' />
-          <h1 className="text-2xl p-2 font-bold">{activity.name}</h1>
+      <div className="flex flex-col h-[90%]">
+        <div className='flex items-center py-3 justify-between w-100 px-8'>
+          <div className='flex items-center'>
+            <ActivityIcon type={activity.type} className='w-6 h-6 flex-none' />
+            <h1 className="text-2xl p-2 font-bold flex-1">{activity.name}</h1>
+          </div>
+          {activity.type !== 'quiz' && (
+            <MarkCompleteButton />
+          )}
         </div>
         {activity.type === 'video' && (
           <ActivityVideoPlayer playbackId={activity.videoData?.playbackId}/>

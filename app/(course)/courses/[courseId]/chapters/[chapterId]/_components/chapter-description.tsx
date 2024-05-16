@@ -7,6 +7,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { DialogDescription } from "@radix-ui/react-dialog";
 import { useState } from "react";
 import { CourseEnrollBanner } from "../../../_components/course-enroll-banner";
+import { MarkCompleteButton } from "./mark-complete-btn";
 
 type ChapterDescriptionProps = {
   description: string;
@@ -26,8 +27,11 @@ export const ChapterDescription = ({ description, title, isPurchased, courseId, 
       {!isPurchased && coursePrice && (
         <CourseEnrollBanner courseId={courseId} price={coursePrice} />
       )}
-      <div className="flex flex-col items-center mt-6">
-        <h1 className="text-2xl font-semibold mt-4">{title}</h1>
+      <div className="flex flex-col mt-6">
+        <div className="flex ml-4 mt-4 mb-10 mr-8 justify-between items-center">
+          <h1 className="text-2xl font-semibold ">{title}</h1>
+          <MarkCompleteButton />
+        </div>
         <Preview value={description} />
       </div>
     </>

@@ -3,53 +3,72 @@
 import { CourseProgress } from "@/components/course-progress";
 import * as Accordion from '@radix-ui/react-accordion';
 
-import { FullCourseData } from "@/core/frontend/entity-types";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useContext, useState } from "react";
-import { CourseContext } from "../contexts/course-context";
+import { useContext, useEffect, useMemo, useState } from "react";
+import { CourseContext } from "../_contexts/course-context";
 import { CourseChapterActivityList } from "./course-chapter-activities";
 import { CourseEnrollButton } from "./course-enroll-button";
 
 interface CourseSidebarProps {
-  course: FullCourseData;
   progressCount: number;
-  isPurchased: boolean;
 };
 
 
 
 export const CourseSidebar = ({
-  course,
-  progressCount,
-  isPurchased
 }: CourseSidebarProps) => {
-  const [collapsedChapterIds, setCollapsedChapterIds] = useState<string[]>([]);
+  const courseCtxVal = useContext(CourseContext);
+  const course = courseCtxVal?.initialData.course;
+  const [collapsedChapterIds, setCollapsedChapterIds] = useState<string[]>(() => {
+    return courseCtxVal?.chapterId ? [courseCtxVal?.chapterId] : []
+  });
+
+  const progressCount = useMemo(() => {
+    if(!courseCtxVal?.initialData.course.chapters) {
+      return 0;
+    }
+    
+    const listActivities = courseCtxVal?.initialData.course.chapters.map(chapter => chapter.activities).flat();
+    const completedActivityCount = listActivities?.filter(activity => courseCtxVal?.isActivityCompleted(activity.id)).length;
+
+    return 100 * completedActivityCount / (listActivities.length || 1)
+  }, [courseCtxVal?.initialData.course.chapters, courseCtxVal?.isActivityCompleted])
+
+  useEffect(() => {
+    if(courseCtxVal?.chapterId) {
+      setCollapsedChapterIds(currentChapterIds => {
+        if(courseCtxVal?.chapterId) {
+          return Array.from(new Set([...currentChapterIds, courseCtxVal?.chapterId]));
+        }
+        return currentChapterIds;
+      });
+    }
+  }, [courseCtxVal?.chapterId]);
   const router = useRouter();
   
   const onAccordionValueChange = (value: string[]) => {
     setCollapsedChapterIds(value)
   }
 
-  const courseContext = useContext(CourseContext);
   const redirectToCourse = () => {
-    router.push(`/courses/${course.id}`)
+    router.push(`/courses/${course?.id}`)
   }
   return (
     <div className="h-full border-r flex flex-col overflow-y-auto shadow-sm">
       <div className="p-8 flex flex-col border-b">
         <h1 className="font-semibold cursor-pointer" onClick={redirectToCourse}>
-          {course.title}
+          {course?.title}
         </h1>
-        {isPurchased && (
+        {courseCtxVal?.initialData.coursePurchased && (
           <div className="mt-10">
             <CourseProgress
-              variant="success"
               value={progressCount}
+              variant="success"
             />
           </div>
         )}
-        {!isPurchased && course.price && (
+        {!courseCtxVal?.initialData.coursePurchased && course?.price && (
           <div className='pt-3'>
             <CourseEnrollButton price={course.price} courseId={course.id} />
           </div>
@@ -58,7 +77,7 @@ export const CourseSidebar = ({
       <div className="flex flex-col w-full">
         <Accordion.Root type='multiple' value={collapsedChapterIds} onValueChange={onAccordionValueChange}>
         {/**Use accordion to group activities into chapter */}
-          {course.chapters.map((chapter) => {
+          {course?.chapters.map((chapter) => {
 
             // (
             //   <CourseSidebarItem
@@ -84,13 +103,14 @@ export const CourseSidebar = ({
                   <Accordion.Content className="p-4 bg-white shadow">
                     <CourseChapterActivityList 
                       chapterId={chapter.id}
-                      currentActivityId={courseContext?.activityId}
-                      currentChapterId={courseContext?.chapterId}
+                      currentActivityId={courseCtxVal?.activityId}
+                      currentChapterId={courseCtxVal?.chapterId}
                       courseId={course.id}
                       activities={chapter.activities.map((activity) => ({
                         type: activity.type,
                         title: activity.name,
                         id: activity.id,
+                        completed: courseCtxVal?.isActivityCompleted(activity.id)
                       }))}
                     />
                   </Accordion.Content>
