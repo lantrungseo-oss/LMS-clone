@@ -70,3 +70,12 @@ export type GetFullCourseDataOptions = {
   freeChapterOnly?: boolean;
   userIdToGetProgress?: string;
 }
+
+export interface ICourseAccessGuard {
+  checkCourseAccess(courseId: string, options: ICheckCourseAccessOptions): Promise<CheckCourseAccessResult>;
+}
+
+export interface IUserProgressRepo {
+  uncompleteUserProgress(userId: string, activityId: string): Promise<prisma.UserProgress>;
+  completeUserProgress(userId: string, activityId: string, completedAt?: Date): Promise<prisma.UserProgress>;
+}

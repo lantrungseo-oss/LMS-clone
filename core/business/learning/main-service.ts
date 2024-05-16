@@ -1,13 +1,15 @@
+import { ApiError } from '@/core/error/api-error';
 import type * as learningType from './types';
 import { ECourseAccessRole } from './types';
+import _ from 'lodash';
 
 export class LearningMainService {
   constructor(
     private readonly couresRepo: learningType.CourseRepo,
     private readonly chapterRepo: learningType.ChapterRepo,
     private readonly activityRepo: learningType.ActivityRepo,
-    private readonly purchaseRepo: learningType.PurchaseRepo,
-    private readonly authService: learningType.AuthService
+    private readonly courseAccessGuard: learningType.ICourseAccessGuard,
+    private readonly userProgressRepo: learningType.IUserProgressRepo,
   ) {}
 
   async getActivity(activityId: string) {
@@ -45,24 +47,7 @@ export class LearningMainService {
   }
 
   async checkCourseAccess(courseId: string, options: learningType.ICheckCourseAccessOptions): Promise<learningType.CheckCourseAccessResult> {
-    const { userId } = await this.authService.getAuthContext({});
-    if(!userId) {
-      return {};
-    }
-    const doesCourseBelongToUser = await this.couresRepo.doesCourseBelongToUser(courseId, userId);
-    if(!doesCourseBelongToUser) {
-      const purchase = await this.purchaseRepo.getPurchase(userId, courseId);
-      if(purchase) {
-        return { userId, grantedAccessRole: ECourseAccessRole.STUDENT };
-      }
-      return { userId, }
-    }
-
-    
-    return {
-      userId,
-      grantedAccessRole: ECourseAccessRole.TEACHER // owner of the course
-    }
+    return this.courseAccessGuard.checkCourseAccess(courseId, options);
   }
 
   async checkCourseAccessForChapter(chapterId: string, options: learningType.ICheckCourseAccessOptions): Promise<learningType.CheckCourseAccessResult> {
@@ -88,5 +73,28 @@ export class LearningMainService {
       grantedAccessRole: result.grantedAccessRole,
       isFree: activity.chapter.isFree
     }
+  }
+
+  async updateLearningProgress(activityId: string, userId: string, isCompleted?: boolean) {
+    const { grantedAccessRole } = await this.checkCourseAccessForActivity(activityId, {});
+    if(!grantedAccessRole) {
+      throw new ApiError({
+        message: 'Unauthorized access to this course. Please purchase the course to access this content',
+        statusCode: 401
+      })
+    }
+
+    if(_.isNil(isCompleted)) {
+      throw new ApiError({
+        message: 'isCompleted is required',
+        statusCode: 400
+      })
+    }
+
+    if(isCompleted) {
+      return this.userProgressRepo.completeUserProgress(userId, activityId, new Date());
+    }
+
+    return this.userProgressRepo.uncompleteUserProgress(userId, activityId);
   }
 }
