@@ -7,3 +7,7 @@ export type FullCourseData = prisma.Course & {
     })[]
   })[]
 };
+
+export type ReadFullCourseOptions = {
+  userIdToGetProgress?: string;
+}

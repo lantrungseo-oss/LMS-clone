@@ -26,7 +26,8 @@ export type FullCourseData = prisma.Course & {
     activities: (prisma.ChapterActivity & {
       videoData: {
         playbackId?: string | null;
-      }
+      },
+      completed: boolean;
     })[]
   })[]
 }

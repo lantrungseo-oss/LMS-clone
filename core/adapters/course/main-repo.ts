@@ -8,7 +8,7 @@ export class MainCourseRepo {
     })
   }
 
-  readFullCourse(id: string) {
+  readFullCourse(id: string, options?: t.ReadFullCourseOptions) {
     return db.course.findUnique({
       where: { id },
       include: {
@@ -22,13 +22,18 @@ export class MainCourseRepo {
                 position: 'asc',
               },
               include: {
-                muxData: true
+                muxData: true,
+                ...(options?.userIdToGetProgress ? {
+                  userProgress: {
+                    where: { userId: options.userIdToGetProgress }
+                  }
+                }: {})
               }
             }
           }
         }
       }
-    }) as Promise<t.FullCourseData | null>;
+    }).then(data => data);
   }
 
   doesCourseBelongToUser(courseId: string, userId: string) {

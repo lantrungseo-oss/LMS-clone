@@ -15,11 +15,12 @@ export type CourseRepoReadFullCourseResponse = prisma.Course & {
   chapters: (prisma.Chapter & {
     activities: (prisma.ChapterActivity & {
       muxData: prisma.MuxData[]
+      userProgress?: prisma.UserProgress[];
     })[]
   })[]
 };
 export interface CourseRepo {
-  readFullCourse(id: string): Promise<CourseRepoReadFullCourseResponse | null>;
+  readFullCourse(id: string, options?: { userIdToGetProgress?: string }): Promise<CourseRepoReadFullCourseResponse | null>;
   read(id: string): Promise<prisma.Course | null>
   doesCourseBelongToUser(courseId: string, userId: string): Promise<boolean>;
   getCourseFullDataWithFreeChaptersOnly(courseId: string): Promise<CourseRepoReadFullCourseResponse | null>
@@ -67,4 +68,14 @@ export interface CheckCourseAccessResult {
 
 export type GetFullCourseDataOptions = {
   freeChapterOnly?: boolean;
+  userIdToGetProgress?: string;
+}
+
+export interface ICourseAccessGuard {
+  checkCourseAccess(courseId: string, options: ICheckCourseAccessOptions): Promise<CheckCourseAccessResult>;
+}
+
+export interface IUserProgressRepo {
+  uncompleteUserProgress(userId: string, activityId: string): Promise<prisma.UserProgress>;
+  completeUserProgress(userId: string, activityId: string, completedAt?: Date): Promise<prisma.UserProgress>;
 }
