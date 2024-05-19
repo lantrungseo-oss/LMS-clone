@@ -113,6 +113,8 @@ export const CourseContextProvider = ({ children, initialData }: CourseContextPr
       if(chapter) {
         return { path: `/courses/${params.courseId}/chapters/${chapter.id}` }
       }
+
+      return;
     }
     if(!params.activityId) {
       const chapter = initialData.course.chapters.find((chapter) => chapter.id === params.chapterId);
@@ -129,6 +131,20 @@ export const CourseContextProvider = ({ children, initialData }: CourseContextPr
 
         if(nextActivity) {
           return { path: `/courses/${params.courseId}/chapters/${chapter.id}/activities/${nextActivity.id}` }
+        }
+        // move to next chapter
+        const nextChapter = initialData.course.chapters.reduce((resultChapter: FullCourseData['chapters'][number] | undefined, checkedChapter) => {
+          if(checkedChapter.position > chapter.position) {
+            if(!resultChapter || checkedChapter.position < resultChapter.position) {
+              return checkedChapter;
+            }
+            return resultChapter;
+          }
+          return resultChapter;
+        }, undefined)
+
+        if(nextChapter) {
+          return { path: `/courses/${params.courseId}/chapters/${nextChapter.id}` }
         }
       }
     } 

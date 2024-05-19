@@ -26,11 +26,15 @@ export const CourseSidebar = ({
 
   const progressCount = useMemo(() => {
     if(!courseCtxVal?.initialData.course.chapters) {
-      return 0;
+      return 100;
     }
     
     const listActivities = courseCtxVal?.initialData.course.chapters.map(chapter => chapter.activities).flat();
     const completedActivityCount = listActivities?.filter(activity => courseCtxVal?.isActivityCompleted(activity.id)).length;
+
+    if(listActivities.length === 0) {
+      return 100;
+    }
 
     return 100 * completedActivityCount / (listActivities.length || 1)
   }, [courseCtxVal?.initialData.course.chapters, courseCtxVal?.isActivityCompleted])
