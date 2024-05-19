@@ -40,7 +40,7 @@ export const fromCsvToDb = async () => {
     const chunk = data.slice(startIndex, endIndex)
     const courses = chunk.map((course, index) => ({
       title: course['Course Name'],
-      description: course['Course Description'],
+      description: `${course['Course Description']}<br/>Skills: ${course['Skills']}<br/>Difficulty Level: ${course['Difficulty Level']}`,
       userId,
       imageUrl: imageUrls[index%imageUrls.length],
       price: Math.round(Math.random() * 100 + 20),
@@ -86,7 +86,7 @@ const seedChapters = async () => {
 }
 
 export const main = async () => {
-  // await fromCsvToDb();
+  await fromCsvToDb();
   await seedChapters();
 }
 
