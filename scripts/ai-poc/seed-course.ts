@@ -47,6 +47,7 @@ const main = async () => {
 
 
     const embeddedCourse = {
+      
       name: targetedCourse['Course Name'],
       desc: targetedCourse['Course Description'],
       Skills: targetedCourse['Skills'],

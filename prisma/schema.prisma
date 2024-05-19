@@ -28,6 +28,8 @@ model Course {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  lastIndexedAt DateTime? @db.DateTime
+
   @@index([categoryId])
   @@fulltext([title, description])
 }
