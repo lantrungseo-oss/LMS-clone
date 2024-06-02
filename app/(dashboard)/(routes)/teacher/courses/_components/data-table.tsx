@@ -3,17 +3,13 @@
 import * as React from "react"
 import {
   ColumnDef,
-  ColumnFiltersState,
-  SortingState,
+  PaginationState,
   flexRender,
   getCoreRowModel,
-  getFilteredRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table"
 import Link from "next/link"
-import { PlusCircle } from "lucide-react"
+import { PlusCircle, Router } from "lucide-react"
 
 import {
   Table,
@@ -25,31 +21,87 @@ import {
 } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { usePathname, useRouter } from "next/navigation"
+import qs from "query-string";
+import { useDebounce } from "@/hooks/use-debounce"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
-  data: TData[]
+  data: TData[];
+  totalPage: number;
+  pagination: {
+    page: number;
+    pageSize: number;
+  };
+  titleSearch?: string;
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
+  totalPage,
+  pagination,
+  titleSearch,
 }: DataTableProps<TData, TValue>) {
-  const [sorting, setSorting] = React.useState<SortingState>([]);
-  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const [titleSearchValue, setTitleSearchValue] = React.useState(titleSearch)
+  const debouncedTitleSearchValue = useDebounce(titleSearchValue);
+
+  const changePagination = (updatedPagination: PaginationState) => {
+    router.push(qs.stringifyUrl({
+      url: pathname,
+      query: {
+        ...titleSearch && { titleSearch },
+        page: updatedPagination.pageIndex,
+        pageSize: updatedPagination.pageSize,
+      }
+    }, { skipEmptyString: true, skipNull: true }))
+  }
+
+  React.useEffect(() => {
+    const url = qs.stringifyUrl({
+      url: pathname,
+      query: {
+        ...debouncedTitleSearchValue && { titleSearch: debouncedTitleSearchValue },
+        page: 1,
+        pageSize: 20,
+      }
+    }, { skipEmptyString: true, skipNull: true });
+
+    router.push(url);
+  }, [debouncedTitleSearchValue, router, pathname])
+
 
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
-    onSortingChange: setSorting,
-    getSortedRowModel: getSortedRowModel(),
-    onColumnFiltersChange: setColumnFilters,
-    getFilteredRowModel: getFilteredRowModel(),
+    manualPagination: true,
+    pageCount: totalPage,
+    onPaginationChange: (paginationUpdater) => {
+      let updatedPagination: PaginationState;
+      if (typeof paginationUpdater === "function") {
+        updatedPagination = paginationUpdater({
+          pageIndex: pagination.page,
+          pageSize: pagination.pageSize,
+        })
+      } else {
+        updatedPagination = paginationUpdater
+      }
+      
+      if(updatedPagination.pageIndex <= 0 || updatedPagination.pageIndex > totalPage) {
+        return;
+      }
+
+      return changePagination(updatedPagination)
+    },
     state: {
-      sorting,
-      columnFilters,
+      pagination: {
+        pageIndex: pagination.page,
+        pageSize: pagination.pageSize,
+      }
     },
   })
 
@@ -58,10 +110,7 @@ export function DataTable<TData, TValue>({
       <div className="flex items-center py-4 justify-between">
         <Input
           placeholder="Filter courses..."
-          value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
-          onChange={(event) =>
-            table.getColumn("title")?.setFilterValue(event.target.value)
-          }
+          onChange={(event) => setTitleSearchValue(event.target.value)}
           className="max-w-sm"
         />
         <Link href="/teacher/create">
