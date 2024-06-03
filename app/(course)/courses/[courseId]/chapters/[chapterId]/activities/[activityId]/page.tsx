@@ -7,6 +7,7 @@ import { Quiz } from "./_components/quiz";
 import { IQuizData } from "@/core/frontend/entity-types";
 import { CourseEnrollBanner } from "../../../../_components/course-enroll-banner";
 import { MarkCompleteButton } from "../../_components/mark-complete-btn";
+import { db } from "@/lib/db";
 
 const ActivityPage = async ({
   params
@@ -33,6 +34,15 @@ const ActivityPage = async ({
     return redirect(`/courses/${params.courseId}/chapters/${params.chapterId}`)
   }
 
+  const userProgress = await db.userProgress.findUnique({
+    where: {
+      userId_activityId: {
+        userId,
+        activityId: params.activityId
+      }
+    }
+  })
+
   return (
     <>
       {!grantedAccessRole && course.price && (
@@ -55,7 +65,11 @@ const ActivityPage = async ({
           <ActivityTextBook value={activity.textContent}/>
         )}
         {activity.type === 'quiz' && activity.quizData && (
-          <Quiz data={activity.quizData as unknown as IQuizData} />
+          <Quiz
+            data={activity.quizData as unknown as IQuizData}
+            studentAnswers={userProgress?.quizAttemptData as any}
+            isCompleted={!!userProgress?.completedAt}
+          />
         )}
       </div>
     </>
