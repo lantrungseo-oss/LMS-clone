@@ -5,7 +5,7 @@ import { db } from "@/lib/db";
 
 export async function POST(
   req: Request,
-  { params }: { params: { courseId: string } }
+  { params }: { params: { courseId: string; chapterId: string; } }
 ) {
   try {
     const { userId } = auth();
@@ -26,11 +26,22 @@ export async function POST(
       return new NextResponse("Unauthorized", { status: 401 });
     }
 
+    const chapter = await db.chapter.findUnique({
+      where: {
+        id: params.chapterId,
+        courseId: params.courseId
+      }
+    })
+
+    if(!chapter) {
+      return new NextResponse("Chapter not found", { status: 404 });
+    }
+
     const attachment = await db.attachment.create({
       data: {
         url,
         name: url.split("/").pop(),
-        courseId: params.courseId,
+        chapterId: chapter.id
       }
     });
 
