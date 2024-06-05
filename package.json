@@ -11,6 +11,7 @@
     "script:run": "ts-node --project ./tsconfig.script.json --transpile-only -r tsconfig-paths/register"
   },
   "dependencies": {
+    "@ant-design/nextjs-registry": "^1.0.0",
     "@clerk/nextjs": "^4.23.5",
     "@elastic/elasticsearch": "^8.13.1",
     "@hello-pangea/dnd": "^16.3.0",
@@ -35,6 +36,7 @@
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "@uploadthing/react": "^6.4.1",
+    "antd": "^5.18.0",
     "autoprefixer": "10.4.15",
     "axios": "^1.5.0",
     "class-variance-authority": "^0.7.0",

@@ -1,63 +1,83 @@
 "use client";
-import React, { useState } from "react";
-import { PlusCircle } from 'lucide-react';
-import { Popover, Content as PopoverContent, PopoverTrigger,  } from '@radix-ui/react-popover';
-import { Check } from 'lucide-react'; 
+
+import React, { useMemo, useState } from "react";
+import { Timeline } from 'antd';
+import { Textarea } from "@/components/ui/textarea";
+import { Course } from "@prisma/client";
+import { Button } from "@/components/ui/button";
+import { CoursesList } from "@/components/courses-list";
+import axios from "axios";
+import { Banner } from "@/components/banner";
+import toast from "react-hot-toast";
 
 // Mock data for courses
-const courses = [
-  { id: 1, title: 'Introduction to Programming' },
-  { id: 2, title: 'Web Development Basics' },
-  { id: 3, title: 'Data Structures and Algorithms' },
-  { id: 4, title: 'Machine Learning Fundamentals' },
-  // Add more courses as needed
-];
+
+type RecommendationResult = {
+  step: string;
+  recommendedCourse: Course;
+  otherCourses: Course[];
+}[];
 
 const OnboardingPage = () => {
   const [inputValue, setInputValue] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
+  const [isTriggering, setIsTriggering] = useState(false);
+  const [recResult, setRecResult] = useState<RecommendationResult>([]);
 
-  // Function to filter courses based on input value
-  const filteredCourses = courses.filter(course =>
-    course.title.toLowerCase().includes(inputValue.toLowerCase())
-  );
+  const triggerLearningPlanRecommendation = () => {
+    setIsTriggering(true);
+    axios.post('/api/learning-path/recommendation', {
+      userQuery: inputValue
+    }).then((response) => {
+      setRecResult(response.data);
+    })
+    .catch(err => toast.error(err.response.data.message))
+    .finally(() => {
+      setIsTriggering(false);
+    })
+  }
+
+  const items = useMemo(() => {
+    return recResult.map((result) => {
+      return (
+        <Timeline.Item key={result.step}>
+          <h2 className="text-lg font-bold">{result.step}</h2>
+          <div>
+            <h4 className="font-bold">Recommended Course</h4>
+            <CoursesList items={[result.recommendedCourse]} />
+          </div>
+          <div>
+            <h4 className="font-bold">Other Courses</h4>
+            <CoursesList items={result.otherCourses} />
+          </div>
+        </Timeline.Item>
+      );
+    });
+  }, [recResult])
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-96">
-        <h1 className="text-3xl font-semibold mb-4">Welcome to Our Learning Platform!</h1>
-        <input
-          type="text"
-          placeholder="Enter your request/desire..."
-          className="w-full border border-gray-300 rounded-md p-2 mb-4"
+    <div className="min-h-screen w-full flex flex-col items-center bg-gray-100">
+      <h3 className="text-xl font-semibold mb-4 mt-10">Let's create your first learning plan</h3>
+      <div className="w-full flex flex-col items-center">
+        <Textarea
           value={inputValue}
+          className="w-[80%] py-4"
+          placeholder="Enter your request/desire..."
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <Popover
-          onOpenChange={isOpen => setIsOpen(isOpen)}
-          open={isOpen}
-        >
-          <PopoverTrigger className="w-full bg-blue-500 text-white py-2 rounded-md text-lg flex items-center justify-center focus:outline-none">
-            <span>Find Courses</span>
-            <PlusCircle className="w-6 h-6 ml-2" />
-          </PopoverTrigger>
-          <PopoverContent className="bg-white shadow-md rounded-md border border-gray-200 w-96">
-            {filteredCourses.length > 0 ? (
-              filteredCourses.map(course => (
-                <div key={course.id}>
-                  <button className="flex items-center justify-between px-4 py-2 w-full text-left hover:bg-gray-100 focus:outline-none">
-                    {course.title}
-                    <Check className="w-5 h-5 text-green-500" />
-                  </button>
-                </div>
-              ))
-            ) : (
-              <div>
-                <div className="px-4 py-2 w-full text-left">No courses found</div>
-              </div>
-            )}
-          </PopoverContent>
-        </Popover>
+        <Button className="mt-4" onClick={() => triggerLearningPlanRecommendation()}>
+          Submit
+        </Button>
+      </div>
+      <div className="w-[79%] mt-5">
+        {recResult.length > 0 && (
+            <Timeline>
+              {items}
+            </Timeline>
+        )}
+
+        {isTriggering && (
+          <Banner variant="info" label="Patient, your learning plan is being generated ..." />
+        )}
       </div>
     </div>
   );
