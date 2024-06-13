@@ -37,4 +37,10 @@ next-env.d.ts
 
 __data__
 
+
+# terraform
 elasticsearch/http_ca.crt
+elasticsearch/tf-local/local.tfvars
+.terraform
+terraform.tfstate
+terraform.tfstate.backup

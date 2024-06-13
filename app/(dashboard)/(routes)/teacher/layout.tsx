@@ -1,3 +1,4 @@
+import { auth } from "@clerk/nextjs";
 
 const TeacherLayout = ({
   children

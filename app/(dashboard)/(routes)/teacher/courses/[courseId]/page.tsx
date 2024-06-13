@@ -37,11 +37,6 @@ const CourseIdPage = async ({
           position: "asc",
         },
       },
-      attachments: {
-        orderBy: {
-          createdAt: "desc",
-        },
-      },
     },
   });
 
@@ -145,16 +140,16 @@ const CourseIdPage = async ({
               />
             </div>
             <div>
-              <div className="flex items-center gap-x-2">
+              {/* <div className="flex items-center gap-x-2">
                 <IconBadge icon={File} />
                 <h2 className="text-xl">
                   Resources & Attachments
                 </h2>
               </div>
               <AttachmentForm
-                initialData={course}
+                initialData={{...course, attachments: []}}
                 courseId={course.id}
-              />
+              /> */}
             </div>
           </div>
         </div>

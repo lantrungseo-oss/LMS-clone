@@ -1,5 +1,5 @@
 import { auth } from "@clerk/nextjs";
-import { ArrowLeft, Eye, LayoutDashboard, ListChecks } from "lucide-react";
+import { ArrowLeft, Eye, LayoutDashboard, ListChecks, File } from "lucide-react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
@@ -13,6 +13,7 @@ import { ChapterActivityForm } from "./_components/chapter-activity-form";
 import { ChapterDescriptionForm } from "./_components/chapter-description-form";
 import { ChapterTitleForm } from "./_components/chapter-title-form";
 import { mainActivityService } from "@/core/business/activity";
+import { AttachmentForm } from "./_components/attachment-form";
 
 const ChapterIdPage = async ({
   params
@@ -49,6 +50,13 @@ const ChapterIdPage = async ({
         }
       }).sort((a, b) => a.position - b.position);
     });
+  
+  const attachments = await db.attachment.findMany({
+      where: {
+        chapterId: chapter.id
+      }
+    })
+
 
   const allRequirementFlags = [
     !!chapter.title,
@@ -144,6 +152,15 @@ const ChapterIdPage = async ({
               courseId={params.courseId}
               chapterId={params.chapterId}
             />
+            <div className="pt-5">
+              <div className="flex items-center gap-x-2">
+                <IconBadge icon={File} />
+                <h2 className="text-xl">
+                  Resources & Attachments
+                </h2>
+              </div>
+              <AttachmentForm attachments={attachments} chapterId={params.chapterId} courseId={params.courseId} />            
+            </div>
           </div>
         </div>
       </div>

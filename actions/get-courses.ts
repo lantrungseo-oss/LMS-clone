@@ -47,7 +47,8 @@ export const getCourses = async ({
       },
       orderBy: {
         createdAt: "desc",
-      }
+      },
+      take: 50,
     });
 
     const coursesWithProgress: CourseWithProgressWithCategory[] = await Promise.all(

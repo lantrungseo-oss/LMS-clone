@@ -1,0 +1,795 @@
+
+> lms-tutorial@0.1.0 script:run
+> ts-node --project ./tsconfig.script.json --transpile-only -r tsconfig-paths/register scripts/learning-path/find-path
+
+Original user query I have some background in Marketing. I want to become a tech indie hacker, wanting to create a revolutionary tech product and advertise it over the world. What should be my learning plan?
+{
+  searchStrings: [
+    'Learn the basics of coding and programming languages, such as HTML, CSS, and JavaScript.',
+    'Take an introductory course on software development to understand the fundamentals of building tech products.',
+    'Gain knowledge in user experience (UX) and user interface (UI) design to create a visually appealing product.',
+    'Learn about product management, project management, and agile methodology to effectively manage the development process.',
+    'Take courses in digital marketing and growth hacking to understand how to promote and advertise your product to a global audience.',
+    'Explore courses on data analytics and market research to make informed decisions based on data-driven insights.',
+    'Experiment with building prototypes and minimum viable products (MVPs) using tools like Figma, Sketch, or InVision.',
+    'Attend hackathons, workshops, and networking events to connect with like-minded individuals in the tech industry.'
+  ]
+}
+Search string Learn the basics of coding and programming languages, such as HTML, CSS, and JavaScript.
+search result [
+  {
+    _index: 'learning-paths',
+    _id: 'e38b8262-2793-4296-a025-df67bd250cf7',
+    _score: 1.6652613,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Programming Foundations with JavaScript, HTML and CSS',
+      description: 'Learn foundational programming concepts (e.g., functions, for loops, conditional statements) and how to solve problems like a programmer. In addition, learn basic web development as you build web pages using HTML, CSS, JavaScript. By the end of the course, will create a web page where others can upload their images and apply image filters that you create.  After completing this course, you will be able to: 1. Think critically about how to solve a problem using programming; 2. Write JavaScript programs using functions, for loops, and conditional statements; 3. Use HTML to construct a web page with paragraphs, divs, images, links, and lists; 4. Add styles to a web page with CSS IDs and classes; and 5. Make a web page interactive with JavaScript commands like alert, onClick, onChange, adding input features like an image canvas, button, and slider.<br/>Skills: HTML and CSS  web page  Javascript  Web Development  Computer Programming  Web Design  html  HTML5  web  CSS computer-science mobile-and-web-development<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '245e7a40-2035-4136-9675-8d4167b73d63',
+    _score: 1.6164292,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Responsive Website Basics: Code with HTML, CSS, and JavaScript',
+      description: 'In this course you will learn three key website programming and design languages: HTML, CSS and JavaScript. You will create a web page using basic elements to control layout and style.  Additionally, your web page will support interactivity.   At the end of the course, you will be able to:  1. Define the purpose of HTML, CSS and JavaScript 2. Make a simple web page using HTML 3. Use CSS to control text styles and layout 4. Use CSS libraries such as Bootstrap to create responsive layouts 5. Use JavaScript variables and functions 6. Manipulate web page content using JavaScript 7. Respond to user input using JavaScript  In this course, you will complete:  2 assignments writing HTML, CSS and JavaScript, each taking ~1 hour to complete 4 quizzes, each taking ~20 minutes to complete 1 programming exercise~30 minutes to complete multiple practice quizzes, each taking ~5 minutes to complete  Participation in or completion of this online course will not confer academic credit for University of London programmes.<br/>Skills: jquery  web  HTML and CSS  responsive web design  Javascript  Web Development  CSS  Web Design  HTML5  html computer-science mobile-and-web-development<br/>Difficulty Level: Intermediate'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '7ea2badd-6dd9-457c-89f6-6d8537ab9813',
+    _score: 0.8315797,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Learn to Program: The Fundamentals',
+      description: 'Behind every mouse click and touch-screen tap, there is a computer program that makes things happen. This course introduces the fundamental building blocks of programming and teaches you how to write fun and useful programs using the Python language.<br/>Skills: basic programming language  language  Computer Programming  computer program  Programming Principles  Problem Solving  python syntax and semantics  syntax  Python Programming  semantics computer-science software-development<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '304531d9-01b7-4bca-a8ab-ba42115e1e11',
+    _score: 0.81172585,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Interactivity with JavaScript',
+      description: 'If you want to take your website to the next level, the ability to incorporate interactivity is a must.    But adding some of these types of capabilities requires a stronger programming language than HTML5 or CSS3, and JavaScript can provide just what you need.  With just a basic understanding of the language, you can create a page that will react to common events such as page loads, mouse clicks & movements, and even keyboard input.        This course will introduce you to the basics of the JavaScript language.  We will cover concepts such as variables, looping, functions, and even a little bit about debugging tools.  You will understand how the Document Object Model (DOM) is used by JavaScript to identify and modify specific parts of your page.  After the course, learners will be able to react to DOM Events and dynamically alter the contents and style of their page.   The class will culminate in a  final project - the creation of an interactive HTML5 form that accepts and verifies input.  This is the third course in the Web Design For Everybody specialization.  A basic understanding of HTML and CSS is expected when you enroll in this class.    Additional courses focus on enhancing the styling with responsive design and completing a capstone project.<br/>Skills: document object model  syntax  HTML5  interactivity  javascript syntax  Computer Programming  web  Web Development  html  Javascript computer-science mobile-and-web-development<br/>Difficulty Level: Intermediate'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '6c0e11e5-3d19-4f34-bbde-3114bf33b77b',
+    _score: 0.81168514,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Introduction to JavaScript',
+      description: 'In this beginning-level course you will discover where JavaScript fits into the world of web development. Through hands-on exercises, you will use the Notepad++ text editor to embed JavaScript code to an existing HTML document. As you code a simple JavaScript program to provide user interaction you will learn to recognize and apply syntax rules and coding standards associated with JavaScript. The final activity in the course has you moving your JavaScript code into an external file so that you can compare inline and external JavaScript.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.<br/>Skills: Mobile Development  html  php  Web Development  syntax  Computer Programming  Javascript  text editors  project  externality computer-science mobile-and-web-development<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'a0b491c6-7f0a-4537-9b58-22671b252053',
+    _score: 0.8059914,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Introduction to Web Development',
+      description: 'This course is designed to start you on a path toward future studies in web development and design, no matter how little experience or technical knowledge you currently have. The web is a very big place, and if you are the typical internet user, you probably visit several websites every day, whether for business, entertainment or education. But have you ever wondered how these websites actually work? How are they built? How do browsers, computers, and mobile devices interact with the web? What skills are necessary to build a website? With almost 1 billion websites now on the internet, the answers to these questions could be your first step toward a better understanding of the internet and developing a new set of internet skills.    By the end of this course you�ll be able to describe the structure and functionality of the world wide web, create dynamic web pages using a combination of HTML, CSS, and JavaScript, apply essential programming language concepts when creating HTML forms, select an appropriate web hosting service, and publish your webpages for the world to see. Finally, you�ll be able to develop a working model for creating your own personal or business websites in the future and be fully prepared to take the next step in a more Advanced web development or design course or specialization.<br/>Skills: web  Web Design  HTML5  Web Development  web page  Javascript  CSS  web hosting service  html  Front-End Web Development computer-science mobile-and-web-development<br/>Difficulty Level: Conversant'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'c7ba6481-bcee-40b6-8ddc-1515b6f6bf55',
+    _score: 0.7975635,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'HTML, CSS, and Javascript for Web Developers',
+      description: 'Do you realize that the only functionality of a web application that the user directly interacts with is through the web page? Implement it poorly and, to the user, the server-side becomes irrelevant! Today�s user expects a lot out of the web page: it has to load fast, expose the desired service, and be comfortable to view on all devices: from a desktop computers to tablets and mobile phones.  In this course, we will learn the basic tools that every web page coder needs to know. We will start from the ground up by learning how to implement modern web pages with HTML and CSS. We will then advance to learning how to code our pages such that its components rearrange and resize themselves automatically based on the size of the user�s screen. You�ll be able to code up a web page that will be just as useful on a mobile phone as on a desktop computer. No �pinch and zoom� required! Last but certainly not least, we will get a thorough introduction to the most ubiquitous, popular, and incredibly powerful language of the web: Javascript. Using Javascript, you will be able to build a fully functional web application that utilizes Ajax to expose server-side functionality and data to the end user.<br/>Skills: web  Web Development  ajax (programming)  html  HTML5  bootstrap (front-end framework)  HTML and CSS  CSS  Computer Programming  Javascript computer-science mobile-and-web-development<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '613c046a-50f9-4e5c-a223-afe620458c42',
+    _score: 0.7880191,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Introduction to Javascript: The Basics',
+      description: 'In this 2h 10m long project-based course, you will learn how to create dynamic web pages using Javascript. Javascript is one of the most popular scripting languages used in front-end, back-end web applications and hybrid mobile applications. It can be used to add interactivity to static HTML pages. It also could be used at the back end of modern web applications. Moreover, it is the core of many modern frameworks used to build hybrid mobile web applications. Learning Javascript opens up a huge variety of promising career options.    Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.<br/>Skills: mobile app  Javascript  web application  document object model  html  Web Development  scripting language  internet of things  web  front and back ends computer-science mobile-and-web-development<br/>Difficulty Level: Beginner'
+    }
+  }
+]
+Search string Take an introductory course on software development to understand the fundamentals of building tech products.
+search result [
+  {
+    _index: 'learning-paths',
+    _id: 'ff6c085d-0b1a-44e3-9b31-bbf42a135d62',
+    _score: 1.535994,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Introduction to Software Product Management',
+      description: 'This course highlights the importance and role of software product management. It also provides an overview of the specialization, as well as its goals, structure, and expectations. The course explains the value of process, requirements, planning, and monitoring in producing better software.<br/>Skills: project  Software Engineering  Product Management  Leadership and Management  software  Agile Software Development  agile management  software product management  Planning  agile manifesto computer-science design-and-product<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '351ba18a-ba2c-419e-9e1b-da552104a941',
+    _score: 0.7962974,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Software Development Processes and Methodologies',
+      description: "Software is quickly becoming integral part of human life as we see more and more automation and technical advancements. Just like we expect car to work all the time and can't afford to break or reboot unexpectedly, software industry needs to continue to learn better way to build software if it were to become integral part of human life.  In this course,  you will get an overview of  how software teams work? What processes they use?  What are some of the industry standard methodologies? What are pros and cons of each?  You will learn enough to have meaningful conversation around software development processes.  After completing this course, a learner will be able to  1) Apply core software engineering practices at conceptual level for a given problem.  2) Compare and contrast traditional, agile, and lean development methodologies at high level.  These include Waterfall, Rational Unified Process, V model, Incremental, Spiral models and overview of agile mindset  3) Propose a methodology best suited for a given situation<br/>Skills: waterfall model  modeling  software  scrum (software development)  methodology  process  Software Engineering  software development process  Software Testing  Agile Software Development computer-science software-development<br/>Difficulty Level: Advanced"
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'f68ff321-5ef6-4b5a-8aeb-6993873a277a',
+    _score: 0.79457223,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Software Processes and Agile Practices',
+      description: 'This course delves into a variety of processes to structure software development. It also covers the foundations of core Agile practices, such as Extreme Programming and Scrum.<br/>Skills: lean software development  process  kanban  software development process  software  Software Engineering  Leadership and Management  scrum (software development)  unified process  Agile Software Development computer-science design-and-product<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '7ea2badd-6dd9-457c-89f6-6d8537ab9813',
+    _score: 0.7902777,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Learn to Program: The Fundamentals',
+      description: 'Behind every mouse click and touch-screen tap, there is a computer program that makes things happen. This course introduces the fundamental building blocks of programming and teaches you how to write fun and useful programs using the Python language.<br/>Skills: basic programming language  language  Computer Programming  computer program  Programming Principles  Problem Solving  python syntax and semantics  syntax  Python Programming  semantics computer-science software-development<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '35c4107d-5736-4017-a582-740e6c0c4ab7',
+    _score: 0.778208,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Engineering Practices for Building Quality Software',
+      description: 'Agile embraces change which means that team should be able to effectively make changes to the system as team learns about users and market.  To be good at effectively making changes to the system, teams need to have engineering rigor and excellence else embracing change becomes very painful and expensive.    In this course, you will learn about engineering practices and processes that agile and traditional teams use to make sure the team is prepared for change. In additional, you will also learn about practices, techniques and processes that can help team build high quality software. You will also learn how to calculate a variety of quantitative metrics related to software quality.  This is an intermediate course, intended for learners with a background in software development. To succeed in the course, you should have experience developing in modern programming languages (e.g., Java, C#, Python, JavaScript), an understanding of software development lifecycle models, familiarity with UML diagrams (class and sequence diagrams), and a desire to better understand quality aspects of software development beyond program correctness.  At the end of this course, you will be able to comfortably and effectively participate in various techniques and processes for building secure and high quality software.<br/>Skills: code coverage  version control systems  software project management  design pattern  software quality  Software Architecture  static analysis  software  Continuous Integration  Software Engineering computer-science software-development<br/>Difficulty Level: Conversant'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'ce18e828-c4f4-45e3-9c2c-98dfd5c7cf9f',
+    _score: 0.7731594,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Lean Software Development',
+      description: 'While scrum and XP were transforming the software development industry, there were another set of ideas (derived from lean manufacturing and Six Sigma) that started to influence software development methods.  These ideas around Lean Software Development forms the foundation of number of agile methods.   In this course, we will explore lean concepts and cover some of the common Lean methods and techniques like Kanban, Value Stream Mapping, etc.   In this course, we will also learn techniques like Lean Startup and Design Thinking that can help team learn about user and market needs much faster and cheaper.   As part of this course, you will also apply the knowledge gained  in this course to fictional case studies.  These projects will help you gain experience to confidently apply these techniques in real world.  At the end of the course,  you will be able to apply lean techniques / methods to software development.  You will also be able to apply methods to learn about your users and market needs much faster and cheaper.<br/>Skills: process  Mobile Development  software  Agile Software Development  value stream mapping  software development process  Software Testing  Software Engineering  scrum (software development)  lean software development computer-science software-development<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '062253f6-a07b-4731-ba27-a1976ad3d08e',
+    _score: 0.76107574,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Creating and Developing a Tech Startup',
+      description: 'This course will allow you to identify and evaluate opportunities for creating a tech business, and to better understand its principal issues on a�human, technical, commercial, environmental and financial level.  As such, you will obtain solid foundations either for building your own tech business, or for joining one.  Deciding to create or to join a tech business in these early years is an out-of-the-ordinary adventure, and it certainly won�t be straightforward: you need to be ready to accept that not all "good" ideas will lead to success, and that only a very small number of projects lead to great success. You must learn to overhaul your relationship with failure, which is a valuable source of experience and should be managed according to the logic of �acceptable loss�: the entrepreneur loves uncertainty, not excessive risk. The creation of tech businesses gives you a genuine opportunity to change the world, but requires you to adopt a particular state of mind and to be able to acquire knowledge, know-how and interpersonal skills.  You will have the chance to work alongside passionate and exciting people from a whole multitude of backgrounds. From a technological point of view, these women and men have constructed numerous companies of a global scale.  The development trajectory of a tech business is full of mishaps which require you to be both agile and greatly prepared to build on a strong idea, choose your market, develop your proposal, assemble a team worthy of the task in hand, and finding financing.  The course is made up of methodological sessions as well as first-hand accounts from entrepreneurs and people who have succeeded in creating tech businesses themselves. You will thus be able to get to know the essential dilemmas with which high-tech business creators are confronted with, beginning with the initial decision to set up your very own structure, which itself represents a significant life decision.  You will also see that the creation of a tech business is much more a collective adventure than an individual one.  In the English version, all of the reading content, quizzes and assesments will be in English, whilst the videos will have French audio and English subtitles.<br/>Skills: Strategy  enabling  market (economics)  experience  business plan  leadership  Innovation  organizing (management)  intellectual property  project business entrepreneurship<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'a0b491c6-7f0a-4537-9b58-22671b252053',
+    _score: 0.76011544,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Introduction to Web Development',
+      description: 'This course is designed to start you on a path toward future studies in web development and design, no matter how little experience or technical knowledge you currently have. The web is a very big place, and if you are the typical internet user, you probably visit several websites every day, whether for business, entertainment or education. But have you ever wondered how these websites actually work? How are they built? How do browsers, computers, and mobile devices interact with the web? What skills are necessary to build a website? With almost 1 billion websites now on the internet, the answers to these questions could be your first step toward a better understanding of the internet and developing a new set of internet skills.    By the end of this course you�ll be able to describe the structure and functionality of the world wide web, create dynamic web pages using a combination of HTML, CSS, and JavaScript, apply essential programming language concepts when creating HTML forms, select an appropriate web hosting service, and publish your webpages for the world to see. Finally, you�ll be able to develop a working model for creating your own personal or business websites in the future and be fully prepared to take the next step in a more Advanced web development or design course or specialization.<br/>Skills: web  Web Design  HTML5  Web Development  web page  Javascript  CSS  web hosting service  html  Front-End Web Development computer-science mobile-and-web-development<br/>Difficulty Level: Conversant'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '59647863-8c84-4804-baab-c20786d57cc8',
+    _score: 0.7548176,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Getting Started With Application Development',
+      description: 'In this course, application developers learn how to design and develop cloud-native applications that seamlessly integrate managed services from the Google Cloud Platform. Through a combination of presentations, demos, and hands-on labs, participants learn how to apply best practices for application development and use the appropriate GCP storage services for object storage, relational data, caching, and analytics. Learners can choose to complete labs in their favorite language: Node.js, Java, or Python.  Prerequisites and prework:  � Completed Google Cloud Platform Fundamentals or have equivalent experience � Working knowledge of Node.js, Java, or Python � Basic proficiency with command-line tools and Linux operating system environments<br/>Skills: Google Cloud Platform  Cloud Platforms  Cloud Storage  bigquery  Google App Engine  google storage  web application  web  Cloud Computing  Application Development computer-science software-development<br/>Difficulty Level: Beginner'
+    }
+  }
+]
+Search string Gain knowledge in user experience (UX) and user interface (UI) design to create a visually appealing product.
+search result [
+  {
+    _index: 'learning-paths',
+    _id: '77f7754d-6711-443e-99a9-3a00b9acdffc',
+    _score: 1.6620854,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Introduction to User Experience Design',
+      description: `The focus of this course is to introduce the learner to User Experience (UX) Design  User Experience design is design that is user centered. The goal is to design artifacts that allow the users to meet their needs in the most effective efficient and satisfying manner. The course introduces the novice to a cycle of discovery and evaluation and a set of techniques that meet the user's needs.  This course is geared toward the novice. It is for learners that have heard about "user experience" or "user interface" design but don't really know much about these disciplines.  The course mantra is that �Design is a systematic and data driven process.� Design is systematic because it is based on a set of techniques and also on a cycle of discovery.  In this course the learner is introduced to the four step user interface design cycle. Along the way learners are exposed to a set of techniques to gather information about a) what the user needs b)how to design and model interfaces based on these and then how to evaluate the design to ascertain that the user's goals are met. These techniques are tools that are used in a standardized manner and give us the data we use in our design.  This means that anyone (regardless of their current training) that is willing to learn these techniques and follow the proposed cycle can be a UX designer!<br/>Skills: user interface  experience design  User Research  evaluation  usability  User Experience  User Experience Design  experience  paper prototyping  user interface design computer-science design-and-product<br/>Difficulty Level: Beginner`
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '9361a899-9091-46b0-a969-9a2e10e25bff',
+    _score: 1.6481555,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Introduction to UI Design',
+      description: 'In this course, you will gain an understanding of the critical importance of user interface design. You will also learn industry-standard methods for how to approach the design of a user interface and key theories and frameworks that underlie the design of most interfaces you use today.  Through a series of case studies on commercial systems - many of which you likely use on a regular basis - we will illustrate the benefits of good design. We will also demonstrate how the costs of bad design can often be severe (in user experience, money, and even human lives).  You will then gain a high-level understanding of the user-interface design process. You will be introduced to common design scenarios - e.g. improving on existing designs and starting a new design from scratch - and the general design processes that tend to be used for each scenario.  Finally, we will begin introducing the large body of existing knowledge on design by providing overviews of core user interface design theories and concepts. This key foundational information will help you avoid �reinventing the wheel� when you are designing your interfaces in this specialization.<br/>Skills: usability  user interface  experience  interfaces  evaluation  java annotation  user interface design  principle  principles of user interface design  User Experience computer-science design-and-product<br/>Difficulty Level: Conversant'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'a583ff52-692e-467c-969c-c18476ed4753',
+    _score: 1.6441867,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'UX Design Fundamentals',
+      description: "This hands-on course examines how content is organized and structured to create an experience for a user, and what role the designer plays in creating and shaping user experience. You will be led through a condensed process that acts as a roadmap for developing robust UI/UX design: from ideation and sitemapping, to the creation of paper and digital prototypes. Building on the design skills learned in Visual Elements of User Interface Design, you will apply this methodology to produce a digital prototype for a multi-screen app of your own invention.  By the end of this course, you will be able to describe and apply current best practices and conventions in UX design, and employ the fundamental principles of how UX design functions to shape an audience's experience of a given body of content. This is the second course in the UI/UX Design Specialization, which brings a design-centric approach to user interface (UI) and user experience (UX) design, and offers practical, skill-based instruction centered around a visual communications perspective, rather than on one focused on marketing or programming alone.  These courses are ideal for anyone with some experience in graphic or visual design and who would like to build their skill set in UI or UX for app and web design. It would also be ideal for anyone with experience in front- or back-end web development or human-computer interaction and want to sharpen their visual design and analysis skills for UI or UX.<br/>Skills: Map  User Experience  user interface  experience design  site map  experience  paper prototyping  User Experience Design  java annotation  website wireframe arts-and-humanities music-and-art<br/>Difficulty Level: Beginner"
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '6b374314-8fcb-4e0b-87a6-cfcf3ee6286d',
+    _score: 0.84450763,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Information Design',
+      description: "A blank canvas is full of possibility. If you have an idea for a user experience, how do you turn it into a beautiful and effective user interface?  This covers covers principles of visual design so that you can effectively organize and present information with your interfaces. You'll learn concrete strategies to create user interfaces, including key lessons in typography, information architecture, layout, color, and more. You�ll learn particular issues that arise in new device contexts, such as mobile and responsive interfaces. You will learn how to apply these design principles in a modern context of increasingly diverse form factors - from tablets, to walls, to watches.<br/>Skills: usability  responsive web design  User Experience  information design  user interface design  interaction design  rapid prototyping  look and feel  interfaces  user interface computer-science design-and-product<br/>Difficulty Level: Advanced"
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'aba39fe9-0634-490c-8d4c-18288cfbb591',
+    _score: 0.8406683,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Visual Elements of User Interface Design',
+      description: 'This design-centric course examines the broad question of what an interface is and what role a designer plays in creating a user interface. Learning how to design and articulate meaning using color, type, and imagery is essential to making interfaces function clearly and seamlessly. Through a series of lectures and visual exercises, you will focus on the many individual elements and components that make up the skillset of an interface designer. By the end of this course, you will be able to describe the key formal elements of clear, consistent, and intuitive UI design, and apply your learned skills to the design of a static screen-based interface.  This is the first course in the UI/UX Design Specialization, which brings a design-centric approach to user interface (UI) and user experience (UX) design, and offers practical, skill-based instruction centered around a visual communications perspective, rather than on one focused on marketing or programming alone.  These courses are ideal for anyone with some experience in graphic or visual design and who would like to build their skill set in UI or UX for app and web design. It would also be ideal for anyone with experience in front- or back-end web development or human-computer interaction and want to sharpen their visual design and analysis skills for UI or UX.<br/>Skills: Computer Graphics  user interface  design pattern  user interface design  java annotation  Graphic Design  User Experience  interfaces  Visual Design  experience arts-and-humanities music-and-art<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '7383cbfd-fa67-4ed4-bd2d-0b9e4b1923cc',
+    _score: 0.8096235,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Introduction to User Experience Principles and Processes',
+      description: "This UX course provides an introduction to the fields of UX research and design. Learners will gain an understanding of what is involved in UX research, including conducting interviews, evaluating systems, and analyzing systems using principles of good design. Learners will also learn about the work involved in UX Design, including the generation of promising design solutions and the creation of prototypes at multiple levels of fidelity. By interleaving successive phases of UX Research and Design, learners will see how to learn from inevitable mistakes and improve towards a product with a great UX.  What you'll learn:  - The skills needed for UX research and design\r\n" +
+        ' - How UX researchers discover and assess user needs and assess possible designs\r\n' +
+        ' - How to conduct a micro-usability test\r\n' +
+        ' - How UX designers use sketching and prototyping to develop design concepts - How to incorporate a user-centered focus into the design process\r\n' +
+        ' - Key features of human behavior and describe their impact on the design of interactive systems\r\n' +
+        ' - Techniques for critiquing and designing interactive systems based on human capabilities and behavior<br/>Skills: usability  heuristic  heuristic evaluation  User Research  User Experience Design  principle  User Experience  experience design  evaluation  experience computer-science design-and-product<br/>Difficulty Level: Conversant'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '17acb0de-a345-4372-92a3-22a4e5793ba1',
+    _score: 0.79752195,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'UX (User Experience) Capstone',
+      description: 'In this UX capstone course, you�ll conduct a multi-stage user experience project to design a product from scratch. You will employ interviews, inspection methods, and user testing, along with ideation, design, and prototyping methods to gain and communicate valuable insight that can be used to deliver a compelling product.  You will:     Learn how to design and carry out an integrated multi-phase user experience research and design project     Gain experience conducting user experience research in a real-world setting     Gain hands-on experience with a realistic UX design project     Improve ability to communicate design concepts and actionable research findings.<br/>Skills: User Experience Design  a/b testing  experience  content management system  Planning  case study  User Research  Human Computer Interaction  interaction design  User Experience computer-science design-and-product<br/>Difficulty Level: Advanced'
+    }
+  }
+]
+Search string Learn about product management, project management, and agile methodology to effectively manage the development process.
+search result [
+  {
+    _index: 'learning-paths',
+    _id: 'ff6c085d-0b1a-44e3-9b31-bbf42a135d62',
+    _score: 1.6450648,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Introduction to Software Product Management',
+      description: 'This course highlights the importance and role of software product management. It also provides an overview of the specialization, as well as its goals, structure, and expectations. The course explains the value of process, requirements, planning, and monitoring in producing better software.<br/>Skills: project  Software Engineering  Product Management  Leadership and Management  software  Agile Software Development  agile management  software product management  Planning  agile manifesto computer-science design-and-product<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'f68ff321-5ef6-4b5a-8aeb-6993873a277a',
+    _score: 1.6108665,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Software Processes and Agile Practices',
+      description: 'This course delves into a variety of processes to structure software development. It also covers the foundations of core Agile practices, such as Extreme Programming and Scrum.<br/>Skills: lean software development  process  kanban  software development process  software  Software Engineering  Leadership and Management  scrum (software development)  unified process  Agile Software Development computer-science design-and-product<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '05321c74-1bf0-4560-b183-4408978759fc',
+    _score: 0.8145619,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'The Art & Science of Product Management',
+      description: 'Sponsored by AMAZON WEB SERVICES (AWS). Learn how Amazon, Facebook, Google, and Twitch PMs and lead and collaborate with an interdisciplinary team of UX designers, software engineers, AI/ML engineers. Plus, practice real PM interview questions asked by Microsoft, Google, and Amazon!  Featuring NANCY WANG, Head of Data Protection Services, Amazon Web Services; Founder and CEO, Advancing Women in Product; SANDY CARTER, Vice President for Worldwide Public Sector Programs, Amazon Web Services; PRANAVA ADDURI, Software Engineering Manager, Amazon Web Services; MINMIN YANG, Principal UX Lead, Amazon Web Services; WAHAB OWOLABI, Founder, OneReq; Diversity Business Partner, Facebook; SHARMEEN CHAPP, Vice President of Product & Engineering, Twitch Community; EJ EMEAGWALI, Product Manager, Samsara; former Product Manager, Google and Microsoft;  STEPHANIE NEILL, Senior Director of Product, Twitch Commerce; GEORGE ELISSAOIS, General Manager & Director of Product Management, Amazon Web Services; NANCY RILEY, Vice President & General Manager of the Ecosystem Product Group, Hubspot, and SABRINA FARMER, Vice President of Engineering for Site Reliability, Google Products.<br/>Skills: business partner  process management  business process  Digital Marketing  Business Process Management  mbase  software product management  Product Strategy  neats vs. scruffies  Product Management computer-science design-and-product<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '09c965a7-75bb-4943-bfb2-00610ad2c023',
+    _score: 0.81382006,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Software Product Management Capstone',
+      description: 'In this six-week capstone course, you will gain practical management experience in a safe, simulated software production setting. You will apply Agile practices and techniques to conquer industry-inspired challenges. Interacting with a realistic client, you will discern what they want and express what they truly need in software requirements to drive software production. Upon completing the capstone, you will be prepared to advance your career as a confident software product management professional.<br/>Skills: Product Management  Leadership and Management  project  scrum (software development)  Project Management  software  software product management  Software Engineering  software project management  Agile Software Development computer-science design-and-product<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'b3a7f87c-a7c6-48b0-bb28-56bbe7037d3b',
+    _score: 0.8101439,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Digital Product Management: Modern Fundamentals',
+      description: "Not so long ago, the job of product manager was about assessing market data, creating requirements, and managing the hand-off to sales/marketing. Maybe you�d talk to a customer somewhere in there and they�d tell you what features they wanted. But companies that manage product that way are dying.  Being a product person today is a new game, and product managers are at the center of it. Today, particularly if your product is mostly digital, you might update it several times a day. Massive troves of data are available for making decisions and, at the same time, deep insights into customer motivation and experience are more important than ever. The job of the modern product manager is to charter a direction and create a successful working environment for all the actors involved in product success.  It�s not a simple job or an easy job, but it is a meaningful job where you�ll be learning all the time.   This course will help you along your learning journey and prepare you with the skills and perspective you need to:  Create the actionable focus to successfully manage your product (week 1) Focus your work using modern product management methods (week 2) Manage new products and explore new product ideas (week 3) Manage and amplify existing products (week 4)  This course is ideal for current product or general  managers interested in today's modern product management methods.  This course was developed with the generous support of the Batten Institute at UVA�s Darden School of Business. The Batten Institute�s mission is to improve the world through entrepreneurship and innovation: www.batteninstitute.org.<br/>Skills: lean startup  Leadership and Management  Product Management  Strategy  Product Strategy  minimum viable product  Planning  agile management  product planning  product/market fit business leadership-and-management<br/>Difficulty Level: Beginner"
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'dcdb5d04-bba7-4d3a-980d-61756a99be46',
+    _score: 0.8101439,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Digital Product Management: Modern Fundamentals',
+      description: "Not so long ago, the job of product manager was about assessing market data, creating requirements, and managing the hand-off to sales/marketing. Maybe you�d talk to a customer somewhere in there and they�d tell you what features they wanted. But companies that manage product that way are dying.  Being a product person today is a new game, and product managers are at the center of it. Today, particularly if your product is mostly digital, you might update it several times a day. Massive troves of data are available for making decisions and, at the same time, deep insights into customer motivation and experience are more important than ever. The job of the modern product manager is to charter a direction and create a successful working environment for all the actors involved in product success.  It�s not a simple job or an easy job, but it is a meaningful job where you�ll be learning all the time.   This course will help you along your learning journey and prepare you with the skills and perspective you need to:  Create the actionable focus to successfully manage your product (week 1) Focus your work using modern product management methods (week 2) Manage new products and explore new product ideas (week 3) Manage and amplify existing products (week 4)  This course is ideal for current product or general  managers interested in today's modern product management methods.  This course was developed with the generous support of the Batten Institute at UVA�s Darden School of Business. The Batten Institute�s mission is to improve the world through entrepreneurship and innovation: www.batteninstitute.org.<br/>Skills: lean startup  Leadership and Management  Product Management  Strategy  Product Strategy  minimum viable product  Planning  agile management  product planning  product/market fit business leadership-and-management<br/>Difficulty Level: Beginner"
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'cbd2fd1c-adfd-4dde-9bff-8a89bd32436c',
+    _score: 0.7988196,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Managing an Agile Team',
+      description: 'While agile has become the de facto standard for managing digital innovation teams, many wonder if they�re doing it �right�. Twitter is full of jokes about how teams say they do agile but don�t �really� do it. The reality is that getting the most out of agile is less about observing specific procedures and more about how a team focuses and measures their progress.   Rather than just boring you with an accounting of agile methodologies, this course focuses on helping you better charter your team�s focus, definition of success, and practice of agile. While learning about agile mainstays like Scrum, XP, and kanban, you�ll also learn to help your team ask the right questions about how they�re working and facilitate good answers on how agile can help.      As a  Project Management Institute (PMI�) Registered Education Provider, the University of Virginia Darden School of Business has been approved by PMI to issue 20 professional development units (PDUs) for this course, which focuses on core competencies recognized by PMI. (Provider #2122)   This course is supported by the Batten Institute at UVA�s Darden School of Business. The Batten Institute�s mission is to improve the world through entrepreneurship and innovation: www.batteninstitute.org.<br/>Skills: openfabrics alliance  kanban  scrum (software development)  Software Engineering  agile management  Agile Software Development  Leadership and Management  leadership  team management  software computer-science design-and-product<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'c474973e-eb7f-429e-9fff-3cd66a4750e0',
+    _score: 0.7988196,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Managing an Agile Team',
+      description: 'While agile has become the de facto standard for managing digital innovation teams, many wonder if they�re doing it �right�. Twitter is full of jokes about how teams say they do agile but don�t �really� do it. The reality is that getting the most out of agile is less about observing specific procedures and more about how a team focuses and measures their progress.   Rather than just boring you with an accounting of agile methodologies, this course focuses on helping you better charter your team�s focus, definition of success, and practice of agile. While learning about agile mainstays like Scrum, XP, and kanban, you�ll also learn to help your team ask the right questions about how they�re working and facilitate good answers on how agile can help.      As a  Project Management Institute (PMI�) Registered Education Provider, the University of Virginia Darden School of Business has been approved by PMI to issue 20 professional development units (PDUs) for this course, which focuses on core competencies recognized by PMI. (Provider #2122)   This course is supported by the Batten Institute at UVA�s Darden School of Business. The Batten Institute�s mission is to improve the world through entrepreneurship and innovation: www.batteninstitute.org.<br/>Skills: openfabrics alliance  kanban  scrum (software development)  Software Engineering  agile management  Agile Software Development  Leadership and Management  leadership  team management  software computer-science design-and-product<br/>Difficulty Level: Beginner'
+    }
+  }
+]
+Search string Take courses in digital marketing and growth hacking to understand how to promote and advertise your product to a global audience.
+search result [
+  {
+    _index: 'learning-paths',
+    _id: 'd27f448d-d72c-4aed-9405-674ee1b5059b',
+    _score: 1.514002,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Marketing in a Digital World',
+      description: 'This course examines how digital tools, such as the Internet, smartphones, and 3D printing, are revolutionizing the world of marketing by changing the roles and practices of both firms and consumers. Marketing in a Digital World is one of the most popular courses on Coursera with over 250,000 Learners and is rated by Class Central as one of the Top 50 MOOCs of All Time (https://www.class-central.com/report/top-moocs/). The course was initially launched in 2015, and has been updated in April 2020.   This course is part of the iMBA offered by the University of Illinois, a flexible, fully-accredited online MBA at an incredibly competitive price. For more information, please see the Resource page in this course and onlinemba.illinois.edu.<br/>Skills: pricing  Strategy  digital strategy  Marketing  promotion (marketing)  marketing strategy  Digital Marketing  product placement  marketing mix  market (economics) business marketing<br/>Difficulty Level: Conversant'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'a99d7edb-8c3b-4f15-b708-f769e464733f',
+    _score: 0.7782011,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Advanced Search Engine Optimization Strategies',
+      description: 'This course focuses on technical, mobile and social strategies for increasing site traffic. Learn how to build SEO for international audiences through content localization, global team alignment and optimizing for local search engines. Discover techniques to optimize mobile-friendly websites, get mobile apps discovered, and leverage social media to drive organic SEO traffic.  You will also learn how to identify key SEO metrics and collect, interpret, validate, and report success to your clients and stakeholders.<br/>Skills: rankings  mobile app  Marketing  Strategy  mathematical optimization  Digital Marketing  search engine optimization  web  web marketing  analytics business marketing<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '2e3854f0-56ef-4bcd-90bc-cb75341498da',
+    _score: 0.7705953,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Create a Google Video Ads Sequence Campaign',
+      description: 'In this 2-hour long project-based course, you will learn how to set up marketing goals and strategy, create a video campaign targeted to YouTube and Display, create a video ad sequence to generate interactive storymarketing and storytelling campaign by showing a sequence of interconnected video ads based on previous interactions with the user.   Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.<br/>Skills: interactivity  Strategy  budget  Storytelling  web  interactive storytelling  Accounting  project  inventory  online advertising business marketing<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '7987c3bf-aab4-4851-8c11-435e2f45a1e2',
+    _score: 0.7701563,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Measure and Optimize Social Media Marketing Campaigns',
+      description: "This course provides you with skills to optimize your social media marketing efforts. Learn to evaluate and interpret the results of your advertising campaigns. Learn how to assess advertising effectiveness through lift studies and optimize your campaigns with A/B testing. Understand how advertising effectiveness is measured across platforms and devices, learn how to evaluate the ROI of your marketing, and master how to communicate your social media marketing results to others in the company. You will end the course with a project where you will gain hands-on experience with communicating results and formulating recommendations based on the results of a social marketing campaign.   By the end of this course, you will be able to: � Use basic and customized reports to evaluate the results of your advertising campaign  � Evaluate advertising effectiveness using lift tests � Understand different techniques used to measure the effectiveness of marketing campaigns across channels  � Implement an A/B test to optimize your campaign � Analyze dashboards and evaluate the ROI from your social media marketing efforts � Present and communicate your findings to a team  This course is for people who want to learn how to analyze their campaign marketing results, optimize their campaigns and effectively communicate findings to their teams. Learners don't need marketing experience but should have basic internet navigation skills and be eager to participate and connect on social media. Having a Facebook or Instagram account helps, and ideally, learners have already completed the four previous courses in this program.<br/>Skills: project management certification  content marketing  advertising campaigns  Social Media  social media marketing  Project Management  Digital Marketing  measurement  mathematical optimization  Marketing business marketing<br/>Difficulty Level: Beginner"
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '60825735-1b43-460a-9cd2-5a6930ef018f',
+    _score: 0.762667,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Business English: Marketing and Sales',
+      description: 'If you work in marketing, sales, or advertising, you already know that effective communication is a requirement. This can be even more difficult when expressing your ideas in a persuasive manner in English.  In this course, you will learn to use English more efficiently while joining successful global professionals around the world. Develop your skills along with authentic characters that work in marketing and also work hard to improve their communication skills. Learn from your successes and failures, reflect on your own style, strengths, and improvement areas. After taking this course, you will be able to: �      Express your ideas through efficient emails, reports and persuasive presentations �      Learn words and phrases related to market research, branding, direct marketing, advertising costs, etc. �      Get instant feedback about the efficiency of your business communication skills in English from sales and marketing professionals from around the world �      Become part of a global community of business professionals who are developing their English communication skills<br/>Skills: Sales Strategy  marketing collateral  Communication  Marketing  english language  Strategy  sales presentation  language  Sales  presentation language-learning learning-english<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '1edc8684-49ec-46c4-b6f4-443aed12d611',
+    _score: 0.74732697,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Digital Media and Marketing Strategies',
+      description: 'The proliferation of digital technology gives businesses a diverse new set of tools to reach, engage, monitor, and respond to consumers to an unprecedented degree. The aggregated and voluminous digital data can also be leveraged to better target specific consumer segments. Following the Digital Marketing Channels: The Landscape, this course aims to give you a deeper understanding of core processes of planning a digital marketing campaign and the role of various digital channels in an integrated marketing communication.<br/>Skills: market (economics)  Digital Marketing  Planning  media market  Social Media  digital media  Marketing  digital strategy  Strategy  marketing strategy business marketing<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '88f64c30-d221-41d6-b572-f4248e7b681d',
+    _score: 0.73862714,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Digital Marketing Capstone',
+      description: 'The Capstone is the culminating project in the Digital Marketing Specialization. The corporate partner for the specialization is W.W. Grainger(http://www.grainger.com/) . They are the largest supplier of Maintenance, Repair and Operations (MRO) products. Millions of businesses and institutions worldwide rely on Grainger for pumps, motors, hand tools, janitorial supplies, fasteners and much more. In 2017, they had sales of US Dollar 10.4 Billion, and about 60% of orders originated online.   You will be working on a problem specified by the Digital Marketing team at Grainger, to develop a channel strategy to increase sales of Bosch power tools on Grainger.com.   You will have the opportunity to combine the tools and techniques obtained through all the courses in this specialization and apply them to a real business problem. The Capstone project will be 6 weeks long. You must take the Capstone project class after taking all the other courses in this Specialization.  This course is part of the iMBA offered by the University of Illinois, a flexible, fully-accredited online MBA at an incredibly competitive price. For more information, please see the Resource page in this course and onlinemba.illinois.edu.<br/>Skills: Strategy  Marketing  Digital Marketing  marketing plan  problem statement  verification and validation  online advertising  Planning  analytics  marketing strategy business marketing<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '58dd35d4-25c3-44b3-b8bd-0dda2e6e18db',
+    _score: 0.7301195,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Digital Media and Marketing Principles',
+      description: 'The digital revolution has led to a titanic shift in the landscape of the marketing communication, while also creating new opportunities for businesses to reach and engage consumers through smart, social, and mobile media technologies. In this course, you will learn about the impacts of digital technologies on marketing communication strategies and practices. By understanding the underlying processes of marketing communication and the core features of new media technologies, you can strategically select the appropriate channels to deliver the right marketing message to the right audience at the right moment.<br/>Skills: Marketing  mobile marketing  Strategy  marketing channel  market (economics)  Digital Marketing  digital media  media market  Social Media  social media marketing business marketing<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '46cad785-e6ea-44b8-8eea-9ea16fae2a86',
+    _score: 0.72740716,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Digital Marketing Analytics in Practice',
+      description: "Successfully marketing brands today requires a well-balanced blend of art and science. This course introduces students to the science of web analytics while casting a keen eye toward the artful use of numbers found in the digital space. The goal is to provide the foundation needed to apply data analytics to real-world challenges marketers confront daily. Students will learn to identify the web analytic tool right for their specific needs; understand valid and reliable ways to collect, analyze, and visualize data from the web; and utilize data in decision making for agencies, organizations or clients.  Digital Analytics for Marketing Professionals: Marketing Analytics in Practice is the second in a two-part series of complementary courses and focuses on the skills and practical abilities analysts need to be successful in today's digital business world.  This course is part of the iMBA offered by the University of Illinois, a flexible, fully-accredited online MBA at an incredibly competitive price. For more information, please see the Resource page in this course and onlinemba.illinois.edu.<br/>Skills: Data Visualization  market (economics)  Planning  Marketing  analysis  Leadership and Management  Data Analysis  analytics  Digital Marketing  Market Analysis data-science data-analysis<br/>Difficulty Level: Intermediate"
+    }
+  }
+]
+Search string Explore courses on data analytics and market research to make informed decisions based on data-driven insights.
+search result [
+  {
+    _index: 'learning-paths',
+    _id: 'cee15155-fe01-4536-b767-485237c58b01',
+    _score: 1.607624,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Business Analytics for Decision Making',
+      description: 'In this course you will learn how to create models for decision making. We will start with cluster analysis, a technique for data reduction that is very useful in market segmentation. You will then learn the basics of Monte Carlo simulation that will help you model the uncertainty that is prevalent in many business decisions. A key element of decision making is to identify the best course of action. Since businesses problems often have too many alternative solutions, you will learn how optimization can help you identify the best option. What is really exciting about this course is that you won�t need to know a computer language or Advanced statistics to learn about these predictive and prescriptive analytic models. The Analytic Solver Platform and basic knowledge of Excel is all you�ll need. Learners participating in assignments will be able to get free access to the Analytic Solver Platform.<br/>Skills: mathematical optimization  business analytics  analysis  Data Analysis  Decision Making  analytics  data clustering algorithms  simulation  Business Analysis  cluster analysis data-science data-analysis<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'd0712612-7602-4b2b-947e-14ee9504b048',
+    _score: 1.594526,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Applying Data Analytics in Marketing',
+      description: 'This course introduces students to the science of business analytics while casting a keen eye toward the artful use of numbers found in the digital space. The goal is to provide businesses and managers with the foundation needed to apply data analytics to real-world challenges they confront daily in their professional lives. Students will learn to identify the ideal analytic tool for their specific needs; understand valid and reliable ways to collect, analyze, and visualize data; and utilize data in decision making for their agencies, organizations or clients.<br/>Skills: Data Analysis  analytics  Advertising  a/b testing  conjoint analysis  analysis  relative change and difference  Market Analysis  Marketing  marketing strategy business leadership-and-management<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'c0bbd30a-0895-4f0f-a2e4-8ed68068930e',
+    _score: 0.81711304,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Foundations of marketing analytics',
+      description: "Who is this course for?   This course is designed for students, business analysts, and data scientists who want to apply statistical knowledge and techniques to business contexts. For example, it may be suited to experienced statisticians, analysts, engineers who want to move more into a business role, in particular in marketing.  You will find this course exciting and rewarding if you already have a background in statistics, can use R or another programming language and are familiar with databases and data analysis techniques such as regression, classification, and clustering. However, it contains a number of recitals and R Studio tutorials which will consolidate your competences, enable you to play more freely with data and explore new features and statistical functions in R.  Business Analytics, Big Data and Data Science are very hot topics today, and for good reasons. Companies are sitting on a treasure trove of data, but usually lack the skills and people to analyze and exploit that data efficiently. Those companies who develop the skills and hire the right people to analyze and exploit that data will have a clear competitive advantage.  It's especially true in one domain: marketing. About 90% of the data collected by companies today are related to customer actions and marketing activities.The domain of Marketing Analytics is absolutely huge, and may cover fancy topics such as text mining, social network analysis, sentiment analysis, real-time bidding, online campaign optimization, and so on.  But at the heart of marketing lie a few basic questions that often remain unanswered: (1) who are my customers, (2) which customers should I target and spend most of my marketing budget on, and (3) what's the future value of my customers so I can concentrate on those who will be worth the most to the company in the future.  That's exactly what this course will cover: segmentation is all about understanding your customers, scorings models are about targeting the right ones, and customer lifetime value is about anticipating their future value. These are the foundations of Marketing Analytics. And that's what you'll learn to do in this course.<br/>Skills: predictive analytics  analytics  market (economics)  Stochastic Matrix  Market Analysis  customer lifetime value  Marketing  market segmentation  Data Analysis  analysis business marketing<br/>Difficulty Level: Intermediate"
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'e4864bbc-2d53-41a5-b5a5-c09f7e54cd19',
+    _score: 0.8059624,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Meaningful Marketing Insights',
+      description: 'With marketers are poised to be the largest users of data within the organization, there is a need to make sense of the variety of consumer data that the organization collects. Surveys, transaction histories and billing records can all provide insight into consumers� future behavior, provided that they are interpreted correctly. In Introduction to Marketing Analytics, we introduce the tools that learners will need to convert raw data into marketing insights. The included exercises are conducted using Microsoft Excel, ensuring that learners will have the tools they need to extract information from the data available to them. The course provides learners with exposure to essential tools including exploratory data analysis, as well as regression methods that can be used to investigate the impact of marketing activity on aggregate data (e.g., sales) and on individual-level choice data (e.g., brand choices).   To successfully complete the assignments in this course, you will require Microsoft Excel. If you do not have Excel, you can download a free 30-day trial here: https://products.office.com/en-us/try<br/>Skills: Central Tendency  Basic Descriptive Statistics  Microsoft Excel  Pivot Table  Regression  evaluation  Market Analysis  analytics  Marketing  measurement business marketing<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '46cad785-e6ea-44b8-8eea-9ea16fae2a86',
+    _score: 0.801548,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Digital Marketing Analytics in Practice',
+      description: "Successfully marketing brands today requires a well-balanced blend of art and science. This course introduces students to the science of web analytics while casting a keen eye toward the artful use of numbers found in the digital space. The goal is to provide the foundation needed to apply data analytics to real-world challenges marketers confront daily. Students will learn to identify the web analytic tool right for their specific needs; understand valid and reliable ways to collect, analyze, and visualize data from the web; and utilize data in decision making for agencies, organizations or clients.  Digital Analytics for Marketing Professionals: Marketing Analytics in Practice is the second in a two-part series of complementary courses and focuses on the skills and practical abilities analysts need to be successful in today's digital business world.  This course is part of the iMBA offered by the University of Illinois, a flexible, fully-accredited online MBA at an incredibly competitive price. For more information, please see the Resource page in this course and onlinemba.illinois.edu.<br/>Skills: Data Visualization  market (economics)  Planning  Marketing  analysis  Leadership and Management  Data Analysis  analytics  Digital Marketing  Market Analysis data-science data-analysis<br/>Difficulty Level: Intermediate"
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'a1fad32c-aabd-410e-b680-23e6aa307699',
+    _score: 0.79023874,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Business intelligence and data analytics: Generate insights',
+      description: '�Megatrends� heavily influence today�s organisations, industries and societies, and your ability to generate insights in this area is crucial to your organisation�s success into the future. This course will introduce you to analytical tools and skills you can use to understand, analyse and evaluate the challenges and opportunities �megatrends� will inevitably bring to your organisation. Via structured learning activities you will explore how these trends can be addressed through sustainability-oriented innovation. You will be introduced to key data analytics concepts such as systems thinking, multi-level perspectives and multidisciplinary methods for envisioning futures, and apply them to specific real-world challenges you and your organisation may face. And there�ll be a focus on future-proofing skills such as teamwork, collaboration with diverse stakeholders and accounting for judgements made within ethical decision-making frameworks.<br/>Skills: analytics  tableau software  Business Intelligence  Statistical Dispersion  software  Demand Forecasting  General Statistics  Data Analysis  measurement  analysis business business-essentials<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '78be0a3f-33cd-420f-8836-a07aeca5796d',
+    _score: 0.7891793,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Introduction to Data Analytics',
+      description: 'This course presents a gentle introduction into the concepts of data analysis, the role of a Data Analyst, and the tools that are used to perform daily functions. You will gain an understanding of the data ecosystem and the fundamentals of data analysis, such as data gathering or data mining.  You will then learn the soft skills that are required to effectively communicate your data to stakeholders, and how mastering these skills can give you the option to become a data driven decision maker.       This course will help you to differentiate between the roles of a Data Analyst, Data Scientist, and Data Engineer. You will learn the responsibilities of a Data Analyst and exactly what data analysis entails. You will be able to summarize the data ecosystem, such as databases and data warehouses. You will then uncover the major vendors within the data ecosystem and explore the various tools on-premise and in the cloud. Continue this exciting journey and discover Big Data platforms such as Hadoop, Hive, and Spark. By the end of this course you will be able to visualize the daily life of a Data Analyst, understand the different career paths that are available for data analytics, and identify the many resources available for mastering this profession.       Throughout this course you will learn the key aspects to data analysis. You will begin to explore the fundamentals of gathering data, and learning how to identify your data sources. You will then learn how to clean, analyze, and share your data with the use of visualizations and dashboard tools. This all comes together in the final project where it will test your knowledge of the course material, explore what it means to be a Data Analyst, and provide a real-world scenario of data analysis.        This course does not require any prior data analysis, spreadsheet, or computer science experience. All you need to get started is basic computer literacy, high school level math, and access to a modern web browser such as Chrome or Firefox.<br/>Skills: analytics  Data Analysis  physics  Exploratory Data Analysis  business analytics  Python Programming  quality control  Data Science  SQL  Business Analysis data-science data-analysis<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'b73e8716-f897-45d3-876b-1cec402d3086',
+    _score: 0.7855142,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Introduction to Data Analytics for Business',
+      description: 'This course will expose you to the data analytics practices executed in the business world. We will explore such key areas as the analytical process, how data is created, stored, accessed, and how the organization works with data and creates the environment in which analytics can flourish.  What you learn in this course will give you a strong foundation in all the areas that support analytics and will help you to better position yourself for success within your organization. You�ll develop skills and a perspective that will make you more productive faster and allow you to become a valuable asset to your organization.  This course also provides a basis for going deeper into Advanced investigative and computational methods, which you have an opportunity to explore in future courses of the Data Analytics for Business specialization.<br/>Skills: analysis  analytics  SQL  Business Analysis  relational database  Data Analysis  Data Model  Databases  business analytics  modeling data-science data-analysis<br/>Difficulty Level: Advanced'
+    }
+  }
+]
+Search string Experiment with building prototypes and minimum viable products (MVPs) using tools like Figma, Sketch, or InVision.
+search result [
+  {
+    _index: 'learning-paths',
+    _id: 'c6f41f2b-55b5-4910-bb62-1ecb110ad3da',
+    _score: 0.81360984,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Prototyping and Design',
+      description: 'In this course you will learn how to design and prototype user interfaces to address the users and tasks identified in user research.  Through a series of lectures and exercises, you will learn and practice paper- and other low-fidelity prototyping techniques; you will learn and apply principles from graphic design, including design patterns; you will learn to write a design rationale; and you will learn how to design for specific populations and situations, including principles and practices of accessible design.<br/>Skills: design pattern  paper prototyping  Commercial Design  user interface  interaction design  interaction design pattern  User Experience  interfaces  usability  user interface design computer-science design-and-product<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '0f3f4354-e333-4cda-b3c6-028156070b58',
+    _score: 0.80402446,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'User Experience: Research & Prototyping',
+      description: "What makes for a great user experience? How can you consistently design experiences that work well, are easy to use and  people want to use? This course will teach you the core process of experience design and how to effectively evaluate your work with the people for whom you are designing. You'll learn fundamental methods of design research that will enable  you to effectively understand people, the sequences of their actions, and the context in which they work. Through the assignments, you�ll learn practical techniques for making sense of what you see and transform your observations into meaningful actionable insights and unique opportunity areas for design.  You�ll also explore how to generate ideas in response to the opportunities identified and learn methods for making your ideas tangible. By answering specific questions and refining your concepts, you�ll move closer to making your ideas real. We�ll use cases from a variety of industries including health, education, transportation, finance, and beyond to illustrate how these methods work across different domains.   Good luck and we hope you enjoy the course!<br/>Skills: i-deas  User Experience  Human Computer Interaction  thought  Map  experience  interview  interaction design  persona (user experience)  User Research computer-science design-and-product<br/>Difficulty Level: Advanced"
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '1448d4c9-49d9-4050-967b-bddbc0771130',
+    _score: 0.7999445,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'UX Design: From Concept to Prototype',
+      description: 'Great design doesn�t come out of nowhere; it is born, nurtured, and grown--all through a systematic, learnable process. In this UX course, you will explore the process of taking a basic concept, grounded in user needs, and developing it into a design that will address those needs. In the course, you will gain hands-on experience with techniques such as sketching, scenario development, storyboarding, and wireframing that will help you transform your understanding of what your users need into a compelling user experience. You will then learn how to turn wireframes and interaction architecture into interactive prototypes that can be tested with prospective users and iteratively refined into a high quality design that that is ready for a hand-off to the development team for implementation.  What You�ll Learn:     Define and scope the design problem you will try to address     Create user stories and storyboards to transform information about user needs into design concepts     Produce sketches and conduct brainstorming sessions to generate many design ideas from which you can construct a high-quality design solution     Develop interface wireframes to concretize the design and enable early user testing     Conduct user tests with paper prototypes to get preliminary user feedback on the design concept and interactions     Develop high-fidelity mockups that specify visual design elements     Create Wizard of Oz prototypes to efficiently test complex interactions and interactive systems that are not screen-based (e.g., smart assistants)<br/>Skills: Human Computer Interaction  Design Effect  User Experience  test design  brainstorming  interfaces  User Experience Design  storyboarding  interaction design  persona (user experience) computer-science design-and-product<br/>Difficulty Level: Intermediate'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'd4f2fd95-2ce3-4bd4-bdf7-731959dc3b0d',
+    _score: 0.7950999,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Agile Projects: Develop Product Wireframe Prototypes in Miro',
+      description: 'By the end of this guided project, you will be fluent in creating wireframe porotypes for Agile projects based on previous project phases. This will enable you to map the product features and add value to how the customer/user will experience the product or service. You will learn how to encapsulate the needs and wants of the customer persona in the product.  This is essential for generating positive results for your business venture. Furthermore, this guided project is designed to engage and harness your visionary and exploratory abilities. You will use proven models in Agile Project Management with Miro to shape the development roadmap of products and services.   We will practice critically how Epics, User Stories, Personas, and Customer journey phases become valuable input for creating functionality for products and services.  Please see the guide for creating a free account with Miro in the Resources section.<br/>Skills: agile management  modeling  software  Product Management  cost benefit analysis  project  Software Engineering  Project Management  persona (user experience)  Leadership and Management business business-strategy<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'd6e1df8f-4924-4101-a614-c165ead3f8c4',
+    _score: 0.7891886,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Web Design: Wireframes to Prototypes',
+      description: 'This course is focused on the application of the early UX research to actual user interfaces: the creation of wireframes, high-fidelity mockups, and clickable prototypes. Along the way we will also discuss:   - Responsive web design and mobile web challenges  - Mobile-first approach  - Web typography  - The relationship between design and programming and whether it is important to know how to code  - The different web technologies that make the web work, such as HTML, CSS, JavaScript, server-side coding, and databases.  This course is the continuation of the course Web Design: Strategy and Information Architecture, in which students completed the first half of a large scale project�developing a comprehensive plan for a complex website. If you are intending to complete the assignments in this course to earn a certificate you must complete the Strategy and Information Architecture course first so you have the materials and data needed to begin creating wireframes and mockups in this course.  This is the fourth and last course in the UI/UX Design Specialization, which brings a design-centric approach to user interface (UI) and user experience (UX) design, and offers practical, skill-based instruction centered around a visual communications perspective, rather than on one focused on marketing or programming alone.  These courses are ideal for anyone with some experience in graphic or visual design and who would like to build their skill set in UI or UX for app and web design. It would also be ideal for anyone with experience in front- or back-end web development or human-computer interaction and want to sharpen their visual design and analysis skills for UI or UX.<br/>Skills: user interface  design pattern  java annotation  website wireframe  User Experience  experience  web  interfaces  user interface design  Web Design arts-and-humanities music-and-art<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '0a0c96e2-043d-46ec-bb3a-ff43150d6fef',
+    _score: 0.76681495,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Product Development: Customer Persona Development with Miro',
+      description: 'By the end of this 2.5 project, you will be fluent in identifying and creating customer personas for new products and services and in deriving opportunities from your analysis, thus generating positive results for your business venture. This project is designed to engage and harness your visionary and exploratory abilities. You will use proven models in strategy and product development with the Miro platform to explore and analyze customer personas. This is an important step for individuals or companies wanting to explore new products or services.   We will practice critically examining customer segments and products structures that affect the business. You will engage in evaluating, through examples and hands-on practice, making decisions on product orientation. Furthermore, you will assess whether to modify or keep the product structure when entering the market. You will be ready to take an entrepreneurial idea through a scientific and logical process, helping you validate your ideas for a new business or service.<br/>Skills: project  modeling  persona (user experience)  Planning  cost benefit analysis  presentation  Strategy  Integral  Product Development  business plan business business-strategy<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '3e4139ca-01aa-489e-a850-e9db27aa71e4',
+    _score: 0.76291454,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Product  and Service Development: Empathy  Mapping with Miro',
+      description: 'By the end of this project, you will be fluent in identifying and creating Empathy Maps based on persona for new products and services and in deriving opportunities from your analysis, thus generating positive results for your business venture. This project is designed to engage and harness your visionary and exploratory abilities. You will use proven models in strategy and product development with the Miro platform to explore and analyze customer data combined with the development of Empathy Maps.  This is an important step for individuals or companies wanting to explore new products or services.   We will practice critically examining the developed persona. You will engage in evaluating, through examples and hands-on practice, making decisions on product orientation.<br/>Skills: Product Development  Planning  Strategy  business plan  modeling  persona (user experience)  User Experience  project  presentation  Integral business business-strategy<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '1d8de0ca-97e3-4c66-badc-fa0089837192',
+    _score: 0.76088864,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Customer Journey Prototyping in XD',
+      description: 'By the end of this project, you will be able to prototype your user journeys in XD! We will complete a basic e-commerce journey from the customer selecting a product to purchasing completion. This includes animating interactive content, sticky content, as well as understand how to share the prototype for your stakeholders to view.<br/>Skills: User Experience  english language  feature-driven development  php  customer experience  project  rstudio  eyeos  openshift  prezi computer-science design-and-product<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '0ae1a336-06ac-435d-b9ff-3876fa80a952',
+    _score: 0.75576484,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Human-Centered Design: an Introduction',
+      description: "In this course, you will learn how to design technologies that bring people joy, rather than frustration. You'll learn several techniques for rapidly prototyping (such as Wizard of Oz Prototyping) and evaluating multiple interface alternatives -- and why rapid prototyping and comparative evaluation are essential to excellent interaction design. You'll learn how to conduct fieldwork with people to help you get design ideas. How to make paper prototypes and low-fidelity mock-ups that are interactive -- and how to use these designs to get feedback from other stakeholders like your teammates, clients, and users. Armed with these design-thinking strategies, you�ll be able to do more creative human-centered design in any domain.   This is the first course offered in the interaction design specialization series. Browse through previous capstone projects for some inspiration here: https://medium.com/capstone-projects/capstone-projects-2019-abc67d3f6f26<br/>Skills: Human Computer Interaction  interview  interaction design  User Research  evaluation  heuristic evaluation  User Experience  paper prototyping  heuristic  rapid prototyping computer-science design-and-product<br/>Difficulty Level: Advanced"
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'b378f8f5-52e3-44b5-b02a-3f75bd09a318',
+    _score: 0.7515448,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Product Development: Customer Journey Mapping with Miro',
+      description: 'By the end of this project, you will be fluent in identifying and analyzing customer journeys for new products and services and in deriving opportunities from your analysis, thus generating positive results for your business venture. This project is designed to engage and harness your visionary and exploratory abilities. You will use proven models in strategy and product development with the Miro platform to explore and analyze these customer journeys. This is an important step for individuals or companies wanting to explore new products or services.   We will practice critically examining customer segments and products structures that affect the business. You will engage in evaluating, through examples and hands-on practice, making decisions on product orientation. Furthermore, you will assess whether to modify or keep the product structure when entering the market. You will be ready to take an entrepreneurial idea through a scientific and logical process, helping you validate your ideas for a new business or service.<br/>Skills: cost benefit analysis  Mapping  project  Product Development  Product Management  Planning  Strategy  Map  business plan  customer experience business business-strategy<br/>Difficulty Level: Beginner'
+    }
+  }
+]
+Search string Attend hackathons, workshops, and networking events to connect with like-minded individuals in the tech industry.
+search result [
+  {
+    _index: 'learning-paths',
+    _id: '6b5fb124-4a19-4491-8e3c-3756d644ccc2',
+    _score: 1.4514627,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Networking and Volunteerism for Career Success',
+      description: 'In a very competitive workplace, establishing, growing, and leveraging your professional community can make all the difference as you search for your initial work opportunity, improve satisfaction at your current job, or find your next work adventure.  In this course, you will learn how to tap into your existing personal and professional networks to find your tribe and then leverage your professional community for your benefit (and sometimes the benefit of your employer!).  Given that job satisfaction and job opportunities, are often integrally intertwined with �doing good,� you will engage in an introspective exercise evaluating your interests and values so you can incorporate those ideals into your work. Finally, you will understand how service experiences can be extremely valuable in growing your professional community and contributing to company success.<br/>Skills: interest  market (economics)  Planning  career  career development  Benefits  personal advertisement  modeling  it service management  volunteer management personal-development personal-development<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '062253f6-a07b-4731-ba27-a1976ad3d08e',
+    _score: 0.7286585,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Creating and Developing a Tech Startup',
+      description: 'This course will allow you to identify and evaluate opportunities for creating a tech business, and to better understand its principal issues on a�human, technical, commercial, environmental and financial level.  As such, you will obtain solid foundations either for building your own tech business, or for joining one.  Deciding to create or to join a tech business in these early years is an out-of-the-ordinary adventure, and it certainly won�t be straightforward: you need to be ready to accept that not all "good" ideas will lead to success, and that only a very small number of projects lead to great success. You must learn to overhaul your relationship with failure, which is a valuable source of experience and should be managed according to the logic of �acceptable loss�: the entrepreneur loves uncertainty, not excessive risk. The creation of tech businesses gives you a genuine opportunity to change the world, but requires you to adopt a particular state of mind and to be able to acquire knowledge, know-how and interpersonal skills.  You will have the chance to work alongside passionate and exciting people from a whole multitude of backgrounds. From a technological point of view, these women and men have constructed numerous companies of a global scale.  The development trajectory of a tech business is full of mishaps which require you to be both agile and greatly prepared to build on a strong idea, choose your market, develop your proposal, assemble a team worthy of the task in hand, and finding financing.  The course is made up of methodological sessions as well as first-hand accounts from entrepreneurs and people who have succeeded in creating tech businesses themselves. You will thus be able to get to know the essential dilemmas with which high-tech business creators are confronted with, beginning with the initial decision to set up your very own structure, which itself represents a significant life decision.  You will also see that the creation of a tech business is much more a collective adventure than an individual one.  In the English version, all of the reading content, quizzes and assesments will be in English, whilst the videos will have French audio and English subtitles.<br/>Skills: Strategy  enabling  market (economics)  experience  business plan  leadership  Innovation  organizing (management)  intellectual property  project business entrepreneurship<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'abfab827-ae55-45e1-bf19-cdebbbcc734c',
+    _score: 0.7065753,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Strengthening Your Widening Network',
+      description: 'In this course, you will learn strategies not only on how to communicate effectively but also how to strengthen your relationships with co-workers and other stakeholders from diverse cultural backgrounds, both inside and beyond the organisation. In particular, "Strengthening your widening network" aims to equip you with a workplace discourse that facilitates familiarity with practices in the working environment and to help you appreciate the complexities inherent in the organisational structure and hierarchy.   You will learn to write effective emails demonstrating a keen awareness of your audience and the 7 communication principles. In addition, you will learn to voice your views and assert your position at various communication contexts such as formal meetings and work-related discussions.     By the end of the course, you should demonstrate a greater communicative and linguistic competence, with a better grasp of interpersonal and intercultural communication in a globalised workplace.<br/>Skills: credibility  organizational chart  interpersonal relationships  cross-cultural communication  grasp  interpersonal communication  email writing  Communication  email  intercultural communication personal-development personal-development<br/>Difficulty Level: Advanced'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'f3e09cd4-0a85-41ff-a4bf-69e416d2e5f8',
+    _score: 0.7042378,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Mastering the Software Engineering Interview',
+      description: 'You�ve hit a major milestone as a computer scientist and are becoming a capable programmer. You now know how to solve problems, write algorithms, and analyze solutions; and you have a wealth of tools (like data structures) at your disposal.  You may now be ready for an internship or (possibly) an entry-level software engineering job.  But can you land the internship/job?  It depends in part on how well you can solve new technical problems and communicate during interviews.  How can you get better at this?  Practice!    With the support of Google�s recruiting and engineering teams we�ve provided tips, examples, and practice opportunities in this course that may help you with a number of tech companies.  We�ll assist you to organize into teams to practice.  Lastly, we�ll give you basic job search advice, and tips for succeeding once you�re on the job.<br/>Skills: phone-in  Data Structures  Problem Solving  pitfall!  interview  internet slang  Software Engineering  algorithmics  thought  experience computer-science software-development<br/>Difficulty Level: Conversant'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '69029c01-4612-4002-87cc-3370e92e6943',
+    _score: 0.7020566,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Exploring Emerging Technologies for Lifelong Learning and Success',
+      description: 'This learning opportunity is an open-access resource for lifelong learning. The aim is to identify the value and implications of using established and emerging technology tools for personal and professional growth and acquire strategies to develop lifelong learning habits to keep pace with technology change.  This course is targeted to the needs of ALL learners, including college students, faculty, current and career-seeking professionals, and anyone from across the globe with a desire to learn how to use emerging technologies to succeed in today�s rapidly changing world.  This project consists of two associated parts; #EmTechMOOC and EmTechWIKI.  #EmTechMOOC is a Massive Open Online Course, also called a MOOC. The MOOC is hosted on the Coursera platform and provides a supportive environment for dialogue and sharing among participants.  EmTechWIKI ( http://suny.edu/emtech ) has been built to complement the MOOC. It is a socially-curated discovery engine to discover tools, tutorials, and resources. The WIKI can be used as a stand-alone resource, or it can be used together with #EmTechMOOC. Anyone is welcome to add or edit WIKI resources.  The MOOC learning environment is structured around 5 modules. The concepts that are covered include Lifelong Learning and the 4Cs of 21st-century skills: including Communication and Collaboration, Creativity, Critical Thinking. Participants build a personal ePortfolio to display artifacts created through Discovery Exercises to showcase accomplishments. The final module provides an opportunity to summarize and reflect on the learning journey.  Learning activities provide accessible, curated information and application exercises pertaining to current and emerging technologies relevant to learners and professionals alike, such as audio, video, social networking, etc.  #EmTechMOOC is not a traditional MOOC. Instead of providing content-heavy information, it relies on discovery-based learning that is under the control of the learner. You will be prompted to locate and explore new resources and tools from the growing EmTechWIKI collection to help you meet your personally identified objectives. You will then reflect on and share your learning and discoveries through your personal portfolio that you will construct throughout the modules in the course.  Complete the MOOC requirements to earn digital badges and a Coursera Certificate of Completion. SUNY affiliates may earn a Coursera Certificate with no fees to enroll.<br/>Skills: Social Media  emerging technologies  Human Learning  professional networks  Social Media Tools  Creativity  lifelong learning  Critical Thinking  Communication  digital footprint personal-development personal-development<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'aaaf9413-25fc-4b1d-9e47-978526b5057c',
+    _score: 0.7007937,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Legal Tech & Startups',
+      description: 'LegalTech is the reaction to the disruption that technology is having across all sectors of the economy. Considering that the legal sector is one of the most resistant to change, due to its conservative nature, we can see just how different the future will be. In this course, IE professor Marti Manent will guide you through the essential stages of this disruption in technology, giving you the key tools and ideas to consider when starting your online business.   In the course, Marti explains the key market trends that you will encounter and will provide you with a handy practical toolbox. The course features interviews with industry professionals as well as very motivating and interesting lectures that will help you open your mind and better understand everything in the course. Be part of this disruption that technology is having in the legal sector and join Professor Marti during this exciting new course.<br/>Skills: lean startup  MailChimp  Marketing  Business Law  stock market  growth hacking  key market  software  Product Development  law business entrepreneurship<br/>Difficulty Level: Beginner'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: '99a1867f-c31b-4aff-b9fd-9a441073abcf',
+    _score: 0.69165456,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Git + GitHub for Open Source Collaboration',
+      description: "By the end of this project, you will be able to collaborate with any GitHub repository on the Internet. You'll learn to add and push your code changes, create and merge branches, fork projects, and send pull requests for making your updates mainstream.   This guided project is for people who want to collaborate, share and version- control code in an effective and transparent manner. Knowledge of it is a differential for anyone engaged in the tech ecosystem, from developers to scientists, specially in team and collaborative environments.  Note: This course works best for learners who are based in the North America region. We�re currently working on providing the same experience in other regions.<br/>Skills: c standard library  git (software)  php  differential forms  open source  video game development  github  Java Programming  software  Software Engineering information-technology support-and-operations<br/>Difficulty Level: Intermediate"
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'a7e34bb2-9983-4cf2-8b5f-b4f9eeb6c2cc',
+    _score: 0.6850658,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: "Competitive Programmer's Core Skills",
+      description: 'During the course, you�ll learn everything needed to participate in real competitions � that�s the main goal. Along the way you�ll also gain useful skills for which competitive programmers are so highly valued by employers: ability to write efficient, reliable, and compact code, manage your time well when it�s limited, apply basic algorithmic ideas to real problems, etc.  We start from the very beginning by teaching you what competitions there are, what are their rules, what specifics problems have, how to read problem statements, how to organize your work, and what you should and shouldn�t do. So it�s fine if you�ve never taken part in programming competitions before.  We�ll focus on skills essential to competitive programming: inventing solutions and proving their correctness, estimating their running time, testing and debugging programs, how to benefit from structuring code. We�ll also cover basic algorithmic ideas: brute force search, dynamic programming, greedy algorithms, segment trees.  On competitions, there are a lot of specific pitfalls, perilous to beginners � but that�s not to worry, as we�ll go through the most common of them: integer overflow and issues with fractional numbers, troubles of particular programming languages, how to get unstuck in general.  And, you�ll hone all these skills by solving practice problems, which are just like problems on real competitions. You could use any of the following programming languages: C, C++, C#, Haskell, Java, JavaScript, Python 2, Python 3, Ruby, Rust, Scala. We assume that you already know how to write simplest programs in one of these.<br/>Skills: greedy algorithm  integer overflow  matrix chain multiplication  Algorithms  computer program  Computer Programming  edit distance  competitiveness  dynamic programming  segment tree computer-science algorithms<br/>Difficulty Level: Intermediate'
+    }
+  },
+  {
+    _index: 'learning-paths',
+    _id: 'e8394db9-fd0a-491b-ae71-5e02225bdf86',
+    _score: 0.6827836,
+    _source: {
+      title_vector: [Array],
+      description_vector: [Array],
+      title: 'Design Thinking for the Greater Good: Innovation in the Social Sector',
+      description: "Do you work for a nonprofit or in the social sector? Are you struggling to solve the problems and meet the needs of the people you serve? Come learn more about how design thinking, a human-centered approach to problem solving, can help you truly understand an issue, generate ideas worth testing and iterate to find solutions that make a real difference. Through global stories from areas as diverse as government, health care, and education, we�ll show you the tools, techniques and mindset needed to use design thinking to uncover new and creative solutions in the social sector.  The development of this course was supported by the Batten Institute for Entrepreneurship and Innovation at the University of Virginia's Darden School of Business. For more about the Batten Institute, see: http://www.darden.virginia.edu/batten-institute/  @BattenInstitute @DesignatDarden<br/>Skills: social entrepreneurship  design thinking  thought  Innovation  brainstorming  innovation management  Storytelling  illustration  autism  agriculture social-sciences education<br/>Difficulty Level: Beginner"
+    }
+  }
+]
+Done
