@@ -12,8 +12,8 @@ interface CourseCardProps {
   imageUrl: string;
   chaptersLength: number;
   price: number;
-  progress: number | null;
-  category: string;
+  progress?: number | null;
+  category?: string;
 };
 
 export const CourseCard = ({
@@ -51,11 +51,11 @@ export const CourseCard = ({
               </span>
             </div>
           </div>
-          {progress !== null ? (
+          {progress ? (
             <CourseProgress
               variant={progress === 100 ? "success" : "default"}
               size="sm"
-              value={progress}
+              value={progress ?? "0"}
             />
           ) : (
             <p className="text-md md:text-sm font-medium text-slate-700">

@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Course } from "@prisma/client";
 import { Button } from "@/components/ui/button";
 import { CoursesList } from "@/components/courses-list";
+import { CourseListSlider } from './_components/course-list-slider'
 import axios from "axios";
 import { Banner } from "@/components/banner";
 import toast from "react-hot-toast";
@@ -41,13 +42,13 @@ const OnboardingPage = () => {
       return (
         <Timeline.Item key={result.step}>
           <h2 className="text-lg font-bold">{result.step}</h2>
-          <div>
+          <div className="w-100">
             <h4 className="font-bold">Recommended Course</h4>
-            <CoursesList items={[result.recommendedCourse]} />
+            <CourseListSlider items={[result.recommendedCourse]} />
           </div>
-          <div>
+          <div className="w-100 overflow-x-auto">
             <h4 className="font-bold">Other Courses</h4>
-            <CoursesList items={result.otherCourses} />
+            <CourseListSlider items={result.otherCourses} />
           </div>
         </Timeline.Item>
       );
