@@ -5,8 +5,7 @@ import { Timeline } from 'antd';
 import { Textarea } from "@/components/ui/textarea";
 import { Course } from "@prisma/client";
 import { Button } from "@/components/ui/button";
-import { CoursesList } from "@/components/courses-list";
-import { CourseListSlider } from './_components/course-list-slider'
+import { CourseListSlider } from '../../components/course-list-slider'
 import axios from "axios";
 import { Banner } from "@/components/banner";
 import toast from "react-hot-toast";
@@ -43,12 +42,10 @@ const OnboardingPage = () => {
         <Timeline.Item key={result.step}>
           <h2 className="text-lg font-bold">{result.step}</h2>
           <div className="w-100">
-            <h4 className="font-bold">Recommended Course</h4>
-            <CourseListSlider items={[result.recommendedCourse]} />
+            <CourseListSlider header={(<h4 className="font-bold">Recommended Course</h4>)} items={[result.recommendedCourse]} />
           </div>
           <div className="w-100 overflow-x-auto">
-            <h4 className="font-bold">Other Courses</h4>
-            <CourseListSlider items={result.otherCourses} />
+            <CourseListSlider header={<h4 className="font-bold">Other Courses</h4>} items={result.otherCourses} />
           </div>
         </Timeline.Item>
       );
