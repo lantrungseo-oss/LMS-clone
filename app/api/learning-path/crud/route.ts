@@ -13,9 +13,9 @@ export const POST = routeErrorHandler(async (req: NextRequest, res: NextResponse
     })
   }
 
-  const { title, steps } = await req.json();
+  const { title, description, steps } = await req.json();
 
-  const result = await createLearningPath({ title, userId, steps });
+  const result = await createLearningPath({ title, description, userId, steps });
 
   return NextResponse.json(result);
 })

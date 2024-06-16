@@ -68,7 +68,7 @@ export const AttachmentForm = ({
   const onDelete = async (id: string) => {
     try {
       setDeletingId(id);
-      await axios.delete(`/api/courses/${courseId}/chapters/${chapterId}/${id}`);
+      await axios.delete(`/api/courses/${courseId}/chapters/${chapterId}/attachments/${id}`);
       toast.success("Attachment deleted");
       router.refresh();
     } catch {
@@ -171,31 +171,35 @@ export const AttachmentForm = ({
                     key={attachment.id}
                     className="flex items-center p-3 w-full bg-sky-100 border-sky-200 border text-sky-700 rounded-md"
                   >
-                    <File className="h-4 w-4 mr-2 flex-shrink-0" />
-                    <p className="text-xs line-clamp-1">
-                      {attachment.name}
-                    </p>
-  
-                    {deletingId === attachment.id && (
-                      <div>
-                        <Loader2 className="h-4 w-4 animate-spin" />
-                      </div>
-                    )}
-                    <button
-                        disabled={deletingId === attachment.id}
-                        onClick={() => toggleEditForAttachment(attachment.id)}
-                        className="ml-auto hover:opacity-75 transition px-1"
-                      >
-                        <Pencil className="h-4 w-4" />
-                      </button>
-                    {deletingId !== attachment.id && (
+                    <div className="flex-1 flex items-center">
+                      <File className="h-4 w-4 mr-2 flex-shrink-0" />
+                      <p className="text-xs line-clamp-1">
+                        {attachment.name}
+                      </p>
+                    </div>
+                    
+                    <div className="flex-none">
+                      {deletingId === attachment.id && (
+                        <div>
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                        </div>
+                      )}
                       <button
-                        onClick={() => onDelete(attachment.id)}
-                        className="ml-auto hover:opacity-75 transition"
-                      >
-                        <X className="h-4 w-4" />
-                      </button>
-                    )}
+                          disabled={deletingId === attachment.id}
+                          onClick={() => toggleEditForAttachment(attachment.id)}
+                          className="ml-auto hover:opacity-75 transition px-1"
+                        >
+                          <Pencil className="h-4 w-4" />
+                        </button>
+                      {deletingId !== attachment.id && (
+                        <button
+                          onClick={() => onDelete(attachment.id)}
+                          className="ml-auto hover:opacity-75 transition"
+                        >
+                          <X className="h-4 w-4" />
+                        </button>
+                      )}
+                    </div>
                   </div>
                 )
               })}

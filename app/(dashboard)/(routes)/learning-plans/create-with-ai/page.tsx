@@ -9,6 +9,10 @@ import { CourseListSlider } from '@/components/course-list-slider'
 import axios from "axios";
 import { Banner } from "@/components/banner";
 import toast from "react-hot-toast";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { useRouter } from "next/navigation";
 
 // Mock data for courses
 
@@ -20,12 +24,18 @@ type RecommendationResult = {
 
 const CreateWithAIPage = () => {
   const [inputValue, setInputValue] = useState("");
+  const [userQuery, setUserQuery] = useState("");
   const [isSaving, setIsSaving] = useState(false);
   const [isTriggering, setIsTriggering] = useState(false);
+  const [isSavingDialogOpen, setIsSavingDialogOpen] = useState(false);
+  const [title, setTitle] = useState("");
   const [recResult, setRecResult] = useState<RecommendationResult>([]);
+
+  const router = useRouter();
 
   const triggerLearningPlanRecommendation = () => {
     setIsTriggering(true);
+    setUserQuery(inputValue);
     axios.post('/api/learning-path/recommendation', {
       userQuery: inputValue,
       mainRecCount: 2,
@@ -39,13 +49,28 @@ const CreateWithAIPage = () => {
     })
   }
 
+  const startSaveLearningPlan = () => {
+    setIsSavingDialogOpen(true);
+  }
+
   const saveLearningPlan = () => {
     setIsSaving(true);
-    // Save learning plan here
-    axios.post('/api/learning-path/create-or-edit', {
-      
+    axios.post('/api/learning-path/crud', {
+      title,
+      description: userQuery,
+      steps: recResult.map(result => ({
+        description: result.step,
+        courseIds: result.recommendedCourses.map(course => course.id),
+      }))
+    }).then((res) => {
+      toast.success("Learning plan saved!");
+      if(res.data.id) {
+        router.push(`/learning-plans/${res.data.id}`);
+      }
+      setIsSavingDialogOpen(false);
     })
-    setIsSaving(false);
+    .catch(err => toast.error(err.response?.data?.message))
+    .finally(() => setIsSaving(false))
   }
 
   const items = useMemo(() => {
@@ -67,6 +92,7 @@ const CreateWithAIPage = () => {
   }, [recResult])
 
   return (
+    <>
     <div className="min-h-screen w-full flex flex-col items-center bg-gray-100">
       <h3 className="text-xl font-semibold mb-4 mt-10">Curate your own learning plan</h3>
       <div className="w-full flex flex-col items-center">
@@ -83,7 +109,7 @@ const CreateWithAIPage = () => {
       <div className="w-[79%] mt-5">
         {recResult.length > 0 && (
           <>
-            <Banner className="mb-10" variant="success" label={<><span>Love the learning plan?</span> <Button className="ml-5" variant={'secondary'}>Save it!</Button></>} />
+            <Banner className="mb-10" variant="success" label={<><span>Love the learning plan?</span> <Button onClick={startSaveLearningPlan} className="ml-5" variant={'secondary'}>Save it!</Button></>} />
             <Timeline className="mt-4">
               {items}
             </Timeline>
@@ -95,6 +121,25 @@ const CreateWithAIPage = () => {
         )}
       </div>
     </div>
+    <Dialog onOpenChange={(open) => setIsSavingDialogOpen(open)} open={isSavingDialogOpen}>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Save learning plan</DialogTitle>
+        </DialogHeader>
+        <DialogDescription>
+          <Label>
+            Set learning plan's title
+          </Label>
+          <Input className="mt-4" value={title} onChange={(e) => setTitle(e.target.value)} />
+          {isSaving && <Banner className="mt-7" variant="info" label="Patient, your learning plan is being saved..." />}
+        </DialogDescription>
+        <DialogFooter>
+          <Button onClick={() => setIsSavingDialogOpen(false)} variant={"ghost"}>Cancel</Button>
+          <Button onClick={saveLearningPlan} variant="default" disabled={isSaving}>Save</Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+    </>
   );
 };
 

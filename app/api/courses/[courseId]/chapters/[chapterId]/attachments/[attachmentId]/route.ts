@@ -42,7 +42,7 @@ export async function DELETE(
 
     const attachment = await db.attachment.delete({
       where: {
-        chapterId: params.courseId,
+        chapterId: params.chapterId,
         id: params.attachmentId,
       }
     });

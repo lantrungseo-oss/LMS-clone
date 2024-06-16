@@ -39,7 +39,7 @@ const CreatePage = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const response = await axios.post("/api/learning-path/create-or-edit", values);
+      const response = await axios.post("/api/learning-path/crud", values);
       router.push(`/learning-plans/${response.data.id}`);
       toast.success("Learning plan created!");
     } catch {
