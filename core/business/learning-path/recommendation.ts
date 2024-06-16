@@ -122,7 +122,7 @@ export const recommendLearningPath = async (userQuery: string, params?: Recommen
     return {
       step: result.step,
       recommendedCourses: allAvailCourse.slice(0, params?.bestRecommendedCount || 1),
-      otherCourses: allAvailCourse.slice(params?.bestRecommendedCount || 1, params?.otherCount ? params.bestRecommendedCount + params.otherCount : allAvailCourse.length)
+      otherCourses: params?.otherCount ? allAvailCourse.slice(params?.bestRecommendedCount || 1, params.bestRecommendedCount + params.otherCount) : []
     }
   })
 }

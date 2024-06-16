@@ -34,12 +34,13 @@ const CreateWithAIPage = () => {
   const router = useRouter();
 
   const triggerLearningPlanRecommendation = () => {
+    setRecResult([])
     setIsTriggering(true);
     setUserQuery(inputValue);
     axios.post('/api/learning-path/recommendation', {
       userQuery: inputValue,
       mainRecCount: 2,
-      otherCount: 3,
+      otherCount: 0,
     }).then((response) => {
       setRecResult(response.data);
     })
@@ -107,17 +108,16 @@ const CreateWithAIPage = () => {
         </Button>
       </div>
       <div className="w-[79%] mt-5">
+        {isTriggering && (
+          <Banner variant="info" label="Patient, your learning plan is being generated ..." />
+        )}
         {recResult.length > 0 && (
           <>
-            <Banner className="mb-10" variant="success" label={<><span>Love the learning plan?</span> <Button onClick={startSaveLearningPlan} className="ml-5" variant={'secondary'}>Save it!</Button></>} />
+            <Banner className="mb-10" variant="success" label={<><span>Love the learning plan?</span> <Button onClick={startSaveLearningPlan} className="mx-5" variant={'secondary'}>Save it!</Button><span>No worries, you can always edit it later!</span></>} />
             <Timeline className="mt-4">
               {items}
             </Timeline>
           </>
-        )}
-
-        {isTriggering && (
-          <Banner variant="info" label="Patient, your learning plan is being generated ..." />
         )}
       </div>
     </div>

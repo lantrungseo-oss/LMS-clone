@@ -4,7 +4,7 @@ import { ApiError } from "@/core/error/api-error";
 import { routeErrorHandler } from "@/core/error/error-hander";
 import { NextRequest, NextResponse } from "next/server";
 
-export const POST = routeErrorHandler(async (req: NextRequest, res: NextResponse) => {
+export const POST = routeErrorHandler(async (req: NextRequest) => {
   const { userId } = await authMainService.getAuthContext({});
   if(!userId) {
     throw new ApiError({
