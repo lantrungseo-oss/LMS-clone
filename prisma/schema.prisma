@@ -24,6 +24,8 @@ model Course {
   chapters Chapter[]
   purchases Purchase[]
 
+  learningPlanStepCourses LearningPlanStepCourse[]
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -147,4 +149,44 @@ model StripeCustomer {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model LearningPlan {
+  id String @id @default(uuid())
+  userId String @unique
+  title String
+  description String? @db.Text
+
+  steps LearningPlanStep[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model LearningPlanStep {
+  id String @id @default(uuid())
+  description String
+  position Int
+
+  learningPlanId String
+  learningPlan LearningPlan @relation(fields: [learningPlanId], references: [id], onDelete: Cascade)
+
+  stepCourses LearningPlanStepCourse[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model LearningPlanStepCourse {
+  id String @id @default(uuid())
+  learningPlanStepId String
+  courseId String
+
+  learningPlanStep LearningPlanStep @relation(fields: [learningPlanStepId], references: [id], onDelete: Cascade)
+  course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([learningPlanStepId, courseId])
 }

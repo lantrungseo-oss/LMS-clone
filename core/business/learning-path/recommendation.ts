@@ -6,6 +6,11 @@ import { AggregationsAggregate, SearchResponse } from "@elastic/elasticsearch/li
 import { Course } from "@prisma/client";
 import { ChatCompletionCreateParams } from 'openai/resources/index.mjs';
 
+type RecommendLearningPathParams = {
+  bestRecommendedCount: number; // number of recommended courses in each step
+  otherCount: number; // number of other courses in each step
+}
+
 const constructRecommendationPrompt = (userQuery: string): ChatCompletionCreateParams['messages'] => {
   return [
     {
@@ -25,7 +30,7 @@ const constructRecommendationPrompt = (userQuery: string): ChatCompletionCreateP
   ]
 }
 
-export const recommendLearningPath = async (userQuery: string) => {
+export const recommendLearningPath = async (userQuery: string, params?: RecommendLearningPathParams) => {
   const prompt = constructRecommendationPrompt(userQuery)
   const response = await openAI.chat.completions.create({
     model: 'gpt-3.5-turbo-0125',
@@ -116,8 +121,8 @@ export const recommendLearningPath = async (userQuery: string) => {
     const allAvailCourse = result.allCourseIds.map(courseId => courseMap[courseId]).filter(Boolean)
     return {
       step: result.step,
-      recommendedCourse: allAvailCourse[0],
-      otherCourses: allAvailCourse.slice(1)
+      recommendedCourses: allAvailCourse.slice(0, params?.bestRecommendedCount || 1),
+      otherCourses: allAvailCourse.slice(params?.bestRecommendedCount || 1, params?.otherCount ? params.bestRecommendedCount + params.otherCount : allAvailCourse.length)
     }
   })
 }
