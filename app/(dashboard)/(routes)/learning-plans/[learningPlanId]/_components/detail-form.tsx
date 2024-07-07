@@ -15,7 +15,14 @@ type DetailFormProps = {
 const DetailForm = ({
   learningPlan
 }: DetailFormProps) => {
-  return null;
+  return (
+    <>
+      <div>
+        {/** a form to edit title, a form to edit description */}
+        
+      </div>
+    </>
+  )
 }
 
 export default DetailForm;

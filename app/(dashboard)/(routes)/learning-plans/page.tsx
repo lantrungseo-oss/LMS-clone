@@ -61,19 +61,19 @@ const ListPage = async ({
     take: take,
   });
 
-  const rawSql = Prisma.sql`
+  const rawSql = fetchedLearningPlans.length ? Prisma.sql`
     select
       lp.id as learningPlanId,
       count(*) as courseCount
     from LearningPlanStepCourse lpsc, LearningPlanStep lps, LearningPlan lp
     where lpsc.learningPlanStepId = lps.id and lps.learningPlanId = lp.id and lp.id in (${Prisma.join(fetchedLearningPlans.map(lp => lp.id))})
     group by lp.id
-  `;
+  ` : Prisma.sql``;
 
 
-  const countData = await db.$queryRaw<{learningPlanId: string; courseCount: BigInt}[]>(
+  const countData = fetchedLearningPlans.length ? await db.$queryRaw<{learningPlanId: string; courseCount: BigInt}[]>(
     rawSql
-  ).then(data => Object.fromEntries(data.map(row => [row.learningPlanId, row.courseCount])));
+  ).then(data => Object.fromEntries(data.map(row => [row.learningPlanId, row.courseCount]))) : {};
 
 
   const learningPlans = fetchedLearningPlans.map(lp => {
