@@ -1,0 +1,1 @@
+ngrok http --domain=great-horse-assured.ngrok-free.app 3000

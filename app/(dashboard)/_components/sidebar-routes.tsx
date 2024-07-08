@@ -18,8 +18,8 @@ const guestRoutes = [
   },
   {
     icon: ClipboardList,
-    label: "Learning plans",
-    href: "/learning-plans"
+    label: "Create learning plans",
+    href: "/learning-plans/create-with-ai"
   }
 ];
 
@@ -34,6 +34,7 @@ const teacherRoutes = [
     label: "Analytics",
     href: "/teacher/analytics",
   }
+
 ]
 
 export const SidebarRoutes = () => {

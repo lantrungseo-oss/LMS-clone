@@ -61,6 +61,7 @@ export const columns: ColumnDef<LearningPlan & { courseCount: number }>[] = [
   {
     id: "actions",
     cell: ({ row }) => {
+      console.log(row.original);
       const { id } = row.original;
 
       return (

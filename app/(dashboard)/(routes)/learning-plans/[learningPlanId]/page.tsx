@@ -7,7 +7,7 @@ import LearningPlanDetailsForm from './_components/detail-form'
 
 type DetailsPageProps = {
   params: {
-    learningPathId: string;
+    learningPlanId: string;
   }
 }
 
@@ -20,10 +20,12 @@ const DetailsPage = async ({
     return redirect("/");
   }
 
+  console.log('params', params)
+
   const learningPlan = await db.learningPlan.findUnique({
     where: {
       userId,
-      id: params.learningPathId
+      id: params.learningPlanId
     },
     include: {
       steps: {

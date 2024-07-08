@@ -113,7 +113,7 @@ const CreateWithAIPage = () => {
         )}
         {recResult.length > 0 && (
           <>
-            <Banner className="mb-10" variant="success" label={<><span>Love the learning plan?</span> <Button onClick={startSaveLearningPlan} className="mx-5" variant={'secondary'}>Save it!</Button><span>No worries, you can always edit it later!</span></>} />
+            <Banner className="mb-10" variant="success" label={<><span>Love the learning plan?</span> <Button onClick={startSaveLearningPlan} className="mx-5" variant={'secondary'}>Save it!</Button></>} />
             <Timeline className="mt-4">
               {items}
             </Timeline>
